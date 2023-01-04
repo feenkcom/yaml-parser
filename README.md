@@ -7,3 +7,6 @@ Metacello new
 	repository: 'github://feenkcom/yaml-parser:main/src';
 	load
 ```
+```
+BaselineOfYAMLParser loadLepiter.
+```
