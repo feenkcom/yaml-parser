@@ -367,7 +367,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-09T16:48:36.246249+01:00"
+									"dateAndTimeString" : "2023-01-09T16:48:27.494208+01:00"
 								}
 							},
 							"uid" : {
@@ -377,7 +377,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Need to define a mini-YAML to test the INDENT and DEDENT stuff."
+							"string" : "Need to define a mini-YAML to test the INDENt and DEDENT stuff"
 						}
 					]
 				},
