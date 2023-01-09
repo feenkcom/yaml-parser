@@ -3,5 +3,5 @@ Class {
 	#superclass : #Object,
 	#traits : 'TYAMLVisitor',
 	#classTraits : 'TYAMLVisitor classTrait',
-	#category : #YAMLParser
+	#category : #'YAMLParser-SmaCC'
 }

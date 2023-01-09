@@ -2,7 +2,7 @@ Trait {
 	#name : #TProgramVisitor,
 	#traits : 'TSmaCCParseNodeVisitor',
 	#classTraits : 'TSmaCCParseNodeVisitor classTrait',
-	#category : #YAMLParser
+	#category : #'YAMLParser-SmaCC'
 }
 
 { #category : #generated }

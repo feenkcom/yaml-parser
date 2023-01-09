@@ -1,7 +1,7 @@
 Class {
 	#name : #YamlParser,
 	#superclass : #SmaCCParser,
-	#category : #YAMLParser
+	#category : #'YAMLParser-SmaCC'
 }
 
 { #category : #'generated-accessing' }

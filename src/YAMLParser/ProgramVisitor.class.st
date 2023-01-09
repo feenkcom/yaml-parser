@@ -3,5 +3,5 @@ Class {
 	#superclass : #Object,
 	#traits : 'TProgramVisitor',
 	#classTraits : 'TProgramVisitor classTrait',
-	#category : #YAMLParser
+	#category : #'YAMLParser-SmaCC'
 }
