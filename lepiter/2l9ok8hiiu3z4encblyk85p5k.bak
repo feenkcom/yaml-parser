@@ -8,6 +8,43 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-10T11:39:48.392358+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-10T11:39:57.776066+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "rURGPUiuDQC0Gt5OA+JlRA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "NB: Open questions start with **Q**. "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
 					"items" : [
 						{
 							"__type" : "textSnippet",
@@ -436,7 +473,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-10T10:03:41.540479+01:00"
+									"dateAndTimeString" : "2023-01-10T10:06:17.792197+01:00"
 								}
 							},
 							"uid" : {
@@ -446,7 +483,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The INDENT and DEDENT tokens are used in the "
+							"string" : "The INDENT and DEDENT tokens are used in the `suite` production of the Python parser."
 						}
 					]
 				},
@@ -485,7 +522,45 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-10T11:39:26.782161+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-10T11:40:28.453634+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "eqa9O0iuDQC0EfzvA+JlRA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "It is used in the PythonParser `ndent` token rule, presumably to trigger the indentation rule only when a line starts, but I cannot find it in the SmaCC booklet documentation. Where is it described? Are there other such annotations for scanner (or parser) rules?"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -495,7 +570,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T10:03:18.907766+01:00"
+						"dateAndTimeString" : "2023-01-10T11:39:11.33767+01:00"
 					}
 				},
 				"editEmail" : {
@@ -506,7 +581,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T10:03:18.907766+01:00"
+						"dateAndTimeString" : "2023-01-10T11:39:40.611903+01:00"
 					}
 				},
 				"uid" : {
@@ -516,7 +591,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "#Q What exactly does lineBegin do?"
 			}
 		]
 	},
