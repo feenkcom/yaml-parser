@@ -177,14 +177,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-11T10:24:45.988654+01:00"
+						"dateAndTimeString" : "2023-01-11T10:25:09.342551+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "3ClvTluuDQCFGfwLAexrOA=="
 				},
-				"code" : "Metacello new\n\tbaseline: 'YAMLParser';\n\trepository: 'github://feenkcom/yaml-parser:main/src';\n\tload.\nBaselineOfYAMLParser loadLepiter."
+				"code" : "Metacello new\r\tbaseline: 'YAMLParser';\r\trepository: 'github://feenkcom/yaml-parser:main/src';\r\tload.\r(Smalltalk at: #BaselineOfYAMLParser) loadLepiter."
 			}
 		]
 	},
