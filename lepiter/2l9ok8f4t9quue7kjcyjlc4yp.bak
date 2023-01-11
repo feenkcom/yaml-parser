@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T09:53:12.700647+01:00"
+						"dateAndTimeString" : "2023-01-10T09:53:21.341208+01:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The goal of this projecf is to build a full YAML parser using SmaCC, and then specialize it later for GH workflows. (While the YAML parser will parse any YAML file, the workflow parser should be specialized for the specific fields expected.)"
+				"string" : "The goal of this project is to build a full YAML parser using SmaCC, and then specialize it later for GH workflows. (While the YAML parser will parse any YAML file, the workflow parser should be specialized for the specific fields expected.)"
 			},
 			{
 				"__type" : "textSnippet",
@@ -92,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T09:53:13.164656+01:00"
+						"dateAndTimeString" : "2023-01-11T10:23:50.336374+01:00"
 					}
 				},
 				"editEmail" : {
@@ -103,7 +103,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T09:53:13.164656+01:00"
+						"dateAndTimeString" : "2023-01-11T10:24:24.186645+01:00"
 					}
 				},
 				"uid" : {
@@ -113,7 +113,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "The github repo is [feenkcom/yaml-parser](https://github.com/feenkcom/yaml-parser)."
 			}
 		]
 	},
