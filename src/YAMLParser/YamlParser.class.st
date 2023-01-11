@@ -1,85 +1,98 @@
 Class {
-	#name : #YamlParser,
+	#name : #YAMLParser,
 	#superclass : #SmaCCParser,
 	#category : #'YAMLParser-SmaCC'
 }
 
 { #category : #'generated-accessing' }
-YamlParser class >> cacheId [
-	^'2023-01-09T16:42:53.101465+01:00'
+YAMLParser class >> cacheId [
+	^'2023-01-11T10:21:21.349942+01:00'
 ]
 
 { #category : #generated }
-YamlParser class >> definitionComment [
-"%unicode;
-
-
-%root YAML;
-%id <INDENT> <DEDENT> ;
-<name>
-	: \w +
+YAMLParser class >> definitionComment [
+"<newline>
+	: \r ? \n
+	| \r
 	;
-<whitespace>
-	: \s *
+<ident_temp>
+	: \w+
 	;
-YAML 
-	: Mapping +
+<cr>	: \r | \n | \r\n ;
+<whitespace> : [ \t]+ | \\<cr>;file
+	: <newline>* document <newline>*
 	;
-Mapping
-	: Key 'key' "":"" Value 'value'
+document
+	: mappinglist
 	;
-Key
-	: <name>
+mappinglist
+	: (<newline>* mapping <newline>?)+
 	;
-Value
-	: <name>
+mapping
+	: key "":"" value?
+	;
+value
+	: <ident_temp>
+	;
+key
+	: <ident_temp>
 	;"
 ]
 
 { #category : #generated }
-YamlParser class >> reduceTable [
+YAMLParser class >> reduceTable [
 ^#(
-	#(8 1 #liftFirstValue: 158721 false) 
-	#(5 1 #liftFirstValue: 93185 false) 
-	#(6 1 #liftFirstValue: 102401 false) 
-	#(6 2 #liftFirstValue: 102402 false) 
-	#(9 1 #liftFirstValue: 176129 false) 
-	#(7 3 #liftFirstValue: 115713 false)
+	#(7 0 #reduceFor: 119809 false) 
+	#(7 2 #reduceFor: 119810 false) 
+	#(8 1 #reduceFor: 154625 false) 
+	#(11 1 #reduceFor: 197633 false) 
+	#(9 1 #reduceFor: 182273 false) 
+	#(14 1 #reduceFor: 289793 false) 
+	#(10 2 #reduceFor: 197633 false) 
+	#(6 3 #reduceFor: 111617 false) 
+	#(11 2 #reduceFor: 197634 false) 
+	#(10 3 #reduceFor: 197634 false) 
+	#(12 2 #reduceFor: 234497 false) 
+	#(13 1 #reduceFor: 264193 false) 
+	#(12 3 #reduceFor: 234498 false)
 	).
 ]
 
 { #category : #generated }
-YamlParser class >> scannerClass [
-	^YamlScanner
+YAMLParser class >> scannerClass [
+	^YAMLScanner
 ]
 
 { #category : #generated }
-YamlParser class >> startingStateForYAML [
+YAMLParser class >> startingStateForfile [
 	^ 1
 ]
 
 { #category : #generated }
-YamlParser class >> symbolNames [
-	^ #('":"' '<name>' '<whitespace>' 'B e g i n' 'YAML' 'Mapping +' 'Mapping' 'Key' 'Value' '<DEDENT>' '<INDENT>' 'E O F' 'error')
+YAMLParser class >> symbolNames [
+	^ #('":"' '<newline>' '<ident_temp>' '<whitespace>' 'B e g i n' 'file' '<newline>*' 'document' 'mappinglist' '(<newline>* mapping <newline>?)' '(<newline>* mapping <newline>?)+' 'mapping' 'value' 'key' 'E O F' 'error')
 ]
 
 { #category : #generated }
-YamlParser class >> symbolTypes [
-	^ #(#SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCErrorNode)
-]
-
-{ #category : #generated }
-YamlParser class >> transitionTable [
+YAMLParser class >> transitionTable [
 ^#(
-#[1 0 25 0 2 0 13 0 5 0 17 0 6 0 17 0 7 0 25 0 8] 
-#[0 0 6 0 1] 
-#[0 0 0 0 12] 
-#[1 0 25 0 2 0 29 0 7 0 25 0 8 0 10 0 12] 
-#[0 0 14 0 2 0 12] 
-#[0 0 33 0 1] 
-#[0 0 18 0 2 0 12] 
-#[0 0 41 0 2 0 9] 
-#[0 0 22 0 2 0 12] 
-#[0 0 26 0 2 0 12]
+#[1 0 6 0 2 0 6 0 3 0 9 0 6 0 13 0 7] 
+#[0 0 0 0 15] 
+#[1 0 17 0 2 0 6 0 3 0 21 0 7 0 25 0 8 0 29 0 9 0 33 0 10 0 37 0 11] 
+#[0 0 10 0 2 0 3 0 15] 
+#[1 0 17 0 2 0 41 0 3 0 45 0 12 0 49 0 14] 
+#[1 0 6 0 2 0 53 0 7 0 6 0 15] 
+#[0 0 14 0 2 0 15] 
+#[0 0 18 0 2 0 3 0 15] 
+#[1 0 6 0 2 0 6 0 3 0 21 0 7 0 57 0 10 0 22 0 15] 
+#[0 0 26 0 1] 
+#[1 0 61 0 2 0 30 0 3 0 30 0 15] 
+#[0 0 65 0 1] 
+#[1 0 17 0 2 0 34 0 15] 
+#[0 0 38 0 2 0 3 0 15] 
+#[0 0 42 0 2 0 3 0 15] 
+#[1 0 46 0 2 0 69 0 3 0 73 0 13 0 46 0 15] 
+#[0 0 50 0 2 0 3 0 15] 
+#[0 0 54 0 2 0 3 0 15]
 	).
 ]

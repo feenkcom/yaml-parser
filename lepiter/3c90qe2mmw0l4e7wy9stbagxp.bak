@@ -8,7 +8,45 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-11T09:47:17.912556+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-11T09:47:37.564321+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "gEVzbFquDQCEMVXKAexrOA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "These are quite extensive, and there is no easy way to select some subset of YAML."
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -18,7 +56,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T09:48:44.237449+01:00"
+						"dateAndTimeString" : "2023-01-11T09:21:13.806479+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +67,54 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T09:48:52.239545+01:00"
+						"dateAndTimeString" : "2023-01-11T09:21:22.8513+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "1uwHsEauDQCrYsGADQXDKw=="
+					"uidString" : "jHFualquDQCEJNCDAexrOA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "[[YAML Parser Overview]] "
+				"string" : "Have a look at the [YAML test suite](https://github.com/yaml/yaml-test-suite) "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-11T09:48:56.414133+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-11T09:49:15.258141+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "UtEZylquDQCEOobFAexrOA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "There is a [Tiny YAML](https://metacpan.org/pod/YAML::Tiny) perlmodule with a spec of a useful subset."
 			},
 			{
 				"__type" : "textSnippet",
@@ -60,7 +135,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-11T09:20:43.556312+01:00"
+									"dateAndTimeString" : "2023-01-11T10:22:11.048341+01:00"
 								}
 							},
 							"editEmail" : {
@@ -71,17 +146,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-11T09:20:50.981065+01:00"
+									"dateAndTimeString" : "2023-01-11T10:22:25.009194+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "PWFCaVquDQCEG4mfAexrOA=="
+								"uidString" : "ruCLRVuuDQCEbHr4AexrOA=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Implement a first mini-YAML]] "
+							"string" : "Started with a tiny parser that can parse "
 						}
 					]
 				},
@@ -93,7 +168,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T09:48:09.919478+01:00"
+						"dateAndTimeString" : "2023-01-11T10:22:06.255235+01:00"
 					}
 				},
 				"editEmail" : {
@@ -104,128 +179,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-11T09:20:28.203386+01:00"
+						"dateAndTimeString" : "2023-01-11T10:22:08.329021+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "J/D9q0auDQCrUF7FDQXDKw=="
+					"uidString" : "na/r01quDQCEQ7kSAexrOA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "[[YAML Parser Tasks]] "
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T09:48:58.436602+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T09:49:03.082472+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "05i0sEauDQCraVYJDQXDKw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "[[SmaCC FAQ]] "
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T09:49:04.885868+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T09:49:10.149441+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "rK1csUauDQCrcBKWDQXDKw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "[[YAML Specs]] "
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T09:48:10.508604+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T09:48:10.508604+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "wSYvrkauDQCrVw6QDQXDKw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
+				"string" : "#Baby steps"
 			}
 		]
 	},
@@ -237,7 +201,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-01-10T09:47:33.696658+01:00"
+			"dateAndTimeString" : "2023-01-11T09:20:53.118872+01:00"
 		}
 	},
 	"editEmail" : {
@@ -248,15 +212,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-01-10T09:47:47.626939+01:00"
+			"dateAndTimeString" : "2023-01-11T09:20:53.118872+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "YAML Parser TOC"
+		"title" : "Implement a first mini-YAML"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "2174fdab-46ae-0d00-ab4f-8ee50d05c32b"
+		"uuid" : "3df36d6a-5aae-0d00-8423-eb1101ec6b38"
 	}
 }

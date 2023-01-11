@@ -1,93 +1,50 @@
 Class {
-	#name : #YamlScanner,
+	#name : #YAMLScanner,
 	#superclass : #SmaCCScanner,
-	#instVars : [
-		'indentStack',
-		'tokenStack'
-	],
 	#category : #'YAMLParser-SmaCC'
 }
 
 { #category : #generated }
-YamlScanner >> DEDENTId [
-	^ 10
+YAMLScanner >> emptySymbolTokenId [
+	^ 15
 ]
 
 { #category : #generated }
-YamlScanner >> INDENTId [
-	^ 11
+YAMLScanner >> errorTokenId [
+	^ 16
 ]
 
 { #category : #generated }
-YamlScanner >> emptySymbolTokenId [
-	^ 12
-]
-
-{ #category : #generated }
-YamlScanner >> errorTokenId [
-	^ 13
-]
-
-{ #category : #accessing }
-YamlScanner >> indent [
-	"Here we should generate the IDENT and DEDENT tokens"
-
-	| string count |
-	self scope: #default.
-	string := outputStream contents.
-	count := 0.
-	string
-		do: [ :each | 
-			each = Character newPage
-				ifTrue: [ count := 0 ].
-			each = Character space
-				ifTrue: [ count := count + 1 ].
-			each = Character tab
-				ifTrue: [ count := (count // 8 + 1) * 8 ] ].
-	count = 0
-		ifTrue: [ ^ super whitespace ].
-	count > self indentStack last
-		ifTrue: [ 
-			self indentStack add: count.
-			matchActions := Array with: self INDENTId.
-			^ self createTokenFor: '' ].
-	[ count < self indentStack last ]
-		whileTrue: [ 
-			matchActions := Array with: self DEDENTId.
-			self tokenStack add: (self createTokenFor: '').
-			self indentStack removeLast ].
-	count = self indentStack last
-		ifFalse: [ ^ self scannerError ].	"A bit crude, but shows an indentation error."
-	^ self next
-]
-
-{ #category : #accessing }
-YamlScanner >> indentStack [
-	^ indentStack ifNil: [ indentStack := OrderedCollection with: 0 ]
-]
-
-{ #category : #accessing }
-YamlScanner >> next [
-	self tokenStack isEmpty
-		ifFalse: [ ^ self tokenStack removeFirst ].
-	^ super next
-]
-
-{ #category : #generated }
-YamlScanner >> scanForToken [
-	self recordMatch: #(3).
+YAMLScanner >> scanForToken [
 	self step.
-	currentCharacter == $: ifTrue: [ ^ self recordAndReportMatch: #(1) ].
-	(currentCharacter isSeparator or: [ currentCharacter == Character pageUp ])
-		ifTrue: [ [ self recordMatch: #(3).
+	currentCharacter == Character lf ifTrue: [ ^ self recordAndReportMatch: #(2) ].
+	currentCharacter == Character cr
+		ifTrue: [ self recordMatch: #(2).
 			self step.
-			currentCharacter isSeparator or: [ currentCharacter == Character pageUp ] ]
+			currentCharacter == Character lf
+				ifTrue: [ ^ self recordAndReportMatch: #(2) ].
+			^ self reportLastMatch ].
+	currentCharacter == $: ifTrue: [ ^ self recordAndReportMatch: #(1) ].
+	currentCharacter == $\
+		ifTrue: [ self step.
+			currentCharacter == Character lf
+				ifTrue: [ ^ self recordAndReportMatch: #(4) ].
+			currentCharacter == Character cr
+				ifTrue: [ self recordMatch: #(4).
+					self step.
+					currentCharacter == Character lf
+						ifTrue: [ ^ self recordAndReportMatch: #(4) ] ].
+			^ self reportLastMatch ].
+	(currentCharacter == Character tab or: [ currentCharacter == Character space ])
+		ifTrue: [ [ self recordMatch: #(4).
+			self step.
+			currentCharacter == Character tab or: [ currentCharacter == Character space ] ]
 				whileTrue.
 			^ self reportLastMatch ].
 	((currentCharacter between: $0 and: $9)
 		or: [ (currentCharacter between: $A and: $Z)
 				or: [ currentCharacter == $_ or: [ currentCharacter between: $a and: $z ] ] ])
-		ifTrue: [ [ self recordMatch: #(2).
+		ifTrue: [ [ self recordMatch: #(3).
 			self step.
 			(currentCharacter between: $0 and: $9)
 				or: [ (currentCharacter between: $A and: $Z)
@@ -97,11 +54,6 @@ YamlScanner >> scanForToken [
 ]
 
 { #category : #generated }
-YamlScanner >> tokenActions [
-	^ #(nil nil #whitespace)
-]
-
-{ #category : #accessing }
-YamlScanner >> tokenStack [
-	^ tokenStack ifNil: [ tokenStack := OrderedCollection new ]
+YAMLScanner >> tokenActions [
+	^ #(nil nil nil #whitespace)
 ]
