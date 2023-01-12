@@ -556,7 +556,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-12T16:39:30.572439+01:00"
+									"dateAndTimeString" : "2023-01-12T16:39:30.963824+01:00"
 								}
 							},
 							"uid" : {
@@ -566,7 +566,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We add a new example to test the AST"
+							"string" : "We add a new example to test the AST."
 						},
 						{
 							"__type" : "exampleSnippet",

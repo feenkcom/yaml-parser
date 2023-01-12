@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T09:48:44.237449+01:00"
+						"dateAndTimeString" : "2023-01-12T16:41:09.627566+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,129 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T09:48:52.239545+01:00"
+						"dateAndTimeString" : "2023-01-12T16:41:21.247545+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "1uwHsEauDQCrYsGADQXDKw=="
+					"uidString" : "X/UBrnSuDQCWghxTDLopQQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "[[YAML Parser Overview]] "
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-11T09:20:43.556312+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-11T09:20:50.981065+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "PWFCaVquDQCEG4mfAexrOA=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "[[Implement a first mini-YAML]] "
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-12T16:41:04.903971+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-12T16:41:06.094839+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "lRFUrnSuDQCWhWxmDLopQQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "[[Adding indentation]] "
-						}
-					]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T09:48:09.919478+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-11T09:20:28.203386+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "J/D9q0auDQCrUF7FDQXDKw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "[[YAML Parser Tasks]] "
+				"string" : "Next we want to handle some indentation in our mini YAML."
 			},
 			{
 				"__type" : "textSnippet",
@@ -167,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T09:48:58.436602+01:00"
+						"dateAndTimeString" : "2023-01-12T16:41:24.398074+01:00"
 					}
 				},
 				"editEmail" : {
@@ -178,17 +66,57 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T09:49:03.082472+01:00"
+						"dateAndTimeString" : "2023-01-12T16:43:04.294451+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "05i0sEauDQCraVYJDQXDKw=="
+					"uidString" : "6CyYr3SuDQCWjILmDLopQQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "[[SmaCC FAQ]] "
+				"string" : "We can parse an indented nested list, but the indentation is ignored for now. It is the same as the simple list."
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-12T16:41:52.991971+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-12T16:41:52.991971+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "GPNmsXSuDQCWn7cVDLopQQ=="
+				},
+				"exampleSelector" : "nestedListParse",
+				"previewHeight" : 200,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "YAMLParserExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : true
 			},
 			{
 				"__type" : "textSnippet",
@@ -204,7 +132,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T09:49:04.885868+01:00"
+						"dateAndTimeString" : "2023-01-12T16:44:21.509142+01:00"
 					}
 				},
 				"editEmail" : {
@@ -215,17 +143,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T09:49:10.149441+01:00"
+						"dateAndTimeString" : "2023-01-12T16:44:30.897213+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "rK1csUauDQCrcBKWDQXDKw=="
+					"uidString" : "BkwRsXSuDQCWkmOjDLopQQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "[[YAML Specs]] "
+				"string" : "We need to add INDENT and DEDENT tokens as is "
 			},
 			{
 				"__type" : "textSnippet",
@@ -241,7 +169,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T09:48:10.508604+01:00"
+						"dateAndTimeString" : "2023-01-12T16:41:47.583151+01:00"
 					}
 				},
 				"editEmail" : {
@@ -252,12 +180,12 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T09:48:10.508604+01:00"
+						"dateAndTimeString" : "2023-01-12T16:41:47.583151+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "wSYvrkauDQCrVw6QDQXDKw=="
+					"uidString" : "jmgUsXSuDQCWmGKWDLopQQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
@@ -274,7 +202,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-01-10T09:47:33.696658+01:00"
+			"dateAndTimeString" : "2023-01-12T16:40:56.010731+01:00"
 		}
 	},
 	"editEmail" : {
@@ -285,15 +213,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-01-10T09:47:47.626939+01:00"
+			"dateAndTimeString" : "2023-01-12T16:40:56.010731+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "YAML Parser TOC"
+		"title" : "Adding indentation"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "2174fdab-46ae-0d00-ab4f-8ee50d05c32b"
+		"uuid" : "937b01ae-74ae-0d00-9681-8b760cba2941"
 	}
 }

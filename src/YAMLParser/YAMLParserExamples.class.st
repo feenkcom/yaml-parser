@@ -47,7 +47,6 @@ YAMLParserExamples >> simpleListAST [
 	<gtExample>
 	| node |
 	node := self simpleListParse.
-
 	self assert: node document mappings size equals: 2.
 	self assert: node document mappings first key ident value equals: 'foo'.
 	self assert: node document mappings first value ident value equals: 'bar'.
