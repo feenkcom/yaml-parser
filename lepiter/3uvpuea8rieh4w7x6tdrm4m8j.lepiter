@@ -110,7 +110,7 @@
 					"__type" : "uid",
 					"uidString" : "GPNmsXSuDQCWn7cVDLopQQ=="
 				},
-				"exampleSelector" : "nestedListParse",
+				"exampleSelector" : "nestedMappingListParse",
 				"previewHeight" : 200,
 				"previewShowSelector" : "gtViewsFor:",
 				"exampleBehaviorName" : "YAMLParserExamples",
