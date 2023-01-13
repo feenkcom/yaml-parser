@@ -15,7 +15,8 @@ YAMLParserExamples >> nestedMappingList [
 
 { #category : #example }
 YAMLParserExamples >> nestedMappingListParse [
-"We need to test that the sublist is actually nested."
+	"We need to test that the sublist is actually nested."
+
 	<gtExample>
 	| node |
 	node := self parse: self nestedMappingList.

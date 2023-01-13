@@ -559,6 +559,43 @@
 								"__type" : "textStyle"
 							},
 							"string" : "It is used in the {{gtClass:name=PythonParser}} `indent` token rule, presumably to trigger the indentation rule only when a line starts, but I cannot find it in the SmaCC booklet documentation. Where is it described? Are there other such annotations for scanner (or parser) rules?"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-13T15:14:29.338352+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-13T15:15:07.585056+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "oquXloeuDQCtWecCANblDg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "[[JB]]: It is a scope. I don’t think there is anything in the booklet about scopes. I did give a small example of them on discord last month. Someone added a github issue to add it to the gt book [](https://github.com/feenkcom/gtoolkit/issues/2964). In this case since lineBegin wasn’t explicitly mentioned in a %scopes, it is defaulted to be an %excludes scope."
 						}
 					]
 				},
@@ -581,7 +618,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T11:39:40.611903+01:00"
+						"dateAndTimeString" : "2023-01-13T15:15:15.224523+01:00"
 					}
 				},
 				"uid" : {
@@ -591,7 +628,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Q What exactly does lineBegin do?"
+				"string" : "#What exactly does lineBegin do?"
 			}
 		]
 	},

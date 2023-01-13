@@ -3,6 +3,7 @@ Class {
 	#superclass : #YAMLRootNode,
 	#instVars : [
 		'key',
+		'mappinglist',
 		'value'
 	],
 	#category : #'YAMLParser-SmaCC'
@@ -26,8 +27,20 @@ YAMLMappingNode >> key: aYAMLIdentNode [
 ]
 
 { #category : #generated }
+YAMLMappingNode >> mappinglist [
+	^ mappinglist
+]
+
+{ #category : #generated }
+YAMLMappingNode >> mappinglist: aYAMLMappinglistNode [
+	self mappinglist notNil ifTrue: [ self mappinglist parent: nil ].
+	mappinglist := aYAMLMappinglistNode.
+	self mappinglist notNil ifTrue: [ self mappinglist parent: self ]
+]
+
+{ #category : #generated }
 YAMLMappingNode >> nodeVariables [
-	^ #(#key #value)
+	^ #(#key #mappinglist #value)
 ]
 
 { #category : #generated }
