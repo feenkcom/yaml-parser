@@ -16,6 +16,11 @@ TYAMLRootNodeVisitor >> visitIdent: anIdent [
 ]
 
 { #category : #generated }
+TYAMLRootNodeVisitor >> visitListItem: aListItem [
+	^ self visitRoot: aListItem
+]
+
+{ #category : #generated }
 TYAMLRootNodeVisitor >> visitMapping: aMapping [
 	^ self visitRoot: aMapping
 ]
@@ -23,6 +28,11 @@ TYAMLRootNodeVisitor >> visitMapping: aMapping [
 { #category : #generated }
 TYAMLRootNodeVisitor >> visitRoot: aRoot [
 	^ self visitSmaCCParseNode: aRoot
+]
+
+{ #category : #generated }
+TYAMLRootNodeVisitor >> visitlistItems: alistItems [
+	^ self visitRoot: alistItems
 ]
 
 { #category : #generated }

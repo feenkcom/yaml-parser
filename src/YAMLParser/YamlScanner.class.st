@@ -10,12 +10,12 @@ Class {
 
 { #category : #generated }
 YAMLScanner >> DEDENTId [
-	^ 18
+	^ 23
 ]
 
 { #category : #generated }
 YAMLScanner >> INDENTId [
-	^ 19
+	^ 24
 ]
 
 { #category : #private }
@@ -29,17 +29,17 @@ YAMLScanner >> NEWLINE [
 
 { #category : #generated }
 YAMLScanner >> NEWLINEId [
-	^ 2
+	^ 3
 ]
 
 { #category : #generated }
 YAMLScanner >> emptySymbolTokenId [
-	^ 20
+	^ 25
 ]
 
 { #category : #generated }
 YAMLScanner >> errorTokenId [
-	^ 21
+	^ 26
 ]
 
 { #category : #private }
@@ -94,44 +94,12 @@ YAMLScanner >> noindent [
 { #category : #generated }
 YAMLScanner >> scanForToken [
 	scope == #lineBegin ifTrue: [ ^ self scanForTokenX2 ].
-	scope == #default
-		ifTrue: [ self step.
-			currentCharacter == Character lf
-				ifTrue: [ ^ self recordAndReportMatch: #(2) ].
-			currentCharacter == Character cr
-				ifTrue: [ self recordMatch: #(2).
-					self step.
-					currentCharacter == Character lf
-						ifTrue: [ ^ self recordAndReportMatch: #(2) ].
-					^ self reportLastMatch ].
-			currentCharacter == $: ifTrue: [ ^ self recordAndReportMatch: #(1) ].
-			currentCharacter == $\
-				ifTrue: [ self step.
-					currentCharacter == Character lf
-						ifTrue: [ ^ self recordAndReportMatch: #(4) ].
-					currentCharacter == Character cr
-						ifTrue: [ self recordMatch: #(4).
-							self step.
-							currentCharacter == Character lf
-								ifTrue: [ ^ self recordAndReportMatch: #(4) ] ].
-					^ self reportLastMatch ].
-			(currentCharacter == Character tab
-				or: [ currentCharacter == Character space ])
-				ifTrue: [ [ self recordMatch: #(4).
-					self step.
-					currentCharacter == Character tab
-						or: [ currentCharacter == Character space ] ] whileTrue.
-					^ self reportLastMatch ].
-			((currentCharacter between: $0 and: $9)
-				or: [ (currentCharacter between: $A and: $Z)
-						or: [ currentCharacter == $_ or: [ currentCharacter between: $a and: $z ] ] ])
-				ifTrue: [ self scanForTokenX1 ] ].
-	^ self reportLastMatch
+	^ self scanForTokenX6
 ]
 
 { #category : #generated }
 YAMLScanner >> scanForTokenX1 [
-	[ self recordMatch: #(3).
+	[ self recordMatch: #(4).
 	self step.
 	(currentCharacter between: $0 and: $9)
 		or: [ (currentCharacter between: $A and: $Z)
@@ -144,12 +112,61 @@ YAMLScanner >> scanForTokenX2 [
 	self step.
 	(currentCharacter == Character newPage
 		or: [ currentCharacter == Character space ])
-		ifTrue: [ [ self recordMatch: #(5).
+		ifTrue: [ [ self recordMatch: #(6).
 			self step.
 			currentCharacter == Character newPage
 				or: [ currentCharacter == Character space ] ] whileTrue.
 			^ self reportLastMatch ].
-	^ self recordAndReportMatch: #(6)
+	^ self recordAndReportMatch: #(7)
+]
+
+{ #category : #generated }
+YAMLScanner >> scanForTokenX3 [
+	[ self recordMatch: #(5).
+	self step.
+	currentCharacter == Character tab or: [ currentCharacter == Character space ] ]
+		whileTrue.
+	^ self reportLastMatch
+]
+
+{ #category : #generated }
+YAMLScanner >> scanForTokenX4 [
+	self step.
+	currentCharacter == Character lf ifTrue: [ ^ self recordAndReportMatch: #(5) ].
+	currentCharacter == Character cr
+		ifTrue: [ self recordMatch: #(5).
+			self step.
+			currentCharacter == Character lf
+				ifTrue: [ ^ self recordAndReportMatch: #(5) ] ].
+	^ self reportLastMatch
+]
+
+{ #category : #generated }
+YAMLScanner >> scanForTokenX5 [
+	self recordMatch: #(3).
+	self step.
+	currentCharacter == Character lf ifTrue: [ ^ self recordAndReportMatch: #(3) ].
+	^ self reportLastMatch
+]
+
+{ #category : #generated }
+YAMLScanner >> scanForTokenX6 [
+	scope == #default
+		ifTrue: [ self step.
+			currentCharacter == Character lf
+				ifTrue: [ ^ self recordAndReportMatch: #(3) ].
+			currentCharacter == Character cr ifTrue: [ ^ self scanForTokenX5 ].
+			currentCharacter == $- ifTrue: [ ^ self recordAndReportMatch: #(1) ].
+			currentCharacter == $: ifTrue: [ ^ self recordAndReportMatch: #(2) ].
+			currentCharacter == $\ ifTrue: [ ^ self scanForTokenX4 ].
+			(currentCharacter == Character tab
+				or: [ currentCharacter == Character space ])
+				ifTrue: [ ^ self scanForTokenX3 ].
+			((currentCharacter between: $0 and: $9)
+				or: [ (currentCharacter between: $A and: $Z)
+						or: [ currentCharacter == $_ or: [ currentCharacter between: $a and: $z ] ] ])
+				ifTrue: [ self scanForTokenX1 ] ].
+	^ self reportLastMatch
 ]
 
 { #category : #private }
@@ -167,7 +184,7 @@ YAMLScanner >> scannerError [
 
 { #category : #generated }
 YAMLScanner >> tokenActions [
-	^ #(nil #NEWLINE nil #whitespace #indent #noindent)
+	^ #(nil nil #NEWLINE nil #whitespace #indent #noindent)
 ]
 
 { #category : #acccessing }
