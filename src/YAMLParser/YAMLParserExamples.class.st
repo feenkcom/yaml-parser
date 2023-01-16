@@ -14,6 +14,26 @@ YAMLParserExamples >> nestedMappingList [
 ]
 
 { #category : #example }
+YAMLParserExamples >> nestedMappingListAST [
+	"We need to test that the sublist is actually nested."
+
+	<gtExample>
+	| node |
+	node := self nestedMappingListParse.
+
+	self assert: node document mappings size equals: 1.
+	self assert: node document mappings first key ident value equals: 'foo'.
+	self
+		assert: node document mappings first mappinglist mappings first key ident value
+		equals: 'foobar'.
+	self
+		assert: node document mappings first mappinglist mappings first value ident value
+		equals: 'baz'.
+
+	^ node
+]
+
+{ #category : #example }
 YAMLParserExamples >> nestedMappingListParse [
 	"We need to test that the sublist is actually nested."
 

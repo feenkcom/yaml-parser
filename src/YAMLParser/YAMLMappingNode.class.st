@@ -32,9 +32,9 @@ YAMLMappingNode >> mappinglist [
 ]
 
 { #category : #generated }
-YAMLMappingNode >> mappinglist: aYAMLMappinglistNode [
+YAMLMappingNode >> mappinglist: aYAMLmappingsNode [
 	self mappinglist notNil ifTrue: [ self mappinglist parent: nil ].
-	mappinglist := aYAMLMappinglistNode.
+	mappinglist := aYAMLmappingsNode.
 	self mappinglist notNil ifTrue: [ self mappinglist parent: self ]
 ]
 

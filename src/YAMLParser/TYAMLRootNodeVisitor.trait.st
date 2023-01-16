@@ -21,11 +21,11 @@ TYAMLRootNodeVisitor >> visitMapping: aMapping [
 ]
 
 { #category : #generated }
-TYAMLRootNodeVisitor >> visitMappinglist: aMappinglist [
-	^ self visitRoot: aMappinglist
+TYAMLRootNodeVisitor >> visitRoot: aRoot [
+	^ self visitSmaCCParseNode: aRoot
 ]
 
 { #category : #generated }
-TYAMLRootNodeVisitor >> visitRoot: aRoot [
-	^ self visitSmaCCParseNode: aRoot
+TYAMLRootNodeVisitor >> visitmappings: amappings [
+	^ self visitRoot: amappings
 ]

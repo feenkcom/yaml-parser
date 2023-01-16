@@ -6,7 +6,7 @@ Class {
 
 { #category : #'generated-accessing' }
 YAMLParser class >> cacheId [
-	^'2023-01-13T15:46:01.09203+01:00'
+	^'2023-01-16T16:31:52.09745+01:00'
 ]
 
 { #category : #generated }
@@ -14,29 +14,31 @@ YAMLParser class >> definitionComment [
 "%root Root;
 %prefix YAML;
 %suffix Node;
-%id <INDENT> <DEDENT> ;<newline>
-	: \r ? \n
-	| \r
+%id <INDENT> <DEDENT>  <NEWLINE>;
+<NEWLINE>
+	: <cr>
 	;
 <ident_temp>
 	: \w+
 	;
-<cr>	: \r | \n | \r\n ;
+<cr> : \r | \n | \r\n ;
 <whitespace> : [ \t]+ | \\<cr>;
-lineBegin <ident>
+lineBegin <indent>
 # The indent method will generate the right number of INDENT or DEDENT tokens
 	: [ \f]+
-	;file
-	: <newline>* document 'document' <newline>* {{}}
+	;
+lineBegin <noindent>  : [^ \f] ;
+file
+	: <NEWLINE>* document 'document' <NEWLINE>* {{}}
 	;
 document
 	: mappinglist
 	;
 mappinglist
-	: (<newline>* mapping 'mapping' <newline>?)+ {{}}
+	: (<NEWLINE>* mapping 'mapping' <NEWLINE>?)+ {{mappings}}
 	;
 mapping
-	: key 'key' "":"" <newline>+ <INDENT> mappinglist 'mappinglist' <DEDENT> {{}}
+	: key 'key' "":"" <NEWLINE>+ <INDENT> mappinglist 'mappinglist' <DEDENT> {{}}
 	| key 'key' "":"" value 'value'? {{}}
 	;
 value
@@ -50,22 +52,22 @@ key
 { #category : #generated }
 YAMLParser class >> reduceTable [
 ^#(
-	#(7 0 #nil 295937 false) 
-	#(7 2 #liftFirstValue: 295938 false) 
-	#(8 1 #liftFirstValue: 347137 false) 
-	#(11 1 #reduceActionFor__newline___mapping__mapping___newline____1: 390145 false) 
-	#(9 1 #reduceActionFormappinglist1: 374785 false) 
-	#(15 1 #reduceActionForkey1: 614401 false) 
-	#(10 2 #liftSecondValue: 390145 false) 
-	#(6 3 #reduceActionForfile1: 287745 false) 
-	#(11 2 #reduceActionFor__newline___mapping__mapping___newline____2: 390146 false) 
-	#(10 3 #liftSecondValue: 390146 false) 
-	#(12 2 #reduceActionFormapping2: 442370 false) 
-	#(13 1 #liftFirstValue: 467969 false) 
-	#(14 1 #reduceActionForkey1: 570369 false) 
-	#(12 3 #reduceActionFormapping3: 442371 false) 
-	#(13 2 #liftFirstValue: 467970 false) 
-	#(12 6 #reduceActionFormapping1: 442369 false)
+	#(9 0 #nil 333825 false) 
+	#(9 2 #liftFirstValue: 333826 false) 
+	#(10 1 #liftFirstValue: 385025 false) 
+	#(13 1 #reduceActionFor__NEWLINE___mapping__mapping___NEWLINE____1: 428033 false) 
+	#(11 1 #reduceActionFormappinglist1: 412673 false) 
+	#(17 1 #reduceActionForkey1: 660481 false) 
+	#(12 2 #liftSecondValue: 428033 false) 
+	#(8 3 #reduceActionForfile1: 325633 false) 
+	#(13 2 #reduceActionFor__NEWLINE___mapping__mapping___NEWLINE____2: 428034 false) 
+	#(12 3 #liftSecondValue: 428034 false) 
+	#(14 2 #reduceActionFormapping2: 488450 false) 
+	#(15 1 #liftFirstValue: 514049 false) 
+	#(16 1 #reduceActionForkey1: 616449 false) 
+	#(14 3 #reduceActionFormapping3: 488451 false) 
+	#(15 2 #liftFirstValue: 514050 false) 
+	#(14 6 #reduceActionFormapping1: 488449 false)
 	).
 ]
 
@@ -81,46 +83,46 @@ YAMLParser class >> startingStateForfile [
 
 { #category : #generated }
 YAMLParser class >> symbolNames [
-	^ #('":"' '<newline>' '<ident_temp>' '<whitespace>' 'B e g i n' 'file' '<newline>*' 'document' 'mappinglist' '(<newline>* mapping ''mapping'' <newline>?)' '(<newline>* mapping ''mapping'' <newline>?)+' 'mapping' '<newline>+' 'value' 'key' '<DEDENT>' '<INDENT>' 'E O F' 'error')
+	^ #('":"' '<NEWLINE>' '<ident_temp>' '<whitespace>' '<indent>' '<noindent>' 'B e g i n' 'file' '<NEWLINE>*' 'document' 'mappinglist' '(<NEWLINE>* mapping ''mapping'' <NEWLINE>?)' '(<NEWLINE>* mapping ''mapping'' <NEWLINE>?)+' 'mapping' '<NEWLINE>+' 'value' 'key' '<DEDENT>' '<INDENT>' 'E O F' 'error')
 ]
 
 { #category : #generated }
 YAMLParser class >> symbolTypes [
-	^ #(#SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #YAMLFileNode #YAMLFileNode nil #YAMLMappinglistNode #YAMLMappinglistNode #YAMLMappingNode #OrderedCollection #YAMLMappingNode #SmaCCToken #YAMLIdentNode #YAMLIdentNode #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCErrorNode)
+	^ #(#SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #YAMLFileNode #YAMLFileNode nil #YAMLmappingsNode #YAMLmappingsNode #YAMLMappingNode #OrderedCollection #YAMLMappingNode #SmaCCToken #YAMLIdentNode #YAMLIdentNode #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCErrorNode)
 ]
 
 { #category : #generated }
 YAMLParser class >> transitionTable [
 ^#(
-#[1 0 6 0 2 0 6 0 3 0 9 0 6 0 13 0 7] 
-#[0 0 0 0 18] 
-#[1 0 17 0 2 0 6 0 3 0 21 0 7 0 25 0 8 0 25 0 9 0 33 0 10 0 37 0 11] 
-#[0 0 10 0 2 0 3 0 18] 
-#[1 0 17 0 2 0 41 0 3 0 45 0 12 0 49 0 15] 
-#[1 0 6 0 2 0 53 0 7 0 6 0 18] 
-#[0 0 14 0 2 0 18] 
-#[0 0 18 0 2 0 3 0 16 0 18] 
-#[1 0 6 0 2 0 6 0 3 0 21 0 7 0 57 0 10 0 22 0 16 0 22 0 18] 
+#[1 0 6 0 2 0 6 0 3 0 9 0 8 0 13 0 9] 
+#[0 0 0 0 20] 
+#[1 0 17 0 2 0 6 0 3 0 21 0 9 0 25 0 10 0 25 0 11 0 33 0 12 0 37 0 13] 
+#[0 0 10 0 2 0 3 0 20] 
+#[1 0 17 0 2 0 41 0 3 0 45 0 14 0 49 0 17] 
+#[1 0 6 0 2 0 53 0 9 0 6 0 20] 
+#[0 0 14 0 2 0 20] 
+#[0 0 18 0 2 0 3 0 18 0 20] 
+#[1 0 6 0 2 0 6 0 3 0 21 0 9 0 57 0 12 0 22 0 18 0 22 0 20] 
 #[0 0 26 0 1] 
-#[1 0 61 0 2 0 30 0 3 0 30 0 16 0 30 0 18] 
+#[1 0 61 0 2 0 30 0 3 0 30 0 18 0 30 0 20] 
 #[0 0 65 0 1] 
-#[1 0 17 0 2 0 34 0 18] 
-#[0 0 38 0 2 0 3 0 16 0 18] 
-#[0 0 42 0 2 0 3 0 16 0 18] 
-#[1 0 77 0 2 0 73 0 3 0 77 0 13 0 81 0 14 0 46 0 16 0 46 0 18] 
-#[0 0 50 0 2 0 17] 
-#[0 0 54 0 2 0 3 0 16 0 18] 
-#[1 0 85 0 2 0 89 0 17] 
-#[0 0 58 0 2 0 3 0 16 0 18] 
-#[0 0 62 0 2 0 17] 
-#[1 0 6 0 2 0 6 0 3 0 21 0 7 0 93 0 9 0 33 0 10 0 37 0 11] 
-#[0 0 97 0 16] 
-#[0 0 66 0 2 0 3 0 16 0 18]
+#[1 0 17 0 2 0 34 0 20] 
+#[0 0 38 0 2 0 3 0 18 0 20] 
+#[0 0 42 0 2 0 3 0 18 0 20] 
+#[1 0 77 0 2 0 73 0 3 0 77 0 15 0 81 0 16 0 46 0 18 0 46 0 20] 
+#[0 0 50 0 2 0 19] 
+#[0 0 54 0 2 0 3 0 18 0 20] 
+#[1 0 85 0 2 0 89 0 19] 
+#[0 0 58 0 2 0 3 0 18 0 20] 
+#[0 0 62 0 2 0 19] 
+#[1 0 6 0 2 0 6 0 3 0 21 0 9 0 93 0 11 0 33 0 12 0 37 0 13] 
+#[0 0 97 0 18] 
+#[0 0 66 0 2 0 3 0 18 0 20]
 	).
 ]
 
 { #category : #'generated-reduction actions' }
-YAMLParser >> reduceActionFor__newline___mapping__mapping___newline____1: nodes [
+YAMLParser >> reduceActionFor__NEWLINE___mapping__mapping___NEWLINE____1: nodes [
 	| result |
 	result := OrderedCollection new: 2.
 	self add: (nodes at: 1) to: result.
@@ -128,7 +130,7 @@ YAMLParser >> reduceActionFor__newline___mapping__mapping___newline____1: nodes 
 ]
 
 { #category : #'generated-reduction actions' }
-YAMLParser >> reduceActionFor__newline___mapping__mapping___newline____2: nodes [
+YAMLParser >> reduceActionFor__NEWLINE___mapping__mapping___NEWLINE____2: nodes [
 	| result |
 	result := nodes at: 1.
 	self add: (nodes at: 2) to: result.
@@ -180,7 +182,7 @@ YAMLParser >> reduceActionFormapping3: nodes [
 { #category : #'generated-reduction actions' }
 YAMLParser >> reduceActionFormappinglist1: nodes [
 	| result |
-	result := YAMLMappinglistNode new.
+	result := YAMLmappingsNode new.
 	result addNodes: (nodes at: 1) to: result mappings.
 	^ result
 ]

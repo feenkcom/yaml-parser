@@ -18,9 +18,9 @@ YAMLFileNode >> document [
 ]
 
 { #category : #generated }
-YAMLFileNode >> document: aYAMLMappinglistNode [
+YAMLFileNode >> document: aYAMLmappingsNode [
 	self document notNil ifTrue: [ self document parent: nil ].
-	document := aYAMLMappinglistNode.
+	document := aYAMLmappingsNode.
 	self document notNil ifTrue: [ self document parent: self ]
 ]
 
