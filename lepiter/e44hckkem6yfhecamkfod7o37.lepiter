@@ -1,0 +1,181 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-19T10:27:00.482639+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-19T10:28:41.936481+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "mWCfP/yuDQCtJq2cBHtp7g=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Here is a simple PetitParser that will parse text with two-space indentations (as in YAML) and produce an {{gtClass:name=OrderedDictionary}} where the keys are the lines and the values the subtrees represented as OrderedDictionaries."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-19T10:30:53.460835+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-19T10:31:15.14765+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "UMR1U/yuDQCwN7lTBHtp7g=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Todo: turn this into a class, and subclass it to recognize actual YAML constructs."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-19T10:25:59.070811+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-19T10:26:49.866572+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "5wn5QfyuDQCtNKqkBHtp7g=="
+				},
+				"code" : "indentLevel := 0.\rroot := OrderedDictionary new.\rdictionaryStack := {root} asOrderedCollection.\rcurrentIndentation := 0.\r\rnewline := #newline asPParser ==> [ :node | indentLevel := 0 ].\rindent := '  ' asPParser ==> [ :node | indentLevel := indentLevel + 1 ].\rline := (indent star , indent not , #newline asPParser negate plus flatten)\r\t\t==> [ :node | \r\t\t\tindentLevel - currentIndentation > 1\r\t\t\t\tifTrue: [ self error: 'Too much indentation!' ].\r\t\t\tindentLevel = (currentIndentation + 1)\r\t\t\t\tifTrue: [ currentIndentation := indentLevel.\r\t\t\t\t\tself\r\t\t\t\t\t\tassert: [ dictionaryStack last notEmpty ]\r\t\t\t\t\t\tdescription: 'Nothing to indent from.'.\r\t\t\t\t\tdictionaryStack\r\t\t\t\t\t\taddLast: (dictionaryStack last at: dictionaryStack last keys last) ].\r\t\t\t[ indentLevel < currentIndentation ]\r\t\t\t\twhileTrue: [ currentIndentation := currentIndentation - 1.\r\t\t\t\t\tdictionaryStack removeLast ].\r\t\t\tdictionaryStack last value at: node third put: OrderedDictionary new.\r\t\t\tnode third ].\rlinenl := (line , newline) ==> #first.\ryaml := (linenl / line) star ==> [ :node | root ]."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-19T10:26:14.077539+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-19T10:26:14.596305+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "qAbeQvyuDQCtOf/eBHtp7g=="
+				},
+				"code" : "eg1 := 'foo\r  bar\r    baz\r  foobar\rfoo2\rbar2'.\rindentLevel := 0.\rroot := OrderedDictionary new.\rdictionaryStack := {root} asOrderedCollection.\rcurrentIndentation := 0.\ryaml end parse: eg1"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2023-01-19T10:25:19.611689+01:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2023-01-19T10:25:19.611689+01:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "PetitParser experiments"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "b3f29e3f-fcae-0d00-ad25-a75c047b69ee"
+	}
+}
