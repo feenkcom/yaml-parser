@@ -145,6 +145,40 @@
 					"uidString" : "qAbeQvyuDQCtOf/eBHtp7g=="
 				},
 				"code" : "eg1 := 'foo\r  bar\r    baz\r  foobar\rfoo2\rbar2'.\rindentLevel := 0.\rroot := OrderedDictionary new.\rdictionaryStack := {root} asOrderedCollection.\rcurrentIndentation := 0.\ryaml end parse: eg1"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-19T17:30:25.47161+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-19T17:31:22.903744+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "8HrjLwKvDQCyThH0BA+jVw=="
+				},
+				"code" : "yamlFile := 'gtoolkit.yaml' asFileReference .\rindentLevel := 0.\rroot := OrderedDictionary new.\rdictionaryStack := {root} asOrderedCollection.\rcurrentIndentation := 0.\ryaml end parse: yamlFile contents "
 			}
 		]
 	},

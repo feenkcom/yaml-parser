@@ -411,7 +411,7 @@
 								"__type" : "uid",
 								"uidString" : "toILy22uDQCsgHTRAdSC0A=="
 							},
-							"exampleSelector" : "simpleListParse",
+							"exampleSelector" : "simpleMappingListParse",
 							"previewHeight" : 200,
 							"previewShowSelector" : "gtViewsFor:",
 							"exampleBehaviorName" : "YAMLParserExamples",
@@ -600,7 +600,7 @@
 								"__type" : "uid",
 								"uidString" : "zlwbp3SuDQCVEldjDLopQQ=="
 							},
-							"exampleSelector" : "simpleListAST",
+							"exampleSelector" : "simpleMappingListAST",
 							"previewHeight" : 200,
 							"previewShowSelector" : "gtViewsFor:",
 							"exampleBehaviorName" : "YAMLParserExamples",
