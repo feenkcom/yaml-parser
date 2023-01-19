@@ -4,22 +4,13 @@ Class {
 	#category : #'YAMLParser-Examples'
 }
 
-{ #category : #'code examples' }
-YAMLParserExamples >> nestedMappingList [
-	"NB: two spaces correspond to an indentation. Tabs are not allowed."
-
-	<gtExample>
-	^ 'foo :
-  foobar : baz'
-]
-
 { #category : #example }
 YAMLParserExamples >> nestedMappingListAST [
 	"We need to test that the sublist is actually nested."
 
 	<gtExample>
 	| node |
-	node := self nestedMappingListParse.
+	node := self parse: self nestedMappingListCode.
 
 	self assert: node document mappings size equals: 1.
 	self assert: node document mappings first key ident value equals: 'foo'.
@@ -33,14 +24,13 @@ YAMLParserExamples >> nestedMappingListAST [
 	^ node
 ]
 
-{ #category : #example }
-YAMLParserExamples >> nestedMappingListParse [
-	"We need to test that the sublist is actually nested."
+{ #category : #'code examples' }
+YAMLParserExamples >> nestedMappingListCode [
+	"NB: two spaces correspond to an indentation. Tabs are not allowed."
 
 	<gtExample>
-	| node |
-	node := self parse: self nestedMappingList.
-	^ node
+	^ 'foo :
+  foobar : baz'
 ]
 
 { #category : #'examples-support' }
@@ -57,17 +47,10 @@ YAMLParserExamples >> parser [
 ]
 
 { #category : #'code examples' }
-YAMLParserExamples >> simpleList [
-	<gtExample>
-	^ '- foo
-- bar'
-]
-
-{ #category : #'code examples' }
 YAMLParserExamples >> simpleListAST [
 	<gtExample>
 	| node |
-	node := self simpleListParse.
+	node := self parse: self simpleListCode.
 	self assert: node document listItems size equals: 2.
 	self assert: node document listItems first value ident value equals: 'foo'.
 	self assert: node document listItems second value ident value equals: 'bar'.
@@ -75,52 +58,43 @@ YAMLParserExamples >> simpleListAST [
 ]
 
 { #category : #'code examples' }
-YAMLParserExamples >> simpleListParse [
+YAMLParserExamples >> simpleListCode [
 	<gtExample>
-	| node |
-	node := self parse: self simpleList.
-	^ node
-]
-
-{ #category : #'code examples' }
-YAMLParserExamples >> simpleMappingList [
-	<gtExample>
-	^ 'foo : bar
-foobar : baz'
+	^ '- foo
+- bar'
 ]
 
 { #category : #example }
 YAMLParserExamples >> simpleMappingListAST [
 	<gtExample>
 	| node |
-	node := self simpleMappingListParse.
+	node := self parse: self simpleMappingListCode.
 	self assert: node document mappings size equals: 2.
 	self assert: node document mappings first key ident value equals: 'foo'.
 	self assert: node document mappings first value ident value equals: 'bar'.
 	^ node
 ]
 
-{ #category : #example }
-YAMLParserExamples >> simpleMappingListParse [
+{ #category : #'code examples' }
+YAMLParserExamples >> simpleMappingListCode [
+	<gtExample>
+	^ 'foo : bar
+foobar : baz'
+]
+
+{ #category : #'code examples' }
+YAMLParserExamples >> simpleNestedListAST [
 	<gtExample>
 	| node |
-	node := self parse: self simpleMappingList.
+	node := self parse: self simpleNestedListCode.
 	^ node
 ]
 
 { #category : #'code examples' }
-YAMLParserExamples >> simpleNestedList [
+YAMLParserExamples >> simpleNestedListCode [
 	<gtExample>
 	^ '-
   - foo
   - bar
 - bar'
-]
-
-{ #category : #'code examples' }
-YAMLParserExamples >> simpleNestedListParse [
-	<gtExample>
-	| node |
-	node := self parse: self simpleNestedList.
-	^ node
 ]
