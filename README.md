@@ -10,3 +10,5 @@ Metacello new
 ```
 BaselineOfYAMLParser loadLepiter.
 ```
+
+Please consult the lepiter database for an overview of the project.
