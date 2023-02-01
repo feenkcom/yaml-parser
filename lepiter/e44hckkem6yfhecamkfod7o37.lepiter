@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-01T10:15:29.319715+01:00"
+						"dateAndTimeString" : "2023-02-01T11:35:07.085521+01:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "{{gtTodo:label=Turn this into a class, and subclass it to recognize actual YAML constructs.}}"
+				"string" : "{{gtTodo:label=Turn this into a class, and subclass it to recognize actual YAML constructs.|completed=2023-02-01}}"
 			},
 			{
 				"__type" : "pharoSnippet",
