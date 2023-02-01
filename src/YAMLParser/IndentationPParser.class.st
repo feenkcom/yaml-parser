@@ -12,6 +12,23 @@ Class {
 	#category : #'YAMLParser-PParser'
 }
 
+{ #category : #indentation }
+IndentationPParser >> checkIndentationFor: node [
+	self indentLevel - self currentIndentation > 1
+		ifTrue: [ self error: 'Too much indentation!' ].
+	self indentLevel = (self currentIndentation + 1)
+		ifTrue: [ self currentIndentation: self indentLevel.
+			self
+				assert: [ self dictionaryStack last notEmpty ]
+				description: 'Nothing to indent from.'.
+			self dictionaryStack
+				addLast: (self dictionaryStack last at: self dictionaryStack last keys last) ].
+	[ self indentLevel < self currentIndentation ]
+		whileTrue: [ self currentIndentation: self currentIndentation - 1.
+			self dictionaryStack removeLast ].
+	self dictionaryStack last value at: node third put: OrderedDictionary new
+]
+
 { #category : #accessing }
 IndentationPParser >> currentIndentation [
 	^ self propertyAt: #currentIndentation
@@ -60,19 +77,7 @@ IndentationPParser >> initialize [
 IndentationPParser >> line [
 	^ (indent star , indent not , #newline asPParser negate plus flatten)
 		==> [ :node | 
-			self indentLevel - self currentIndentation > 1
-				ifTrue: [ self error: 'Too much indentation!' ].
-			self indentLevel = (self currentIndentation + 1)
-				ifTrue: [ self currentIndentation: self indentLevel.
-					self
-						assert: [ self dictionaryStack last notEmpty ]
-						description: 'Nothing to indent from.'.
-					self dictionaryStack
-						addLast: (self dictionaryStack last at: self dictionaryStack last keys last) ].
-			[ self indentLevel < self currentIndentation ]
-				whileTrue: [ self currentIndentation: self currentIndentation - 1.
-					self dictionaryStack removeLast ].
-			self dictionaryStack last value at: node third put: OrderedDictionary new.
+			self checkIndentationFor: node.
 			node third ]
 ]
 
