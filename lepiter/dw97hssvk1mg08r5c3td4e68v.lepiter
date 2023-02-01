@@ -447,6 +447,43 @@
 											"__type" : "textStyle"
 										},
 										"string" : "Introduce accessors for any state variables and delegate to the `properties` accessors {{gtMethod:name=PP2Node>>propertyAt:}}  and  {{gtMethod:name=PP2Node>>propertyAt:put:}} "
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-02-01T14:54:18.140044+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-02-01T14:55:07.77948+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "SydyhQWwDQCpAMgLD8Gb3w=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "Alternatively there is the possibility to specify ignored slots on the class side."
 									}
 								]
 							},
