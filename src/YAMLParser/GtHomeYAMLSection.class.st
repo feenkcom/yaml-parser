@@ -22,7 +22,7 @@ GtHomeYAMLSection >> create [
 				action: [ :card | 
 					| database startPage |
 					database := LeDatabasesRegistry default currentLoadedDefaultLogicalDatabase
-							databaseNamed: 'feenkcom/yaml-parser/lepiter'.
+							databaseNamed: 'YAML Parser Notebook'.
 					startPage := database pageNamed: 'YAML Parser Overview'.
 					GtWorldUtility
 						showSpaceWithTitle: startPage title
