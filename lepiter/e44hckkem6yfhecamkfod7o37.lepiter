@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-19T10:30:53.460835+01:00"
+						"dateAndTimeString" : "2023-02-01T10:15:21.271725+01:00"
 					}
 				},
 				"editEmail" : {
@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-19T10:31:15.14765+01:00"
+						"dateAndTimeString" : "2023-02-01T10:15:29.319715+01:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Todo: turn this into a class, and subclass it to recognize actual YAML constructs."
+				"string" : "{{gtTodo:label=Turn this into a class, and subclass it to recognize actual YAML constructs.}}"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -201,12 +201,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-01-19T10:25:19.611689+01:00"
+			"dateAndTimeString" : "2023-02-01T10:16:40.699676+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "PetitParser experiments"
+		"title" : "Two-space indentation parser"
 	},
 	"uid" : {
 		"__type" : "uuid",
