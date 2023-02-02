@@ -289,6 +289,43 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-02-01T11:33:43.254381+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-02-02T09:41:35.927549+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "I13jpQGwDQCslKRbA1S46g=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "[[Recognizing mappings]]"
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
 												"dateAndTimeString" : "2023-02-01T13:30:38.474847+01:00"
 											}
 										},
@@ -322,7 +359,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-01T11:33:43.254381+01:00"
+									"dateAndTimeString" : "2023-02-02T09:44:29.74586+01:00"
 								}
 							},
 							"editEmail" : {
@@ -333,17 +370,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-01T11:34:14.048209+01:00"
+									"dateAndTimeString" : "2023-02-02T09:44:35.59457+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "I13jpQGwDQCslKRbA1S46g=="
+								"uidString" : "aoM4TxWwDQCZMWOXDCAgYQ=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Subclassing to recognize mappings]]"
+							"string" : "[[YAML PParser]]"
 						},
 						{
 							"__type" : "textSnippet",

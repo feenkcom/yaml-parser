@@ -1,7 +1,7 @@
 Class {
 	#name : #YAMLParserExamples,
 	#superclass : #Object,
-	#category : #'YAMLParser-Examples'
+	#category : #'YAMLParser-SmaCC-Examples'
 }
 
 { #category : #example }

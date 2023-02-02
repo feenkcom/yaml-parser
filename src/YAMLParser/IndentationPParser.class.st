@@ -1,3 +1,7 @@
+"
+I am a demo of how to turn the Indentation parser script into a class.
+The parser will recognize YAML-style 2-space indentation, to produce a nested OrderedDictionary structure of the lines of the input.
+"
 Class {
 	#name : #IndentationPParser,
 	#superclass : #PP2CompositeNode,
@@ -7,70 +11,50 @@ Class {
 		'newline',
 		'linenl',
 		'yaml',
-		'yamlEnd'
+		'yamlEnd',
+		'root',
+		'currentIndentation',
+		'dictionaryStack',
+		'indentLevel'
 	],
 	#category : #'YAMLParser-PParser'
 }
 
+{ #category : #accessing }
+IndentationPParser class >> ignoredNames [
+	^ super ignoredNames copyWithAll: #(root currentIndentation dictionaryStack indentLevel)
+]
+
 { #category : #indentation }
 IndentationPParser >> checkIndentationFor: node [
-	self indentLevel - self currentIndentation > 1
+	indentLevel - currentIndentation > 1
 		ifTrue: [ self error: 'Too much indentation!' ].
-	self indentLevel = (self currentIndentation + 1)
-		ifTrue: [ self currentIndentation: self indentLevel.
+	indentLevel = (currentIndentation + 1)
+		ifTrue: [ currentIndentation := indentLevel.
 			self
-				assert: [ self dictionaryStack last notEmpty ]
+				assert: [ dictionaryStack last notEmpty ]
 				description: 'Nothing to indent from.'.
-			self dictionaryStack
-				addLast: (self dictionaryStack last at: self dictionaryStack last keys last) ].
-	[ self indentLevel < self currentIndentation ]
-		whileTrue: [ self currentIndentation: self currentIndentation - 1.
-			self dictionaryStack removeLast ].
-	self dictionaryStack last value at: node third put: OrderedDictionary new
-]
-
-{ #category : #accessing }
-IndentationPParser >> currentIndentation [
-	^ self propertyAt: #currentIndentation
-]
-
-{ #category : #accessing }
-IndentationPParser >> currentIndentation: aNumber [
-	self propertyAt: #currentIndentation put: aNumber
-]
-
-{ #category : #accessing }
-IndentationPParser >> dictionaryStack [
-	^ self propertyAt: #dictionaryStack
-]
-
-{ #category : #accessing }
-IndentationPParser >> dictionaryStack: anObject [
-	self propertyAt: #dictionaryStack put: anObject
+			dictionaryStack
+				addLast: (dictionaryStack last at: dictionaryStack last keys last) ].
+	[ indentLevel < currentIndentation ]
+		whileTrue: [ currentIndentation := currentIndentation - 1.
+			dictionaryStack removeLast ].
+	dictionaryStack last value at: node third put: OrderedDictionary new.
+	node third
 ]
 
 { #category : #tokens }
 IndentationPParser >> indent [
-	^ '  ' asPParser ==> [ :node | self indentLevel: self indentLevel + 1 ]
-]
-
-{ #category : #accessing }
-IndentationPParser >> indentLevel [
-	^ self propertyAt: #indentLevel
-]
-
-{ #category : #accessing }
-IndentationPParser >> indentLevel: aNumber [
-	self propertyAt: #indentLevel put: aNumber
+	^ '  ' asPParser ==> [ :node | indentLevel := indentLevel + 1 ]
 ]
 
 { #category : #initialization }
 IndentationPParser >> initialize [
 	super initialize.
-	self indentLevel: 0.
-	self root: OrderedDictionary new.
-	self dictionaryStack: {self root} asOrderedCollection.
-	self currentIndentation: 0
+	indentLevel := 0.
+	root := OrderedDictionary new.
+	dictionaryStack := {root} asOrderedCollection.
+	currentIndentation := 0
 ]
 
 { #category : #grammar }
@@ -88,16 +72,7 @@ IndentationPParser >> linenl [
 
 { #category : #tokens }
 IndentationPParser >> newline [
-	^ #newline asPParser ==> [ :node | self indentLevel: 0 ]
-]
-
-{ #category : #accessing }
-IndentationPParser >> root [	^ self propertyAt: #root
-]
-
-{ #category : #accessing }
-IndentationPParser >> root: anObject [
-	self propertyAt: #root put: anObject
+	^ #newline asPParser ==> [ :node | indentLevel := 0 ]
 ]
 
 { #category : #accessing }
@@ -107,7 +82,7 @@ IndentationPParser >> start [
 
 { #category : #grammar }
 IndentationPParser >> yaml [
-	^ (linenl / line) star ==> [ :node | self root ]
+	^ (linenl / line) star ==> [ :node | root ]
 ]
 
 { #category : #accessing }

@@ -18,43 +18,6 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-01T11:34:24.589356+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-01T11:42:08.196845+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "8M4bugKwDQCBmetsDLq1yA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Next we want to introduce more productions by subclassing the indentation parser as {{gtClass:name=MappingPParser}}. "
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2023-02-01T11:40:50.910598+01:00"
 					}
 				},
@@ -66,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-01T11:44:06.080463+01:00"
+						"dateAndTimeString" : "2023-02-02T09:42:14.22958+01:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Instead of just recognizing a line, this should recognize the key/values of the mappings."
+				"string" : "Instead of just recognizing a line, we want to recognize keys and values of mappings."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -103,14 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-01T11:41:43.135306+01:00"
+						"dateAndTimeString" : "2023-02-02T09:42:34.536386+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "9qjN0wKwDQCEqFlaDLq1yA=="
 				},
-				"code" : "IndentationPParser parse: MappingPParserExamples new simpleMappingListCode"
+				"code" : "YamlPParserExamples new simpleMappingListCode"
 			},
 			{
 				"__type" : "textSnippet",
@@ -121,45 +84,7 @@
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-02-01T16:40:58.406719+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-02-01T16:41:16.365894+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "wJvdAgewDQCRmoHDC6ic+Q=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "```language=text\nSTRING_MY\n : STRING_MY_START (~(' '|'\\r'|'\\n'|'\"'|':') | (':' ~[ \\r\\n]) | (' '+ ~[ :#\\r\\n]) )*\n ;\n\nfragment STRING_MY_START\n : ~('-'|' '|'\\r'|'\\n'|'\"'|':'|'#'|'['|'{'|'&'|'*'|'|') | (':' ~[ \\r\\n]) | ('-' ~[ \\-\\r\\n]) | {_input.LA(3) != 45}? '--' | {super.getCharPositionInLine() != 0}? '---'\n ;\n```"
-									}
-								]
+								"items" : [ ]
 							},
 							"createEmail" : {
 								"__type" : "email",
@@ -217,7 +142,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-01T16:57:24.186129+01:00"
+									"dateAndTimeString" : "2023-02-02T09:43:59.572128+01:00"
 								}
 							},
 							"uid" : {
@@ -227,7 +152,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "To keep thing simple, let's assume that keys are alphnumeric or underscore characters."
+							"string" : "To keep thing simple, let's assume that keys are alphanumeric or underscore characters."
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -659,40 +584,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : ""
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-01T11:37:22.917163+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-01T11:41:27.143541+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "ETc/xQKwDQCDndZVDLq1yA=="
-				},
-				"code" : "MappingPParserExamples new simpleMappingList"
 			}
 		]
 	},
@@ -715,12 +606,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-02-01T11:34:15.991961+01:00"
+			"dateAndTimeString" : "2023-02-02T09:41:35.923488+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Subclassing to recognize mappings"
+		"title" : "Recognizing mappings"
 	},
 	"uid" : {
 		"__type" : "uuid",

@@ -1,7 +1,7 @@
 Class {
 	#name : #IndentationPParserExamples,
 	#superclass : #Object,
-	#category : #'YAMLParser-Examples'
+	#category : #'YAMLParser-PPExamples'
 }
 
 { #category : #accessing }

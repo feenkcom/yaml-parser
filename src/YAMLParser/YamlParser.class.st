@@ -1,3 +1,7 @@
+"
+A prototype of a YAML parser, based on the ANTLR YAML grammar.
+Work in progress ...
+"
 Class {
 	#name : #YAMLParser,
 	#superclass : #SmaCCParser,
