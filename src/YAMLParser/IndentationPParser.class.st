@@ -25,24 +25,6 @@ IndentationPParser class >> ignoredNames [
 	^ super ignoredNames copyWithAll: #(root currentIndentation dictionaryStack indentLevel)
 ]
 
-{ #category : #indentation }
-IndentationPParser >> checkIndentationFor: node [
-	indentLevel - currentIndentation > 1
-		ifTrue: [ self error: 'Too much indentation!' ].
-	indentLevel = (currentIndentation + 1)
-		ifTrue: [ currentIndentation := indentLevel.
-			self
-				assert: [ dictionaryStack last notEmpty ]
-				description: 'Nothing to indent from.'.
-			dictionaryStack
-				addLast: (dictionaryStack last at: dictionaryStack last keys last) ].
-	[ indentLevel < currentIndentation ]
-		whileTrue: [ currentIndentation := currentIndentation - 1.
-			dictionaryStack removeLast ].
-	dictionaryStack last value at: node third put: OrderedDictionary new.
-	node third
-]
-
 { #category : #tokens }
 IndentationPParser >> indent [
 	^ '  ' asPParser ==> [ :node | indentLevel := indentLevel + 1 ]
@@ -61,7 +43,19 @@ IndentationPParser >> initialize [
 IndentationPParser >> line [
 	^ (indent star , indent not , #newline asPParser negate plus flatten)
 		==> [ :node | 
-			self checkIndentationFor: node.
+			indentLevel - currentIndentation > 1
+				ifTrue: [ self error: 'Too much indentation!' ].
+			indentLevel = (currentIndentation + 1)
+				ifTrue: [ currentIndentation := indentLevel.
+					self
+						assert: [ dictionaryStack last notEmpty ]
+						description: 'Nothing to indent from.'.
+					dictionaryStack
+						addLast: (dictionaryStack last at: dictionaryStack last keys last) ].
+			[ indentLevel < currentIndentation ]
+				whileTrue: [ currentIndentation := currentIndentation - 1.
+					dictionaryStack removeLast ].
+			dictionaryStack last value at: node third put: OrderedDictionary new.
 			node third ]
 ]
 
