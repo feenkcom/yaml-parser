@@ -15,7 +15,8 @@ Class {
 		'root',
 		'currentIndentation',
 		'dictionaryStack',
-		'indentLevel'
+		'indentLevel',
+		'indents'
 	],
 	#category : #'YAMLParser-PParser'
 }
@@ -30,18 +31,9 @@ IndentationPParser >> indent [
 	^ '  ' asPParser ==> [ :node | indentLevel := indentLevel + 1 ]
 ]
 
-{ #category : #initialization }
-IndentationPParser >> initialize [
-	super initialize.
-	indentLevel := 0.
-	root := OrderedDictionary new.
-	dictionaryStack := {root} asOrderedCollection.
-	currentIndentation := 0
-]
-
-{ #category : #grammar }
-IndentationPParser >> line [
-	^ (indent star , indent not , #newline asPParser negate plus flatten)
+{ #category : #accessing }
+IndentationPParser >> indents [
+	^ (indent star , indent not)
 		==> [ :node | 
 			indentLevel - currentIndentation > 1
 				ifTrue: [ self error: 'Too much indentation!' ].
@@ -55,8 +47,24 @@ IndentationPParser >> line [
 			[ indentLevel < currentIndentation ]
 				whileTrue: [ currentIndentation := currentIndentation - 1.
 					dictionaryStack removeLast ].
-			dictionaryStack last value at: node third put: OrderedDictionary new.
-			node third ]
+			node first ]
+]
+
+{ #category : #initialization }
+IndentationPParser >> initialize [
+	super initialize.
+	indentLevel := 0.
+	root := OrderedDictionary new.
+	dictionaryStack := {root} asOrderedCollection.
+	currentIndentation := 0
+]
+
+{ #category : #grammar }
+IndentationPParser >> line [
+	^ (indents , #newline asPParser negate plus flatten)
+		==> [ :node | 
+			dictionaryStack last value at: node second put: OrderedDictionary new.
+			node second ]
 ]
 
 { #category : #grammar }

@@ -5,6 +5,15 @@ Class {
 }
 
 { #category : #accessing }
+YamlPParserExamples >> nestedMappingListCode [
+	<gtExample>
+	^ 'foo :
+  bar : foobar
+  baz : foobaz
+bar : foo'
+]
+
+{ #category : #accessing }
 YamlPParserExamples >> parse: aString [ 
 	^ MappingPParser parse: aString
 ]

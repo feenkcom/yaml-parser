@@ -443,6 +443,81 @@
 							"string" : "We start with the [[Two-space indentation parser]] and adapt it."
 						},
 						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-02-02T15:05:26.611731+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-02-02T15:07:49.019151+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "qXEJyxmwDQCx6hVpAFa0qQ=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "To avoid prematurely fixing the representation classes, we will store associations in the stack of the form `#key -> value` where `#key` is `#list`, `#map`, or `#new` in case we don't know yet, and the value is, respectively, an OrderedCollection, an OrderedDictionary, or nil (or possibly instances of other classes)."
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-02T13:14:19.694285+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-02T15:06:06.713007+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ZBHGPRiwDQCuj4GmAFa0qQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Instead of just a `dictionaryStack`, we need a `listMapStack` of collections or dictionaries, to hold lists or mapping lists. "
+						},
+						{
 							"__type" : "pharoSnippet",
 							"children" : {
 								"__type" : "snippets",
@@ -467,14 +542,85 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-02T11:27:16.293663+01:00"
+									"dateAndTimeString" : "2023-02-02T15:13:20.742134+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "XnRpZhawDQCchuNPDWbXtg=="
 							},
-							"code" : "indentLevel := 0.\rroot := OrderedDictionary new.\rdictionaryStack := {root} asOrderedCollection.\rcurrentIndentation := 0.\r\rnewline := #newline asPParser ==> [ :node | indentLevel := 0 ].\rindent := '  ' asPParser ==> [ :node | indentLevel := indentLevel + 1 ].\r\rindents := (indent star , indent not)\r\t\t==> [ :node | \r\t\t\tindentLevel - currentIndentation > 1\r\t\t\t\tifTrue: [ self error: 'Too much indentation!' ].\r\t\t\tindentLevel = (currentIndentation + 1)\r\t\t\t\tifTrue: [ currentIndentation := indentLevel.\r\t\t\t\t\tself\r\t\t\t\t\t\tassert: [ dictionaryStack last notEmpty ]\r\t\t\t\t\t\tdescription: 'Nothing to indent from.'.\r\t\t\t\t\tdictionaryStack\r\t\t\t\t\t\taddLast: (dictionaryStack last at: dictionaryStack last keys last) ].\r\t\t\t[ indentLevel < currentIndentation ]\r\t\t\t\twhileTrue: [ currentIndentation := currentIndentation - 1.\r\t\t\t\t\tdictionaryStack removeLast ].\r\r\t\t\tnode first ].\r\rline := (indents , #newline asPParser negate plus flatten)\r\t\t==> [ :node | \r\t\t\tdictionaryStack last value at: node second put: OrderedDictionary new.\r\t\t\tnode second ].\r\r\r\rlinenl := (line , newline) ==> #first.\ryaml := (linenl / line) star ==> [ :node | root ]"
+							"code" : "indentLevel := 0.\rlistMapStack := {#new -> nil} asOrderedCollection.\rcurrentIndentation := 0.\r\rnewline := #newline asPParser ==> [ :node | indentLevel := 0 ].\rindent := '  ' asPParser ==> [ :node | indentLevel := indentLevel + 1 ].\t\"Todo: check all the cases.\"\rindents := (indent star , indent not)\r\t\t==> [ :node | \r\t\t\tindentLevel - currentIndentation > 1\r\t\t\t\tifTrue: [ self error: 'Too much indentation!' ].\r\t\t\tindentLevel = (currentIndentation + 1)\r\t\t\t\tifTrue: [ currentIndentation := indentLevel.\r\t\t\t\t\tself\r\t\t\t\t\t\tassert: [ listMapStack last notEmpty ]\r\t\t\t\t\t\tdescription: 'Nothing to indent from.'.\r\t\t\t\t\tlistMapStack addLast: (listMapStack last at: listMapStack last keys last) ].\r\t\t\t[ indentLevel < currentIndentation ]\r\t\t\t\twhileTrue: [ currentIndentation := currentIndentation - 1.\r\t\t\t\t\tlistMapStack removeLast ].\r\t\t\tnode first ].\r\rkey := (#word asPParser / $_ asPParser) plus flatten.\t\"Here we need a value, not just a key as the RHS\"\rmapping := key , $: asPParser trim , key.\r\r\rmappingList := mapping , (newline , mapping) plus.\r\r\rline := (indents , #newline asPParser negate plus flatten)\r\t\t==> [ :node | \r\t\t\tlistMapStack last value at: node second put: OrderedDictionary new.\r\t\t\tnode second ].\r\rlinenl := (line , newline) ==> #first.\r\r\ryaml := (linenl / line) star ==> [ :node | root ]"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-02T13:08:47.43282+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-02T13:11:12.183787+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "7h7EKRiwDQCt/GmrAFa0qQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "We make a new example."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-02T13:09:23.8248+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-02T13:10:40.7053+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ivYoLBiwDQCuYUyRAFa0qQ=="
+							},
+							"code" : "YamlPParserExamples new nestedMappingListCode"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -501,14 +647,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-02T11:07:17.379771+01:00"
+									"dateAndTimeString" : "2023-02-02T13:15:58.797828+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "NdrldhawDQCd7t46DWbXtg=="
 							},
-							"code" : "eg1 := 'foo\r  bar\r    baz\r  foobar\rfoo2\rbar2'.\rindentLevel := 0.\rroot := OrderedDictionary new.\rdictionaryStack := {root} asOrderedCollection.\rcurrentIndentation := 0.\ryaml end parse: eg1"
+							"code" : "indentLevel := 0.\rroot := OrderedDictionary new.\rlistMapStack := {root} asOrderedCollection.\rcurrentIndentation := 0.\ryaml end parse: YamlPParserExamples new nestedMappingListCode"
 						},
 						{
 							"__type" : "textSnippet",
