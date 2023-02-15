@@ -715,7 +715,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T14:37:48.099148+01:00"
+									"dateAndTimeString" : "2023-02-15T15:19:39.072853+01:00"
 								}
 							},
 							"editEmail" : {
@@ -726,14 +726,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T14:50:00.342883+01:00"
+									"dateAndTimeString" : "2023-02-15T15:19:47.287919+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "T6ZB7B6xDQCq8MHBD2Eujw=="
+								"uidString" : "Ng3sgR+xDQC625m9AURqSQ=="
 							},
-							"code" : "indentLevel := 0.\t\"NB: these pseudo-tokens could be anything.\"\rindentToken := '<<INDENT>>'.\rdedentToken := '<<DEDENT>>'.\rnewline := #newline asPParser\r\t\t==> [ :node | \r\t\t\tindentLevel := 0.\r\t\t\tnode asOrderedCollection ].\rindent := '  ' asPParser ==> [ :node | indentLevel := indentLevel + 1 ].\rindents := (indent star , indent not)\r\t\t==> [ :node | \r\t\t\t| output |\r\t\t\toutput := OrderedCollection new.\r\t\t\t[ indentLevel > currentIndentation ]\r\t\t\t\twhileTrue: [ currentIndentation := currentIndentation + 1.\r\t\t\t\t\toutput add: indentToken ].\r\t\t\t[ indentLevel < currentIndentation ]\r\t\t\t\twhileTrue: [ currentIndentation := currentIndentation - 1.\r\t\t\t\t\toutput add: dedentToken ].\r\t\t\toutput ].\rline := (indents , #newline asPParser negate plus)\r\t\t==> [ :node | node first , node second ].\rlinenl := (line , newline) ==> [ :node | node first , node second ].\rtransformIndents := (linenl / line) star ==> [ :node | node flatten ]."
+							"code" : "indentLevel := 0.\t\"NB: these pseudo-tokens could be anything.\"\rcurrentIndentation := 0.\rindentToken := '<<INDENT>>'.\rdedentToken := '<<DEDENT>>'.\rnewline := #newline asPParser\r\t\t==> [ :node | \r\t\t\tindentLevel := 0.\r\t\t\tnode asOrderedCollection ].\rindent := '  ' asPParser ==> [ :node | indentLevel := indentLevel + 1 ].\rindents := (indent star , indent not)\r\t\t==> [ :node | \r\t\t\t| output |\r\t\t\toutput := OrderedCollection new.\r\t\t\t[ indentLevel > currentIndentation ]\r\t\t\t\twhileTrue: [ currentIndentation := currentIndentation + 1.\r\t\t\t\t\toutput add: indentToken ].\r\t\t\t[ indentLevel < currentIndentation ]\r\t\t\t\twhileTrue: [ currentIndentation := currentIndentation - 1.\r\t\t\t\t\toutput add: dedentToken ].\r\t\t\toutput ].\rline := (indents , #newline asPParser negate plus)\r\t\t==> [ :node | node first , node second ].\rlinenl := (line , newline) ==> [ :node | node first , node second ].\rtransformIndents := (linenl / line) star ==> [ :node | node flatten ]."
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -760,14 +760,48 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T14:38:56.5979+01:00"
+									"dateAndTimeString" : "2023-02-15T15:21:08.677575+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "8Jpr7x6xDQCrDwD7D2Eujw=="
 							},
-							"code" : "eg1 := 'foo\r  bar\r    baz\r  foofoo\r  foobar\rfoo2\rbar2'.\rcurrentIndentation := 0.\r\"The join is just to see a string instead of a collection.\"\r'' join: (transformIndents end parse: eg1)."
+							"code" : "eg1 := 'foo\r  bar\r    baz\r  foofoo\r  foobar\rfoo2\rbar2'.\rindentLevel := 0.\rcurrentIndentation := 0.\r\"The join is just to see a string instead of a collection.\"\r'' join: (transformIndents end parse: eg1)."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-15T15:19:58.557718+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-15T15:21:36.397127+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "7l0Vgx+xDQC7DHh2AURqSQ=="
+							},
+							"code" : "indentLevel := 0.\rcurrentIndentation := 0.\r'' join: (transformIndents end parse: 'foo\r  bar\rfoobar\r')."
 						}
 					]
 				},
@@ -951,6 +985,117 @@
 							"string" : "We implement some tests in {{gtClass:name=IndentationTransformerExamples}}. "
 						},
 						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-15T15:13:43.08414+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-15T15:13:54.192372+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ODWubB+xDQCkmoODAUzVKw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "We still have a problem getting all the DEDENTS at the end."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-15T15:24:40.512103+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-15T15:25:03.974641+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "OV7ckx+xDQC7kMoWAURqSQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The problem appears to be with the rule \n`transformIndents := (linenl / line) star`"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-15T15:26:02.800827+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-15T15:26:09.31416+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "IdeClR+xDQC8LD+tAURqSQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Backtracking will mess up the state."
+						},
+						{
 							"__type" : "pharoSnippet",
 							"children" : {
 								"__type" : "snippets",
@@ -964,7 +1109,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:10:59.824092+01:00"
+									"dateAndTimeString" : "2023-02-15T15:24:09.028991+01:00"
 								}
 							},
 							"editEmail" : {
@@ -975,14 +1120,51 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:10:59.824092+01:00"
+									"dateAndTimeString" : "2023-02-15T15:24:33.01669+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "3ej4Yh+xDQCkjFx9AUzVKw=="
+								"uidString" : "SDgDkh+xDQC7e0EyAURqSQ=="
 							},
-							"code" : ""
+							"code" : "transformIndents := IndentationTransformer new.\rindentLevel := 0.\rcurrentIndentation := 0.\r'' join: (transformIndents end parse: 'foo\r  bar\rfoobar')."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-15T15:28:54.153646+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-15T15:29:27.678001+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "mj1nbR+xDQClUAAGAUzVKw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "We must avoid backtracking, so no choice with the same start, and we must also explicitly match the end to generate any trailing dedents."
 						}
 					]
 				},
