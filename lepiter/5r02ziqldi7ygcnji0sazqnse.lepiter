@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-02T09:45:19.973724+01:00"
+						"dateAndTimeString" : "2023-02-15T14:55:39.717126+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We want to define a YAML PetitParser as a class that we can later subclass to recognize GiutHub Action Workflow files."
+				"string" : "We want to define a YAML PetitParser as a class that we can later subclass to recognize GutHub Action Workflow files."
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-02T09:45:22.42708+01:00"
+						"dateAndTimeString" : "2023-02-15T14:58:19.239554+01:00"
 					}
 				},
 				"editEmail" : {
@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-02T09:46:30.02434+01:00"
+						"dateAndTimeString" : "2023-02-15T14:58:47.360478+01:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We start with the [[Two-space indentation parser]] and extend it with further productions to recognize mappings, lists and other YAML constructs."
+				"string" : "We start with the [[Indentation Transformer]] to transform indentations to pseudo-tokens, and proceed from there."
 			},
 			{
 				"__type" : "textSnippet",
@@ -145,7 +145,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-02T09:47:34.461517+01:00"
+									"dateAndTimeString" : "2023-02-15T14:59:10.295624+01:00"
 								}
 							},
 							"uid" : {
@@ -155,7 +155,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "{{gtTodo:label=Add mapping lists to the indentation parser script}}"
+							"string" : "{{gtTodo:label=Add mapping lists}}"
 						},
 						{
 							"__type" : "textSnippet",

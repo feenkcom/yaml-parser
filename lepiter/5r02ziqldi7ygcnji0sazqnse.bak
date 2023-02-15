@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-02T09:45:19.973724+01:00"
+						"dateAndTimeString" : "2023-02-15T14:55:39.717126+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We want to define a YAML PetitParser as a class that we can later subclass to recognize GiutHub Action Workflow files."
+				"string" : "We want to define a YAML PetitParser as a class that we can later subclass to recognize GutHub Action Workflow files."
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-02T09:45:22.42708+01:00"
+						"dateAndTimeString" : "2023-02-15T14:58:19.239554+01:00"
 					}
 				},
 				"editEmail" : {
@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-02T09:46:30.02434+01:00"
+						"dateAndTimeString" : "2023-02-15T14:58:47.360478+01:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We start with the [[Two-space indentation parser]] and extend it with further productions to recognize mappings, lists and other YAML constructs."
+				"string" : "We start with the [[Indentation Transformer]] to transform indentations to pseudo-tokens, and proceed from there."
 			},
 			{
 				"__type" : "textSnippet",
@@ -330,7 +330,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-02T09:49:19.050934+01:00"
+									"dateAndTimeString" : "2023-02-02T09:50:23.869883+01:00"
 								}
 							},
 							"uid" : {
@@ -340,7 +340,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "{{gtTodo:label=}}"
+							"string" : "{{gtTodo:label=Extend the parser class with new productions}}"
 						}
 					]
 				},
@@ -374,6 +374,80 @@
 					"__type" : "textStyle"
 				},
 				"string" : "#Todos"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-02T09:50:24.833713+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-02T09:50:24.833713+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "G2uKZBWwDQCiX1jGDCAgYQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-02T09:50:29.639333+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-02T09:50:29.639333+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Eb7TZBWwDQCiaLlaDCAgYQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
 			}
 		]
 	},
