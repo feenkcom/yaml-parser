@@ -67,5 +67,5 @@ foobar
 
 { #category : #accessing }
 IndentationTransformerExamples >> parse: aString [
-	^ IndentationTransformer new end parse: aString
+	^ IndentationTransformer new parse: aString
 ]
