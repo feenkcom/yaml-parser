@@ -712,6 +712,40 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-15T14:48:35.990296+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-15T14:49:49.711239+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "cqXfEh+xDQCX/ohSAUzVKw=="
+							},
+							"code" : "\r\t\t\t\r\t\t\t\rtransformIndents := (linenl / line) star ==> [ :node | node flatten ].\r\r\r\r\r"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
 									"dateAndTimeString" : "2023-02-15T14:38:41.181973+01:00"
 								}
 							},
@@ -829,14 +863,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T14:37:48.101705+01:00"
+									"dateAndTimeString" : "2023-02-15T14:41:41.785863+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "TLBB7B6xDQCq9Q7pD2Eujw=="
 							},
-							"code" : "eg1 := 'foo\r  bar\r    baz\r  foofoo\r  foobar\rfoo2\rbar2'.\rindentLevel := 0.\r\"The join is just to see a string instead of a collection.\"\r'' join: (IndentTransformer new end parse: eg1)"
+							"code" : "eg1 := 'foo\r  bar\r    baz\r  foofoo\r  foobar\rfoo2\rbar2'.\rindentLevel := 0.\r\"The join is just to see a string instead of a collection.\"\r'' join: (IndentationTransformer new end parse: eg1)"
 						}
 					]
 				},
