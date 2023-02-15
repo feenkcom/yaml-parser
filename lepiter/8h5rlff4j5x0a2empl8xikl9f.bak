@@ -723,14 +723,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T14:49:20.392503+01:00"
+									"dateAndTimeString" : "2023-02-15T14:49:49.711239+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "cqXfEh+xDQCX/ohSAUzVKw=="
 							},
-							"code" : "\r\t\t\t\rindents := (indent star , indent not)\r\t\t==> [ :node | \r\t\t\t| output |\r\t\t\toutput := OrderedCollection new.\r\t\t\t[ indentLevel > currentIndentation ]\r\t\t\t\twhileTrue: [ currentIndentation := currentIndentation + 1.\r\t\t\t\t\toutput add: indentToken ].\r\t\t\t[ indentLevel < currentIndentation ]\r\t\t\t\twhileTrue: [ currentIndentation := currentIndentation - 1.\r\t\t\t\t\toutput add: dedentToken ].\r\t\t\toutput ].\r\t\t\t\r\t\t\t\r\t\t\t\r\t\t\t\rline := (indents , #newline asPParser negate plus)\r\t\t==> [ :node | node first , node second ].\rlinenl := (line , newline) ==> [ :node | node first , node second ].\rtransformIndents := (linenl / line) star ==> [ :node | node flatten ].\r\r\r\r\r"
+							"code" : "\r\t\t\t\r\t\t\t\rtransformIndents := (linenl / line) star ==> [ :node | node flatten ].\r\r\r\r\r"
 						},
 						{
 							"__type" : "pharoSnippet",

@@ -689,7 +689,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T14:37:48.099148+01:00"
+									"dateAndTimeString" : "2023-02-15T14:50:00.342883+01:00"
 								}
 							},
 							"uid" : {
@@ -697,40 +697,6 @@
 								"uidString" : "T6ZB7B6xDQCq8MHBD2Eujw=="
 							},
 							"code" : "indentLevel := 0.\t\"NB: these pseudo-tokens could be anything.\"\rindentToken := '<<INDENT>>'.\rdedentToken := '<<DEDENT>>'.\rnewline := #newline asPParser\r\t\t==> [ :node | \r\t\t\tindentLevel := 0.\r\t\t\tnode asOrderedCollection ].\rindent := '  ' asPParser ==> [ :node | indentLevel := indentLevel + 1 ].\rindents := (indent star , indent not)\r\t\t==> [ :node | \r\t\t\t| output |\r\t\t\toutput := OrderedCollection new.\r\t\t\t[ indentLevel > currentIndentation ]\r\t\t\t\twhileTrue: [ currentIndentation := currentIndentation + 1.\r\t\t\t\t\toutput add: indentToken ].\r\t\t\t[ indentLevel < currentIndentation ]\r\t\t\t\twhileTrue: [ currentIndentation := currentIndentation - 1.\r\t\t\t\t\toutput add: dedentToken ].\r\t\t\toutput ].\rline := (indents , #newline asPParser negate plus)\r\t\t==> [ :node | node first , node second ].\rlinenl := (line , newline) ==> [ :node | node first , node second ].\rtransformIndents := (linenl / line) star ==> [ :node | node flatten ]."
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T14:48:35.990296+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T14:49:49.711239+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "cqXfEh+xDQCX/ohSAUzVKw=="
-							},
-							"code" : "\r\t\t\t\r\t\t\t\rtransformIndents := (linenl / line) star ==> [ :node | node flatten ].\r\r\r\r\r"
 						},
 						{
 							"__type" : "pharoSnippet",
