@@ -6,19 +6,21 @@ Class {
 		'indent',
 		'indents',
 		'line',
-		'linenl',
 		'transformIndents',
 		'currentIndentation',
 		'indentLevel',
 		'indentToken',
-		'dedentToken'
+		'dedentToken',
+		'indentString',
+		'lineNL',
+		'end'
 	],
 	#category : #'YAMLParser-PParser'
 }
 
 { #category : #accessing }
 IndentationTransformer class >> ignoredNames [
-	^ super ignoredNames copyWithAll: #(currentIndentation indentLevel indentToken dedentToken)
+	^ super ignoredNames copyWithAll: #(indentString currentIndentation indentLevel indentToken dedentToken)
 ]
 
 { #category : #accessing }
@@ -47,8 +49,26 @@ IndentationTransformer >> defaultDedentToken [
 ]
 
 { #category : #accessing }
+IndentationTransformer >> defaultIndentString [
+	"For YAML: two spaces"
+	^ '  '
+]
+
+{ #category : #accessing }
 IndentationTransformer >> defaultIndentToken [
 	^ '<<INDENT>>'
+]
+
+{ #category : #grammar }
+IndentationTransformer >> end [
+	^ #endOfInput asPParser
+		==> [ :node | 
+			| output |
+			output := OrderedCollection new.
+			[ indentLevel < currentIndentation ]
+				whileTrue: [ currentIndentation := currentIndentation - 1.
+					output add: dedentToken ].
+			output ]
 ]
 
 { #category : #grammar }
@@ -64,6 +84,16 @@ IndentationTransformer >> indentLevel [
 { #category : #accessing }
 IndentationTransformer >> indentLevel: anObject [
 	indentLevel := anObject
+]
+
+{ #category : #accessing }
+IndentationTransformer >> indentString [
+	^ indentString
+]
+
+{ #category : #accessing }
+IndentationTransformer >> indentString: anObject [
+	indentString := anObject
 ]
 
 { #category : #accessing }
@@ -94,6 +124,7 @@ IndentationTransformer >> indents [
 { #category : #accessing }
 IndentationTransformer >> initialize [
 	super initialize.
+	self indentString: self defaultIndentString.
 	self indentLevel: 0.
 	self currentIndentation: 0.
 	self indentToken: self defaultIndentToken.
@@ -107,8 +138,8 @@ IndentationTransformer >> line [
 ]
 
 { #category : #grammar }
-IndentationTransformer >> linenl [
-	^ (line , newline) ==> [ :node | node first , node second ]
+IndentationTransformer >> lineNL [
+	^ (line , (newline / end)) ==> [ :node | node first , node second ].
 ]
 
 { #category : #grammar }
@@ -126,5 +157,5 @@ IndentationTransformer >> start [
 
 { #category : #grammar }
 IndentationTransformer >> transformIndents [
-	^ (linenl / line) star ==> [ :node | node flatten ]
+	^ end / lineNL plus ==> [ :node | node flatten ]
 ]

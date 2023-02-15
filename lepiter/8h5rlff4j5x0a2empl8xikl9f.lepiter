@@ -1180,6 +1180,43 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-15T17:46:40.675851+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-15T17:46:40.675851+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "/Qm7jyGxDQCyI9aQBBSfcQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "We must avoid backtracking, so no choice with the same start, and we must also explicitly match the end to generate any trailing dedents."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
 									"dateAndTimeString" : "2023-02-15T15:28:54.153646+01:00"
 								}
 							},
@@ -1191,7 +1228,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:29:27.678001+01:00"
+									"dateAndTimeString" : "2023-02-15T17:46:40.677161+01:00"
 								}
 							},
 							"uid" : {
@@ -1201,7 +1238,112 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We must avoid backtracking, so no choice with the same start, and we must also explicitly match the end to generate any trailing dedents."
+							"string" : "Let's try again"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-15T17:46:30.911029+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-15T18:31:34.918639+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "JAkmjyGxDQCx7E05BBSfcQ=="
+							},
+							"code" : "indentLevel := 0.\t\"NB: these pseudo-tokens could be anything.\"\rcurrentIndentation := 0.\rindentString := '  '.\rindentToken := '<<INDENT>>'.\rdedentToken := '<<DEDENT>>'.\r\rnewline := #newline asPParser\r\t\t==> [ :node | \r\t\t\tindentLevel := 0.\r\t\t\tnode asOrderedCollection ].\rindent := indentString asPParser ==> [ :node | indentLevel := indentLevel + 1 ].\rindents := (indent star , indentString asPParser not)\r\t\t==> [ :node | \r\t\t\t| output |\r\t\t\toutput := OrderedCollection new.\r\t\t\t[ indentLevel > currentIndentation ]\r\t\t\t\twhileTrue: [ currentIndentation := currentIndentation + 1.\r\t\t\t\t\toutput add: indentToken ].\r\t\t\t[ indentLevel < currentIndentation ]\r\t\t\t\twhileTrue: [ currentIndentation := currentIndentation - 1.\r\t\t\t\t\toutput add: dedentToken ].\r\t\t\toutput ].\rline := (indents , #newline asPParser negate plus)\r\t\t==> [ :node | node first , node second ].\rend := #endOfInput asPParser\r\t\t==> [ :node | \r\t\t\t| output |\r\t\t\toutput := OrderedCollection new.\r\t\t\t[ indentLevel < currentIndentation ]\r\t\t\t\twhileTrue: [ currentIndentation := currentIndentation - 1.\r\t\t\t\t\toutput add: dedentToken ].\r\t\t\toutput ].\rlineNL := (line , (newline / end)) ==> [ :node | node first , node second ].\rtransformIndents := end / lineNL plus ==> [ :node | node flatten ].\r\"Test case\"\rindentLevel := 0.\rcurrentIndentation := 0.\r'' join: (transformIndents\r\tparse: 'foo\r  bar\rfoobar')"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-15T18:21:28.251883+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-15T18:21:48.734864+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "oH0VDCKxDQC1UJNlBBSfcQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Looks good. Let's lift this up to the class."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-15T18:21:42.976392+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-15T18:31:05.05069+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "apoJDSKxDQC14KUyBBSfcQ=="
+							},
+							"code" : "transformIndents := IndentationTransformer new.\rindentLevel := 0.\rcurrentIndentation := 0.\r''\r\tjoin: (transformIndents\r\t\t\tparse: 'foo\r  bar\rfoobar')."
 						}
 					]
 				},
