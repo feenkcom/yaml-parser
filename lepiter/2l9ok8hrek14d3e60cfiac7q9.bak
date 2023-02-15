@@ -257,7 +257,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-08T09:39:20.038736+01:00"
+									"dateAndTimeString" : "2023-02-08T09:39:31.207936+01:00"
 								}
 							},
 							"uid" : {
@@ -267,7 +267,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Porting the "
+							"string" : "[[Porting the PP1 YAML parser]]"
 						},
 						{
 							"__type" : "textSnippet",
