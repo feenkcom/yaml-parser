@@ -145,7 +145,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-02T09:47:34.461517+01:00"
+									"dateAndTimeString" : "2023-02-15T14:59:10.295624+01:00"
 								}
 							},
 							"uid" : {
@@ -155,7 +155,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "{{gtTodo:label=Add mapping lists to the indentation parser script}}"
+							"string" : "{{gtTodo:label=Add mapping lists}}"
 						},
 						{
 							"__type" : "textSnippet",
