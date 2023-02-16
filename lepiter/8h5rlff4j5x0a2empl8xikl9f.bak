@@ -1223,7 +1223,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-16T11:55:59.874219+01:00"
+									"dateAndTimeString" : "2023-02-16T12:05:01.258517+01:00"
 								}
 							},
 							"uid" : {
@@ -1233,41 +1233,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "CODE TO LIFT"
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-16T11:56:20.360057+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-16T12:01:52.477163+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "cNapyDCxDQCUY8L9D3Ijyg=="
-							},
-							"code" : "\r\rnonIndentedLine := (indentString asPParser not , #newline asPParser negate plus)\r\t\t==> [ :node | \r\t\t\t| repeat |\r\t\t\trepeat := currentIndentation.\r\t\t\tcurrentIndentation := 0.\r\t\t\t{dedentToken repeat: repeat} asOrderedCollection , node second ].\r\rtransformIndents := line star end\r\t\t==> [ :node | \r\t\t\tnode\r\t\t\t\tadd: {dedentToken repeat: currentIndentation} asOrderedCollection;\r\t\t\t\tflatten ].\t\"Test case\""
+							"string" : ""
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -1294,48 +1260,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-16T11:57:09.454401+01:00"
+									"dateAndTimeString" : "2023-02-16T12:04:56.330571+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "3/WWyzCxDQCUkTOhD3Ijyg=="
 							},
-							"code" : "transformer := IndentationTransformer new ."
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-16T11:56:01.495521+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-16T11:57:09.455883+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "1/2JxzCxDQCUU86PD3Ijyg=="
-							},
-							"code" : "indentLevel := 0.\rcurrentIndentation := 0.\r''\r\tjoin: (transformer\r\t\t\tparse: 'foo\r  bar\rb')"
+							"code" : "transformer := IndentationTransformer new.\rindentLevel := 0.\rcurrentIndentation := 0.\r''\r\tjoin: (transformer\r\t\t\tparse: 'foo\r  bar\rb')"
 						}
 					]
 				},
