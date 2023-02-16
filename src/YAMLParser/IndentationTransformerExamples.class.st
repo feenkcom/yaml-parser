@@ -8,7 +8,7 @@ Class {
 IndentationTransformerExamples >> foo [
 	<gtExample>
 	| result |
-	result := '' join: (self parse: 'foo').
+	result := self transform: 'foo'.
 	self assert: result equals: 'foo'.
 	^ result
 ]
@@ -17,9 +17,12 @@ IndentationTransformerExamples >> foo [
 IndentationTransformerExamples >> fooIndentBar [
 	<gtExample>
 	| result |
-	result := '' join: (self parse: 'foo
-  bar').
-	self assert: result equals: 'foo
+	result := self
+			transform: 'foo
+  bar'.
+	self
+		assert: result
+		equals: 'foo
 <<INDENT>>bar<<DEDENT>>'.
 	^ result
 ]
@@ -28,10 +31,13 @@ IndentationTransformerExamples >> fooIndentBar [
 IndentationTransformerExamples >> fooIndentBarCR [
 	<gtExample>
 	| result |
-	result := '' join: (self parse: 'foo
+	result := self
+			transform: 'foo
   bar
-').
-	self assert: result equals: 'foo
+'.
+	self
+		assert: result
+		equals: 'foo
 <<INDENT>>bar
 <<DEDENT>>'.
 	^ result
@@ -41,10 +47,13 @@ IndentationTransformerExamples >> fooIndentBarCR [
 IndentationTransformerExamples >> fooIndentBarDedentFoobar [
 	<gtExample>
 	| result |
-	result := '' join: (self parse: 'foo
+	result := self
+			transform: 'foo
   bar
-foobar').
-	self assert: result equals: 'foo
+foobar'.
+	self
+		assert: result
+		equals: 'foo
 <<INDENT>>bar
 <<DEDENT>>foobar'.
 	^ result
@@ -54,11 +63,14 @@ foobar').
 IndentationTransformerExamples >> fooIndentBarDedentFoobarCR [
 	<gtExample>
 	| result |
-	result := '' join: (self parse: 'foo
+	result := self
+			transform: 'foo
   bar
 foobar
-').
-	self assert: result equals: 'foo
+'.
+	self
+		assert: result
+		equals: 'foo
 <<INDENT>>bar
 <<DEDENT>>foobar
 '.
@@ -71,10 +83,15 @@ IndentationTransformerExamples >> parse: aString [
 ]
 
 { #category : #accessing }
+IndentationTransformerExamples >> transform: aString [
+	^ IndentationTransformer transform: aString
+]
+
+{ #category : #accessing }
 IndentationTransformerExamples >> x [
 	<gtExample>
 	| result |
-	result := '' join: (self parse: 'x').
+	result := self transform: 'x'.
 	self assert: result equals: 'x'.
 	^ result
 ]

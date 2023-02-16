@@ -18,6 +18,80 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-16T16:00:04.280743+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-16T16:00:06.47437+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "udYpMDSxDQCkzEViD4lH3A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Actually this "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-16T16:00:01.940167+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-16T16:00:01.940167+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "DnQtMDSxDQCk0LzID4lH3A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2023-01-19T10:27:00.482639+01:00"
 					}
 				},
@@ -475,14 +549,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-02T13:08:10.586088+01:00"
+						"dateAndTimeString" : "2023-02-02T13:08:20.445649+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "5wn5QfyuDQCtNKqkBHtp7g=="
 				},
-				"code" : "indentLevel := 0.\rroot := OrderedDictionary new.\rdictionaryStack := {root} asOrderedCollection.\rcurrentIndentation := 0.\r\rnewline := #newline asPParser ==> [ :node | indentLevel := 0 ].\rindent := '  ' asPParser ==> [ :node | indentLevel := indentLevel + 1 ].\r\rindents := (indent star , indent not)\r\t\t==> [ :node | \r\t\t\tindentLevel - currentIndentation > 1\r\t\t\t\tifTrue: [ self error: 'Too much indentation!' ].\r\t\t\tindentLevel = (currentIndentation + 1)\r\t\t\t\tifTrue: [ currentIndentation := indentLevel.\r\t\t\t\t\tself\r\t\t\t\t\t\tassert: [ dictionaryStack last notEmpty ]\r\t\t\t\t\t\tdescription: 'Nothing to indent from.'.\r\t\t\t\t\tdictionaryStack\r\t\t\t\t\t\taddLast: (dictionaryStack last at: dictionaryStack last keys last) ].\r\t\t\t[ indentLevel < currentIndentation ]\r\t\t\t\twhileTrue: [ currentIndentation := currentIndentation - 1.\r\t\t\t\t\tdictionaryStack removeLast ].\r\r\t\t\tnode first ].\r\rline := (indents , #newline asPParser negate plus flatten)\r\t\t==> [ :node | \r\t\t\tdictionaryStack last value at: node second put: OrderedDictionary new.\r\t\t\tnode second ].\r\r\rlinenl := (line , newline) ==> #first.\ryaml := (linenl / line) star ==> [ :node | root ]"
+				"code" : "indentLevel := 0.\rroot := OrderedDictionary new.\rdictionaryStack := {root} asOrderedCollection.\rcurrentIndentation := 0.\r\rnewline := #newline asPParser ==> [ :node | indentLevel := 0 ].\rindent := '  ' asPParser ==> [ :node | indentLevel := indentLevel + 1 ].\r\rindents := (indent star , indent not)\r\t\t==> [ :node | \r\t\t\tindentLevel - currentIndentation > 1\r\t\t\t\tifTrue: [ self error: 'Too much indentation!' ].\r\t\t\tindentLevel = (currentIndentation + 1)\r\t\t\t\tifTrue: [ currentIndentation := indentLevel.\r\t\t\t\t\tself\r\t\t\t\t\t\tassert: [ dictionaryStack last notEmpty ]\r\t\t\t\t\t\tdescription: 'Nothing to indent from.'.\r\t\t\t\t\tdictionaryStack\r\t\t\t\t\t\taddLast: (dictionaryStack last at: dictionaryStack last keys last) ].\r\t\t\t[ indentLevel < currentIndentation ]\r\t\t\t\twhileTrue: [ currentIndentation := currentIndentation - 1.\r\t\t\t\t\tdictionaryStack removeLast ].\r\r\t\t\tnode first ].\r\rline := (indents , #newline asPParser negate plus flatten)\r\t\t==> [ :node | \r\t\t\tdictionaryStack last value at: node second put: OrderedDictionary new.\r\t\t\tnode second ].\r\rlinenl := (line , newline) ==> #first.\ryaml := (linenl / line) star ==> [ :node | root ]."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -573,12 +647,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-02-01T10:16:40.699676+01:00"
+			"dateAndTimeString" : "2023-02-16T15:59:49.02401+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Two-space indentation parser"
+		"title" : "Two-space indentation parser (Broken)"
 	},
 	"uid" : {
 		"__type" : "uuid",

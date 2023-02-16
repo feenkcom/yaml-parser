@@ -615,7 +615,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T14:37:48.099142+01:00"
+									"dateAndTimeString" : "2023-02-16T15:59:49.031676+01:00"
 								}
 							},
 							"uid" : {
@@ -625,7 +625,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Start with the [[Two-space indentation parser]] and modify it to just generate a new output stream."
+							"string" : "Start with the [[Two-space indentation parser (Broken)]] and modify it to just generate a new output stream."
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -1189,14 +1189,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-16T12:04:56.330571+01:00"
+									"dateAndTimeString" : "2023-02-16T15:53:22.964306+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "3/WWyzCxDQCUkTOhD3Ijyg=="
 							},
-							"code" : "transformer := IndentationTransformer new.\rindentLevel := 0.\rcurrentIndentation := 0.\r''\r\tjoin: (transformer\r\t\t\tparse: 'foo\r  bar\rb')"
+							"code" : "transformer := IndentationTransformer new.\r''\r\tjoin: (transformer\r\t\t\tparse: 'foo\r  bar\rb')"
 						}
 					]
 				},
@@ -1272,6 +1272,40 @@
 								"__type" : "textStyle"
 							},
 							"string" : "We implement some tests in {{gtClass:name=IndentationTransformerExamples}}. "
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-16T15:54:10.548921+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-16T15:55:07.056438+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "sqQ7GzSxDQCkEByLD4lH3A=="
+							},
+							"code" : "transformer := IndentationTransformer new.\r\"The join is just to see a string instead of a collection.\"\r (transformer end parse: 'foo\r  bar\r    baz\r  foofoo\r  foobar\rfoo2\rbar2')."
 						}
 					]
 				},
@@ -1327,12 +1361,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-02-16T08:08:37.668153+01:00"
+			"dateAndTimeString" : "2023-02-16T15:51:57.891884+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "* Indentation Transformer TO FIX"
+		"title" : "Indentation Transformer"
 	},
 	"uid" : {
 		"__type" : "uuid",

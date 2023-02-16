@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-15T14:59:37.292468+01:00"
+						"dateAndTimeString" : "2023-02-16T15:51:57.897908+01:00"
 					}
 				},
 				"uid" : {
@@ -103,14 +103,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-15T15:00:10.107151+01:00"
+						"dateAndTimeString" : "2023-02-16T17:29:10.035725+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "59poOh+xDQCdWkcwAUzVKw=="
 				},
-				"code" : "transformIndents := IndentationTransformer new.\reg1 := 'foo\r  bar\r    baz\r  foofoo\r  foobar\rfoo2\rbar2'.\rindentLevel := 0.\r\"The join is just to see a string instead of a collection.\"\r'' join: (transformIndents end parse: eg1)."
+				"code" : "IndentationTransformer\r\ttransform: 'foo\r  bar\r    baz\r  foofoo\r  foobar\rfoo2\rbar2'"
 			},
 			{
 				"__type" : "textSnippet",
@@ -358,14 +358,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:02:55.024389+01:00"
+									"dateAndTimeString" : "2023-02-16T17:09:56.161726+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "ifWsRB+xDQCeo2vpAUzVKw=="
 							},
-							"code" : "mapping := key , $: asPParser trim , key.\rmapping parse: 'foo : bar'."
+							"code" : "key := (#word asPParser / $_ asPParser) plus flatten.\rmapping := (key , $: asPParser trim , key)\r\t\t==> [ :node | node first -> node third ].\rmapping parse: 'foo : bar'"
 						},
 						{
 							"__type" : "textSnippet",
@@ -418,7 +418,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:02:36.56951+01:00"
+									"dateAndTimeString" : "2023-02-16T17:10:37.421418+01:00"
 								}
 							},
 							"editEmail" : {
@@ -429,14 +429,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:02:43.589461+01:00"
+									"dateAndTimeString" : "2023-02-16T17:27:53.855907+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "Gd75RB+xDQCesItbAUzVKw=="
+								"uidString" : "bsOhLDWxDQCnQ4RgD4lH3A=="
 							},
-							"code" : "newline := #newline asPParser.\rmappingList := mapping , (newline, mapping) plus, newline optional.\rmappingList end parse: YamlPParserExamples new simpleMappingListCode"
+							"code" : "key := (#word asPParser / $_ asPParser) plus flatten.\rmapping := (key , $: asPParser trim , key)\r\t\t==> [ :node | node first -> node third ].\rnewline := #newline asPParser.\rmappingList := (newline / (mapping , #endOfLine asPParser)) plus.\r\rmappingList end parse: YamlPParserExamples new simpleMappingListCode"
 						}
 					]
 				},
@@ -585,6 +585,117 @@
 							"string" : "We will now leverage the indentation transformer."
 						},
 						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-16T17:36:29.194008+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-16T17:36:42.560192+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "V0voiDWxDQCsCbfBD4lH3A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "We need a recursive rule. See the [[PP FAQ]]."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-16T17:40:48.558186+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-16T17:40:53.990668+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "tyZ/dTWxDQCpb/rpD4lH3A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "**CONTINUE HERE** "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-16T17:41:00.979584+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-16T17:41:07.725327+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "iA9EmTWxDQCt57UED4lH3A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "This is not yet working ..."
+						},
+						{
 							"__type" : "pharoSnippet",
 							"children" : {
 								"__type" : "snippets",
@@ -609,14 +720,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:08:43.053727+01:00"
+									"dateAndTimeString" : "2023-02-16T17:41:46.100637+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "MumoVh+xDQCiG3lRAUzVKw=="
 							},
-							"code" : "input := IndentationTransformer new end\r\t\tparse: YamlPParserExamples new nestedMappingListCode.\r'' join: input."
+							"code" : "key := (#word asPParser / $_ asPParser) plus flatten.\rvalue := PP2UnresolvedNode new.\r\rmapping := (key , $: asPParser trim , value)\r\t\t==> [ :node | node first -> node third ].\r\rnewline := #newline asPParser.\rindent := '<<INDENT>>' asPParser.\rdedent := '<<DEDENT>>' \r\rmappingList := (newline / (mapping , #endOfLine asPParser)) plus.\r\rvalue def: (key / (newline, indent, mappingList, dedent)).\r\r\r\rinput := IndentationTransformer transform: YamlPParserExamples new nestedMappingListCode.\r\rvalue end parse: 'foo : bar'."
 						},
 						{
 							"__type" : "textSnippet",
@@ -1050,7 +1161,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:04:38.40215+01:00"
+									"dateAndTimeString" : "2023-02-16T15:59:49.030958+01:00"
 								}
 							},
 							"uid" : {
@@ -1060,7 +1171,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We start with the [[Two-space indentation parser]] and adapt it."
+							"string" : "We start with the [[Two-space indentation parser (Broken)]] and adapt it."
 						},
 						{
 							"__type" : "textSnippet",

@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-15T14:57:27.730988+01:00"
+						"dateAndTimeString" : "2023-02-15T14:57:29.033217+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "NB: This attempt was based on the two-space indentation parser, but it proved to hard to s"
+				"string" : "NB: This attempt was based on the two-space indentation parser, but it proved to hard to scale."
 			},
 			{
 				"__type" : "textSnippet",

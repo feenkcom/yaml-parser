@@ -25,6 +25,13 @@ IndentationTransformer class >> ignoredNames [
 ]
 
 { #category : #accessing }
+IndentationTransformer class >> transform: aString [
+	"Transform the inpput from a collection back into a string"
+
+	^ self new transform: aString
+]
+
+{ #category : #accessing }
 IndentationTransformer >> currentIndentation [
 	^ currentIndentation
 ]
@@ -163,6 +170,13 @@ IndentationTransformer >> nonIndentedLine [
 { #category : #accessing }
 IndentationTransformer >> start [
 	^ transformIndents
+]
+
+{ #category : #transforming }
+IndentationTransformer >> transform: aString [
+	"Transform the inpput from a collection back into a string"
+
+	^ '' join: (self parse: aString)
 ]
 
 { #category : #grammar }
