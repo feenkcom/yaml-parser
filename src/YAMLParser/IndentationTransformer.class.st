@@ -12,8 +12,9 @@ Class {
 		'indentToken',
 		'dedentToken',
 		'indentString',
-		'lineNL',
-		'end'
+		'end',
+		'indentedLine',
+		'nonIndentedLine'
 	],
 	#category : #'YAMLParser-PParser'
 }
@@ -73,7 +74,8 @@ IndentationTransformer >> end [
 
 { #category : #grammar }
 IndentationTransformer >> indent [
-	^ '  ' asPParser ==> [ :node | self indentLevel: self indentLevel + 1 ]
+	^ self indentString asPParser
+		==> [ :node | self indentLevel: self indentLevel + 1 ]
 ]
 
 { #category : #accessing }
@@ -107,17 +109,21 @@ IndentationTransformer >> indentToken: anObject [
 ]
 
 { #category : #grammar }
+IndentationTransformer >> indentedLine [
+	^ (indents , #newline asPParser negate star)
+		==> [ :node | node first , node second ]
+]
+
+{ #category : #grammar }
 IndentationTransformer >> indents [
-	^ (indent star , indent not)
+	^ (indent plus , self indentString asPParser not)
 		==> [ :node | 
 			| output |
 			output := OrderedCollection new.
-			[ self indentLevel > self currentIndentation ]
-				whileTrue: [ self currentIndentation: self currentIndentation + 1.
-					output add: self indentToken ].
-			[ self indentLevel < self currentIndentation ]
-				whileTrue: [ self currentIndentation: self currentIndentation - 1.
-					output add: self dedentToken ].
+			self indentLevel > self currentIndentation
+				ifTrue: [ output := indentToken repeat: self indentLevel - self currentIndentation ]
+				ifFalse: [ output := dedentToken repeat: self currentIndentation - self indentLevel ].
+			self currentIndentation: self indentLevel.
 			output ]
 ]
 
@@ -133,13 +139,7 @@ IndentationTransformer >> initialize [
 
 { #category : #grammar }
 IndentationTransformer >> line [
-	^ (indents , #newline asPParser negate plus)
-		==> [ :node | node first , node second ]
-]
-
-{ #category : #grammar }
-IndentationTransformer >> lineNL [
-	^ (line , (newline / end)) ==> [ :node | node first , node second ].
+	^ newline / indentedLine / nonIndentedLine
 ]
 
 { #category : #grammar }
@@ -150,6 +150,16 @@ IndentationTransformer >> newline [
 			node asOrderedCollection ]
 ]
 
+{ #category : #grammar }
+IndentationTransformer >> nonIndentedLine [
+	^ (indentString asPParser not , #newline asPParser negate plus)
+		==> [ :node | 
+			| repeat |
+			repeat := self currentIndentation.
+			self currentIndentation: 0.
+			{self dedentToken repeat: repeat} asOrderedCollection , node second ]
+]
+
 { #category : #accessing }
 IndentationTransformer >> start [
 	^ transformIndents
@@ -157,5 +167,9 @@ IndentationTransformer >> start [
 
 { #category : #grammar }
 IndentationTransformer >> transformIndents [
-	^ end / lineNL plus ==> [ :node | node flatten ]
+	^ line star end
+		==> [ :node | 
+			node
+				add: {self dedentToken repeat: self currentIndentation} asOrderedCollection;
+				flatten ]
 ]

@@ -69,3 +69,12 @@ foobar
 IndentationTransformerExamples >> parse: aString [
 	^ IndentationTransformer new parse: aString
 ]
+
+{ #category : #accessing }
+IndentationTransformerExamples >> x [
+	<gtExample>
+	| result |
+	result := '' join: (self parse: 'x').
+	self assert: result equals: 'x'.
+	^ result
+]
