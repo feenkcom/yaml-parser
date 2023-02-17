@@ -490,6 +490,43 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T11:04:11.007825+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T11:07:24.070364+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "XsXlK0SxDQClad9sAWx99g=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "We will try to follow roughly the structure proposed in the [ANTLR scanner](https://github.com/umaranis/FastYaml/blob/master/src/antlr/YamlLexer.g4) and  [ANTLR parser](https://github.com/umaranis/FastYaml/blob/master/src/antlr/YamlParser.g4)."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
 									"dateAndTimeString" : "2023-02-15T15:06:40.133995+01:00"
 								}
 							},
@@ -635,43 +672,6 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-16T17:40:48.558186+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-16T17:40:53.990668+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "tyZ/dTWxDQCpb/rpD4lH3A=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "**CONTINUE HERE** "
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
 									"dateAndTimeString" : "2023-02-17T09:17:55.157439+01:00"
 								}
 							},
@@ -694,6 +694,111 @@
 								"__type" : "textStyle"
 							},
 							"string" : "NB: the value rule is problematic as it is ambiguous. We don't know until we see the $: or not whether we are seeing a scalar or a mapping."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T11:05:13.734634+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T11:08:29.18708+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "f95hL0SxDQCmi+nWAWx99g=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "NB: we use `name` instead of `STRING_MY` for now. Later we will generalize the prototype to handle other kinds of plain values like quoted strings and other kinds of numbers."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T11:39:24.192134+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T11:39:24.192134+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "J7PvqUSxDQCscbB5AWx99g=="
+							},
+							"code" : "name := (#letter asPParser / $_ asPParser\r\t\t, (#word asPParser / $_ asPParser) star) flatten.\r\rnumber := #digit asPParser plus flatten.\rscalar := name / number.\rvalue := scalar.\r\rkey := name.\r\rmappingValue := PP2UnresolvedNode new.\r\rmapping := (key , $: asPParser trim , mappingValue)\r\t\t==> [ :node | node first -> node third ].\r\rnewline := #newline asPParser.\rindent := '<<INDENT>>' asPParser.\rdedent := '<<DEDENT>>' asPParser.\r\rmappingList := mapping , #endOfLine asPParser\r\t\t, (newline / mapping , #endOfLine asPParser) star.\r\rindentedMappingList := indent , mappingList , dedent.\r\rmappingValue def: indentedMappingList / value.\r\rdocument := (mappingList / value) end."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T11:39:24.843545+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T11:39:34.141311+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "qqz5qUSxDQCsd3z/AWx99g=="
+							},
+							"code" : "indentedMappingList parse: '<<INDENT>>bar : foobar\rbaz : foobaz\r<<DEDENT>>'"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -720,48 +825,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-17T09:16:30.227938+01:00"
+									"dateAndTimeString" : "2023-02-17T11:39:24.193748+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "jWyuoUKxDQCDfTurDhA3Ig=="
 							},
-							"code" : "literal := (#letter asPParser / $_ asPParser\r\t\t, (#word asPParser / $_ asPParser) star) flatten.\r\rnumber := #digit asPParser plus flatten.\rscalar := literal / number.\rkey := literal.\r\rvalue := PP2UnresolvedNode new.\r\rmapping := (key , $: asPParser trim , value)\r\t\t==> [ :node | node first -> node third ].\r\rnewline := #newline asPParser.\rindent := '<<INDENT>>' asPParser.\rdedent := '<<DEDENT>>' asPParser.\r\rmappingList := mapping , #endOfLine asPParser\r\t\t, (newline / mapping , #endOfLine asPParser) star.\r\rvalue def: mappingList / scalar.\r\rdocument := mappingList end.\r"
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:07:33.253922+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-17T09:16:38.203561+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "MumoVh+xDQCiG3lRAUzVKw=="
-							},
-							"code" : "input := IndentationTransformer\r\t\ttransform: YamlPParserExamples new nestedMappingListCode.\r\rdocument parse: 'foo : bar'"
+							"code" : "document parse: 'foo : bar'.\r\rinput := IndentationTransformer\r\t\ttransform: YamlPParserExamples new nestedMappingListCode.\r\rdocument parse: input."
 						},
 						{
 							"__type" : "textSnippet",
@@ -794,43 +865,6 @@
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "9ygdXh+xDQCipB/9AUzVKw=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : ""
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:04:38.402141+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-17T09:17:24.753101+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "X+w8TB+xDQCe43WVAUzVKw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
@@ -906,6 +940,81 @@
 					"__type" : "textStyle"
 				},
 				"string" : "#Nested mappings"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T12:15:15.835128+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T12:16:05.89228+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "j7z+KUWxDQCcMfohAWx99g=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "TG suggests to make tests subclasses of PP2CompositeNodeExamples so we  can just test whether a particular grammar rule is working."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-17T12:14:57.511104+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-17T12:15:12.194+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "X+w8TB+xDQCe43WVAUzVKw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#Testing"
 			},
 			{
 				"__type" : "textSnippet",
