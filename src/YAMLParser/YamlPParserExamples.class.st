@@ -20,6 +20,12 @@ bar : foo'
 ]
 
 { #category : #accessing }
+YamlPParserExamples >> newline [
+	<gtExample>
+	^ self parse: String cr rule: #newline
+]
+
+{ #category : #accessing }
 YamlPParserExamples >> parse: aString [
 	^ super parse: (IndentationTransformer transform: aString)
 ]
