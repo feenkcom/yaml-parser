@@ -2,7 +2,6 @@ Class {
 	#name : #YamlPParser,
 	#superclass : #PP2CompositeNode,
 	#instVars : [
-		'name',
 		'number',
 		'scalar',
 		'value',
@@ -25,7 +24,9 @@ Class {
 		'stringWithinSingleQuotes',
 		'singleQuotedString',
 		'dedentToken',
-		'indentToken'
+		'indentToken',
+		'initialScalarStringChars',
+		'scalarString'
 	],
 	#category : #'YAMLParser-PParser'
 }
@@ -112,6 +113,18 @@ YamlPParser >> indentedMappingList [
 ]
 
 { #category : #grammar }
+YamlPParser >> initialScalarStringChars [
+	"Taken from the ANTLR Scanner
+	https://github.com/umaranis/FastYaml/blob/master/src/antlr/YamlLexer.g4
+	fragment STRING_MY_START
+	"
+	^ ($- asPParser / #blank asPParser / #newline asPParser / $: asPParser
+		/ $# asPParser / ${ asPParser / $[ asPParser / $& asPParser / $* asPParser) negate 
+		/ ($: asPParser , (#blank asPParser / #newline asPParser) negate)
+		/ ($- asPParser , (#blank asPParser / $- asPParser / #newline asPParser) negate)
+]
+
+{ #category : #grammar }
 YamlPParser >> integer [
 	<todo: 'Add octal, hex and binary integers.'>
 	^ decimalInteger
@@ -119,7 +132,7 @@ YamlPParser >> integer [
 
 { #category : #grammar }
 YamlPParser >> key [
-	^ name
+	^ scalarString
 ]
 
 { #category : #grammar }
@@ -135,12 +148,6 @@ YamlPParser >> mappingList [
 { #category : #grammar }
 YamlPParser >> mappingValue [
 	^ indentedMappingList / value
-]
-
-{ #category : #grammar }
-YamlPParser >> name [
-	^ (#letter asPParser / $_ asPParser , (#word asPParser / $_ asPParser) star)
-		flatten
 ]
 
 { #category : #grammar }
@@ -161,7 +168,20 @@ YamlPParser >> number [
 
 { #category : #grammar }
 YamlPParser >> scalar [
-	^ name / number
+	^ scalarString / number
+]
+
+{ #category : #grammar }
+YamlPParser >> scalarString [
+	"Taken from the ANTLR Scanner
+	https://github.com/umaranis/FastYaml/blob/master/src/antlr/YamlLexer.g4
+	STRING_MY
+	"
+	^ initialScalarStringChars
+		, ((#blank asPParser / #newline asPParser / $" asPParser / $: asPParser) negate
+			/ ($: asPParser , (#blank asPParser / #newline asPParser) negate)
+			/ (#blank asPParser plus , (#blank asPParser / $: asPParser / $# asPParser / #newline asPParser) negate)
+			) star
 ]
 
 { #category : #grammar }

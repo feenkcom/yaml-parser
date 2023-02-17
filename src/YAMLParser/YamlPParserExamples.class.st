@@ -80,6 +80,24 @@ YamlPParserExamples >> parserClass [
 ]
 
 { #category : #accessing }
+YamlPParserExamples >> scalarStringFoo [
+	<gtExample>
+	^ self parse: 'foo' rule: #scalarString
+]
+
+{ #category : #accessing }
+YamlPParserExamples >> scalarStringFooBarWithColon [
+	<gtExample>
+	^ self parse: 'foo:bar' rule: #scalarString
+]
+
+{ #category : #accessing }
+YamlPParserExamples >> scalarStringFooBarWithSpaces [
+	<gtExample>
+	^ self parse: 'foo bar' rule: #scalarString
+]
+
+{ #category : #accessing }
 YamlPParserExamples >> simpleMappingList [
 	<gtExample>
 	^ self parse: self simpleMappingListCode rule: #mappingList
