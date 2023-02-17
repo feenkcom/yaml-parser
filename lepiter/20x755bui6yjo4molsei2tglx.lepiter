@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-15T15:00:37.99838+01:00"
+						"dateAndTimeString" : "2023-02-17T08:47:22.344641+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-15T15:00:45.873067+01:00"
+						"dateAndTimeString" : "2023-02-17T08:47:31.543843+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "9WW4PR+xDQCdesDOAUzVKw=="
+					"uidString" : "zhP/QUKxDQC1gPspDhA3Ig=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "See also [[Recognizing mappings (first attempt)]] "
+				"string" : "The [[YAML Specs]] are very complex and detailed."
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-15T14:59:23.275283+01:00"
+						"dateAndTimeString" : "2023-02-17T08:47:32.779824+01:00"
 					}
 				},
 				"editEmail" : {
@@ -66,51 +66,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-16T15:51:57.897908+01:00"
+						"dateAndTimeString" : "2023-02-17T08:47:50.766594+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "OH+iKx+xDQCZ0H6QAUzVKw=="
+					"uidString" : "sy9NQ0KxDQC2H4F2DhA3Ig=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We start with the [[Indentation Transformer]]."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-15T14:59:39.293792+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-16T17:29:10.035725+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "59poOh+xDQCdWkcwAUzVKw=="
-				},
-				"code" : "IndentationTransformer\r\ttransform: 'foo\r  bar\r    baz\r  foofoo\r  foobar\rfoo2\rbar2'"
+				"string" : "Basically YAML is equivalent to JSON, it seems, and JSON is actually a sublanguage."
 			},
 			{
 				"__type" : "textSnippet",
@@ -131,7 +97,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:01:31.164187+01:00"
+									"dateAndTimeString" : "2023-02-17T08:53:50.373799+01:00"
 								}
 							},
 							"editEmail" : {
@@ -142,51 +108,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:01:39.264732+01:00"
+									"dateAndTimeString" : "2023-02-17T08:54:34.486766+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "SGJkQB+xDQCeA6jjAUzVKw=="
+								"uidString" : "NevGWUKxDQC7urcNDhA3Ig=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We start with simple keys and values."
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:01:56.879484+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:01:57.328537+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "9TmcQh+xDQCeexMrAUzVKw=="
-							},
-							"code" : "YamlPParserExamples new simpleMappingListCode"
+							"string" : "A document is a list, a mapping list, a flow list, a flow mapping list, or a value."
 						},
 						{
 							"__type" : "textSnippet",
@@ -202,7 +134,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:02:04.663711+01:00"
+									"dateAndTimeString" : "2023-02-17T08:54:40.668878+01:00"
 								}
 							},
 							"editEmail" : {
@@ -213,17 +145,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:02:04.663711+01:00"
+									"dateAndTimeString" : "2023-02-17T08:55:05.473209+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "TFrYQh+xDQCeg26mAUzVKw=="
+								"uidString" : "sP1/XEKxDQC8/sUwDhA3Ig=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Keys are `STRING_MY` in the [ANTLR grammar](https://github.com/umaranis/FastYaml)."
+							"string" : "The flow versions are essentially JSON (i.e., using curly braces instead of indents)."
 						},
 						{
 							"__type" : "textSnippet",
@@ -239,7 +171,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:02:10.900664+01:00"
+									"dateAndTimeString" : "2023-02-17T08:55:53.948823+01:00"
 								}
 							},
 							"editEmail" : {
@@ -250,51 +182,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:02:10.900664+01:00"
+									"dateAndTimeString" : "2023-02-17T08:55:59.29621+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "BYA2Qx+xDQCei0QbAUzVKw=="
+								"uidString" : "g/NxXkKxDQC+Dj+ZDhA3Ig=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "To keep thing simple, let's assume that keys are alphanumeric or underscore characters."
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:02:12.830561+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:02:17.083978+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "iJ2PQx+xDQCek3GGAUzVKw=="
-							},
-							"code" : "key := (#word asPParser / $_ asPParser) plus flatten .\rkey end parse: '6_foo'."
+							"string" : "Mappings are key-value pairs."
 						},
 						{
 							"__type" : "textSnippet",
@@ -310,7 +208,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:02:24.710431+01:00"
+									"dateAndTimeString" : "2023-02-17T08:56:00.641595+01:00"
 								}
 							},
 							"editEmail" : {
@@ -321,122 +219,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:02:24.710431+01:00"
+									"dateAndTimeString" : "2023-02-17T08:56:28.360388+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "za/3Qx+xDQCem9MNAUzVKw=="
+								"uidString" : "pECJYUKxDQC+agL1DhA3Ig=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "A mapping is a key value pair."
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:02:31.530941+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-16T17:09:56.161726+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "ifWsRB+xDQCeo2vpAUzVKw=="
-							},
-							"code" : "key := (#word asPParser / $_ asPParser) plus flatten.\rmapping := (key , $: asPParser trim , key)\r\t\t==> [ :node | node first -> node third ].\rmapping parse: 'foo : bar'"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:02:40.798239+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:02:40.798239+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "rQPfRB+xDQCeq+91AUzVKw=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "A mapping list is a bunch of them."
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-16T17:10:37.421418+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-16T17:27:53.855907+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "bsOhLDWxDQCnQ4RgD4lH3A=="
-							},
-							"code" : "key := (#word asPParser / $_ asPParser) plus flatten.\rmapping := (key , $: asPParser trim , key)\r\t\t==> [ :node | node first -> node third ].\rnewline := #newline asPParser.\rmappingList := (newline / (mapping , #endOfLine asPParser)) plus.\r\rmappingList end parse: YamlPParserExamples new simpleMappingListCode"
+							"string" : "Lists are lists of values. With indentation they start with a hyphen. In flow lists they are separated by commas."
 						}
 					]
 				},
@@ -448,7 +241,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-15T15:01:14.446298+01:00"
+						"dateAndTimeString" : "2023-02-17T08:53:47.235178+01:00"
 					}
 				},
 				"editEmail" : {
@@ -459,17 +252,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-15T15:01:18.465096+01:00"
+						"dateAndTimeString" : "2023-02-17T08:53:48.877749+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "dNu7PB+xDQCddW9yAUzVKw=="
+					"uidString" : "W+GSWUKxDQC7mrqeDhA3Ig=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Recognizing mappings"
+				"string" : "#Document"
 			},
 			{
 				"__type" : "textSnippet",
@@ -490,7 +283,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:06:40.133995+01:00"
+									"dateAndTimeString" : "2023-02-17T08:48:35.828481+01:00"
 								}
 							},
 							"editEmail" : {
@@ -501,51 +294,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:06:46.270287+01:00"
+									"dateAndTimeString" : "2023-02-17T08:48:37.52954+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "ZxhjUx+xDQChdHsMAUzVKw=="
+								"uidString" : "LxwWR0KxDQC3or4cDhA3Ig=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Here's a simple example to parse:"
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:06:47.873912+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:06:48.432166+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "Y3f0Ux+xDQCh2yesAUzVKw=="
-							},
-							"code" : "YamlPParserExamples new nestedMappingListCode"
+							"string" : "There are three primitives: maps, sequences and scalars (strings/numbers)."
 						},
 						{
 							"__type" : "textSnippet",
@@ -561,7 +320,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:05:59.483545+01:00"
+									"dateAndTimeString" : "2023-02-17T08:48:39.473137+01:00"
 								}
 							},
 							"editEmail" : {
@@ -572,17 +331,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:07:24.504279+01:00"
+									"dateAndTimeString" : "2023-02-17T08:48:39.473137+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "T064UB+xDQCgqde7AUzVKw=="
+								"uidString" : "+7VNR0KxDQC3riKXDhA3Ig=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We will now leverage the indentation transformer."
+							"string" : "Sequence entries start with \"- \"."
 						},
 						{
 							"__type" : "textSnippet",
@@ -598,7 +357,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-16T17:36:29.194008+01:00"
+									"dateAndTimeString" : "2023-02-17T08:48:40.79036+01:00"
 								}
 							},
 							"editEmail" : {
@@ -609,17 +368,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-16T17:36:42.560192+01:00"
+									"dateAndTimeString" : "2023-02-17T08:48:40.79036+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "V0voiDWxDQCsCbfBD4lH3A=="
+								"uidString" : "eM5hR0KxDQC3t+83DhA3Ig=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We need a recursive rule. See the [[PP FAQ]]."
+							"string" : "Maps use \": \" to separate keys and values."
 						},
 						{
 							"__type" : "textSnippet",
@@ -635,7 +394,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-16T17:40:48.558186+01:00"
+									"dateAndTimeString" : "2023-02-17T08:48:43.793223+01:00"
 								}
 							},
 							"editEmail" : {
@@ -646,17 +405,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-16T17:40:53.990668+01:00"
+									"dateAndTimeString" : "2023-02-17T08:48:43.793223+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "tyZ/dTWxDQCpb/rpD4lH3A=="
+								"uidString" : "IKWPR0KxDQC3w04DDhA3Ig=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "**CONTINUE HERE** "
+							"string" : "Comments start with \"#\"."
 						},
 						{
 							"__type" : "textSnippet",
@@ -672,7 +431,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-17T09:17:55.157439+01:00"
+									"dateAndTimeString" : "2023-02-17T08:48:46.738944+01:00"
 								}
 							},
 							"editEmail" : {
@@ -683,85 +442,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-17T09:18:39.227047+01:00"
+									"dateAndTimeString" : "2023-02-17T08:48:46.738944+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "/Gb3q0KxDQCEgoaQDhA3Ig=="
+								"uidString" : "/Ze8R0KxDQC3z4hnDhA3Ig=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "NB: the value rule is problematic as it is ambiguous. We don't know until we see the $: or not whether we are seeing a scalar o"
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-17T09:13:55.761355+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-17T09:16:30.227938+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "jWyuoUKxDQCDfTurDhA3Ig=="
-							},
-							"code" : "literal := (#letter asPParser / $_ asPParser\r\t\t, (#word asPParser / $_ asPParser) star) flatten.\r\rnumber := #digit asPParser plus flatten.\rscalar := literal / number.\rkey := literal.\r\rvalue := PP2UnresolvedNode new.\r\rmapping := (key , $: asPParser trim , value)\r\t\t==> [ :node | node first -> node third ].\r\rnewline := #newline asPParser.\rindent := '<<INDENT>>' asPParser.\rdedent := '<<DEDENT>>' asPParser.\r\rmappingList := mapping , #endOfLine asPParser\r\t\t, (newline / mapping , #endOfLine asPParser) star.\r\rvalue def: mappingList / scalar.\r\rdocument := mappingList end.\r"
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:07:33.253922+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-17T09:16:38.203561+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "MumoVh+xDQCiG3lRAUzVKw=="
-							},
-							"code" : "input := IndentationTransformer\r\t\ttransform: YamlPParserExamples new nestedMappingListCode.\r\rdocument parse: 'foo : bar'"
+							"string" : "Indentation is not needed to map scalars to sequences."
 						},
 						{
 							"__type" : "textSnippet",
@@ -777,7 +468,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:09:39.225962+01:00"
+									"dateAndTimeString" : "2023-02-17T08:48:54.299984+01:00"
 								}
 							},
 							"editEmail" : {
@@ -788,91 +479,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-17T09:16:53.872342+01:00"
+									"dateAndTimeString" : "2023-02-17T08:48:54.299984+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "9ygdXh+xDQCipB/9AUzVKw=="
+								"uidString" : "D/YvSEKxDQC34btmDhA3Ig=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : ""
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:04:38.402141+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-17T09:17:24.753101+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "X+w8TB+xDQCe43WVAUzVKw=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : ""
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:04:38.402176+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:04:38.402176+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "gew8TB+xDQCe62uMAUzVKw=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : ""
+							"string" : "Flow styles use curly braces and commas for maps and square brackets and commas for lists. Trailing commas can be ignored."
 						}
 					]
 				},
@@ -884,7 +501,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-15T15:04:38.402135+01:00"
+						"dateAndTimeString" : "2023-02-17T08:48:27.719528+01:00"
 					}
 				},
 				"editEmail" : {
@@ -895,23 +512,135 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-15T15:04:38.402135+01:00"
+						"dateAndTimeString" : "2023-02-17T08:48:32.128484+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Wuw8TB+xDQCe4kkaAUzVKw=="
+					"uidString" : "PUWHRkKxDQC3XY8bDhA3Ig=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Nested mappings"
+				"string" : "#Primitives"
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T08:49:12.70362+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T08:49:12.70362+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "1cdISUKxDQC4NjZUDhA3Ig=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "There are many ways to express longer content."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T08:49:16.550974+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T08:49:16.550974+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "sHiDSUKxDQC4P1zNDhA3Ig=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Quoted scalars with \" or '"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T08:49:17.812953+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T08:49:17.812953+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "6L2WSUKxDQC4SC08DhA3Ig=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Multiline with | or > at EOL"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -921,7 +650,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-15T15:04:38.403082+01:00"
+						"dateAndTimeString" : "2023-02-17T08:49:03.062284+01:00"
 					}
 				},
 				"editEmail" : {
@@ -932,23 +661,135 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-15T15:04:38.403082+01:00"
+						"dateAndTimeString" : "2023-02-17T08:49:03.062284+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "DfA8TB+xDQCe7fEZAUzVKw=="
+					"uidString" : "3aq1SEKxDQC38h5wDhA3Ig=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "#Scalars"
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T08:49:27.249105+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T08:49:27.249105+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "zLkmSkKxDQC4Z4xZDhA3Ig=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Basic value types are seq, map, str."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T08:49:28.50809+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T08:49:28.50809+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "gu85SkKxDQC4cAU9DhA3Ig=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "From JSON also int, float or null."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T08:49:29.836335+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T08:49:29.836335+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "6jNOSkKxDQC4eY8kDhA3Ig=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Also boolean, timestamp and others?"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -958,7 +799,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-15T15:04:38.403349+01:00"
+						"dateAndTimeString" : "2023-02-17T08:49:23.639272+01:00"
 					}
 				},
 				"editEmail" : {
@@ -969,23 +810,98 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-15T15:04:38.403349+01:00"
+						"dateAndTimeString" : "2023-02-17T08:49:23.639272+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "F/E8TB+xDQCe7sRJAUzVKw=="
+					"uidString" : "qaXvSUKxDQC4WSS+DhA3Ig=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "#Types"
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T08:49:37.21686+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T08:49:37.21686+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "PNK+SkKxDQC4mLsPDhA3Ig=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Complex mapping key with ? (eg a sequence used as a key)."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T08:49:38.521738+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T08:49:38.521738+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "b7jSSkKxDQC4odxiDhA3Ig=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Repeated nodes are labeled with anchors with & and referenced with *"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -995,7 +911,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-15T15:04:38.403604+01:00"
+						"dateAndTimeString" : "2023-02-17T08:49:34.807697+01:00"
 					}
 				},
 				"editEmail" : {
@@ -1006,17 +922,129 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-15T15:04:38.403604+01:00"
+						"dateAndTimeString" : "2023-02-17T08:49:34.807697+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "FvI8TB+xDQCe76a8AUzVKw=="
+					"uidString" : "RRCaSkKxDQC4iu1DDhA3Ig=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "#Obscure features"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T08:51:11.243756+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T08:53:29.05622+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Dy8IT0KxDQC45FKADhA3Ig=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "DocumentStart is '---'. DocumentEnd is '...'. These are only used if there are multiple “documents” is a file."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T08:51:55.292353+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T08:52:21.967481+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "LwU6UUKxDQC5gg+lDhA3Ig=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "At the end of a line '>' and '|' indicate a folded string or a literal string following."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-17T08:50:46.952489+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-17T08:50:48.537353+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "GHXHTkKxDQC4xjAZDhA3Ig=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#Tokens"
 			}
 		]
 	},
@@ -1028,7 +1056,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-02-15T14:55:31.366441+01:00"
+			"dateAndTimeString" : "2023-02-17T08:47:10.403509+01:00"
 		}
 	},
 	"editEmail" : {
@@ -1039,15 +1067,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-02-15T15:00:34.818176+01:00"
+			"dateAndTimeString" : "2023-02-17T08:47:10.403509+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Recognizing mappings"
+		"title" : "YAML grammar outline"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "72d0a12b-1fb1-0d00-99cf-b7af014cd52b"
+		"uuid" : "55a3fe41-42b1-0d00-b57f-196f0e103722"
 	}
 }

@@ -150,7 +150,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-01-10T10:15:43.432619+01:00"
+												"dateAndTimeString" : "2023-01-10T10:15:52.556917+01:00"
 											}
 										},
 										"uid" : {
@@ -160,7 +160,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "[JSON <-> YAML]("
+										"string" : "[JSON <-> YAML](https://www.json2yaml.com)"
 									}
 								]
 							},
@@ -199,80 +199,6 @@
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-10T10:10:59.902258+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-10T10:11:09.531046+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "U5FP/0auDQCsOLX5DQXDKw=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "[YAML 1.2 spec](https://yaml.org/spec/1.2.2/) "
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-10T10:08:28.177025+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-10T10:09:19.538516+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "IkRW9kauDQCsG1RCDQXDKw=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "[YAML grammar repo](https://github.com/yaml/yaml-grammar). "
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
 								"items" : [
 									{
 										"__type" : "textSnippet",
@@ -288,7 +214,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-01-10T10:11:58.087054+01:00"
+												"dateAndTimeString" : "2023-01-10T10:10:59.902258+01:00"
 											}
 										},
 										"editEmail" : {
@@ -299,17 +225,17 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-01-10T10:12:05.804675+01:00"
+												"dateAndTimeString" : "2023-01-10T10:11:09.531046+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "v/wVA0euDQCsWNWZDQXDKw=="
+											"uidString" : "U5FP/0auDQCsOLX5DQXDKw=="
 										},
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "[ANTLR Parser](https://github.com/umaranis/FastYaml/blob/master/src/antlr/YamlParser.g4) "
+										"string" : "[YAML 1.2 spec](https://yaml.org/spec/1.2.2/) "
 									},
 									{
 										"__type" : "textSnippet",
@@ -325,7 +251,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-01-10T10:12:07.270166+01:00"
+												"dateAndTimeString" : "2023-01-10T10:08:28.177025+01:00"
 											}
 										},
 										"editEmail" : {
@@ -336,17 +262,129 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-01-10T10:12:25.011938+01:00"
+												"dateAndTimeString" : "2023-01-10T10:09:19.538516+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "EzLCA0euDQCsYZq8DQXDKw=="
+											"uidString" : "IkRW9kauDQCsG1RCDQXDKw=="
 										},
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "[ANTLR Scanner](https://github.com/umaranis/FastYaml/blob/master/src/antlr/YamlLexer.g4) "
+										"string" : "[YAML grammar repo](https://github.com/yaml/yaml-grammar). "
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [
+												{
+													"__type" : "textSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-01-10T10:11:58.087054+01:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-01-10T10:12:05.804675+01:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "v/wVA0euDQCsWNWZDQXDKw=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "[ANTLR Parser](https://github.com/umaranis/FastYaml/blob/master/src/antlr/YamlParser.g4) "
+												},
+												{
+													"__type" : "textSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-01-10T10:12:07.270166+01:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-01-10T10:12:25.011938+01:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "EzLCA0euDQCsYZq8DQXDKw=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "[ANTLR Scanner](https://github.com/umaranis/FastYaml/blob/master/src/antlr/YamlLexer.g4) "
+												}
+											]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-01-10T10:08:17.748536+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-01-10T10:11:26.250117+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "fUA09UauDQCsEtuKDQXDKw=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "[ANTLR Grammar](https://github.com/umaranis/FastYaml)."
 									}
 								]
 							},
@@ -358,7 +396,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-10T10:08:17.748536+01:00"
+									"dateAndTimeString" : "2023-01-10T10:15:56.167538+01:00"
 								}
 							},
 							"editEmail" : {
@@ -369,17 +407,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-10T10:11:26.250117+01:00"
+									"dateAndTimeString" : "2023-01-10T10:15:59.544588+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "fUA09UauDQCsEtuKDQXDKw=="
+								"uidString" : "6RxREUeuDQCsoYYpDQXDKw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[ANTLR Grammar](https://github.com/umaranis/FastYaml)."
+							"string" : "#Grammar specs"
 						}
 					]
 				},
