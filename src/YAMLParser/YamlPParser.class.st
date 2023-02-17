@@ -23,10 +23,17 @@ Class {
 		'stringWithinDoubleQuotes',
 		'doubledSingleQuotes',
 		'stringWithinSingleQuotes',
-		'singleQuotedString'
+		'singleQuotedString',
+		'dedentToken',
+		'indentToken'
 	],
 	#category : #'YAMLParser-PParser'
 }
+
+{ #category : #accessing }
+YamlPParser class >> ignoredNames [
+	^ super ignoredNames copyWithAll: #(indentToken dedentToken)
+]
 
 { #category : #grammar }
 YamlPParser >> comment [
@@ -42,11 +49,33 @@ YamlPParser >> decimalInteger [
 
 { #category : #grammar }
 YamlPParser >> dedent [
-	^ '<<DEDENT>>' asPParser
+	^ self dedentToken asPParser
+]
+
+{ #category : #grammar }
+YamlPParser >> dedentToken [
+	dedentToken ifNil: [ dedentToken := self defaultDedentToken ].
+	^ dedentToken
+]
+
+{ #category : #accessing }
+YamlPParser >> dedentToken: anObject [
+	dedentToken := anObject
+]
+
+{ #category : #grammar }
+YamlPParser >> defaultDedentToken [
+	^ '<<DEDENT>>'
+]
+
+{ #category : #grammar }
+YamlPParser >> defaultIndentToken [
+	^ '<<INDENT>>'
 ]
 
 { #category : #grammar }
 YamlPParser >> document [
+	<todo: 'Add list, flowList and flowMappingList'>
 	^ (mappingList / value) end
 ]
 
@@ -63,7 +92,18 @@ YamlPParser >> doubledSingleQuotes [
 
 { #category : #grammar }
 YamlPParser >> indent [
-	^ '<<INDENT>>' asPParser
+	^ self indentToken asPParser
+]
+
+{ #category : #grammar }
+YamlPParser >> indentToken [
+	indentToken ifNil: [ indentToken := self defaultIndentToken ].
+	^ indentToken
+]
+
+{ #category : #accessing }
+YamlPParser >> indentToken: anObject [
+	indentToken := anObject
 ]
 
 { #category : #grammar }
