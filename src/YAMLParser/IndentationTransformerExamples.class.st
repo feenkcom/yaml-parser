@@ -1,6 +1,6 @@
 Class {
 	#name : #IndentationTransformerExamples,
-	#superclass : #Object,
+	#superclass : #PP2CompositeNodeExamples,
 	#category : #'YAMLParser-PPExamples'
 }
 
@@ -8,8 +8,13 @@ Class {
 IndentationTransformerExamples >> foo [
 	<gtExample>
 	| result |
-	result := self transform: 'foo'.
-	self assert: result equals: 'foo'.
+	result := ''
+			join: (self
+					parse: 'foo'
+					rule: #transformIndents).
+	self
+		assert: result
+		equals: 'foo'.
 	^ result
 ]
 
@@ -17,9 +22,11 @@ IndentationTransformerExamples >> foo [
 IndentationTransformerExamples >> fooIndentBar [
 	<gtExample>
 	| result |
-	result := self
-			transform: 'foo
-  bar'.
+	result := ''
+			join: (self
+					parse: 'foo
+  bar'
+					rule: #transformIndents).
 	self
 		assert: result
 		equals: 'foo
@@ -31,10 +38,12 @@ IndentationTransformerExamples >> fooIndentBar [
 IndentationTransformerExamples >> fooIndentBarCR [
 	<gtExample>
 	| result |
-	result := self
-			transform: 'foo
+	result := ''
+			join: (self
+					parse: 'foo
   bar
-'.
+'
+					rule: #transformIndents).
 	self
 		assert: result
 		equals: 'foo
@@ -47,10 +56,12 @@ IndentationTransformerExamples >> fooIndentBarCR [
 IndentationTransformerExamples >> fooIndentBarDedentFoobar [
 	<gtExample>
 	| result |
-	result := self
-			transform: 'foo
+	result := ''
+			join: (self
+					parse: 'foo
   bar
-foobar'.
+foobar'
+					rule: #transformIndents).
 	self
 		assert: result
 		equals: 'foo
@@ -63,11 +74,13 @@ foobar'.
 IndentationTransformerExamples >> fooIndentBarDedentFoobarCR [
 	<gtExample>
 	| result |
-	result := self
-			transform: 'foo
+	result := ''
+			join: (self
+					parse: 'foo
   bar
 foobar
-'.
+'
+					rule: #transformIndents).
 	self
 		assert: result
 		equals: 'foo
@@ -78,20 +91,65 @@ foobar
 ]
 
 { #category : #accessing }
-IndentationTransformerExamples >> parse: aString [
-	^ IndentationTransformer new parse: aString
+IndentationTransformerExamples >> indentOnce [
+	<gtExample>
+	| result |
+	result := self parse: String space , String space rule: #indent.
+	^ result
 ]
 
 { #category : #accessing }
-IndentationTransformerExamples >> transform: aString [
-	^ IndentationTransformer transform: aString
+IndentationTransformerExamples >> indentString [
+	^ String space , String space
+]
+
+{ #category : #accessing }
+IndentationTransformerExamples >> indentTwice [
+	<gtExample>
+	| result |
+	result := self parse: (self indentString repeat: 2) rule: #indents.
+	^ result
+]
+
+{ #category : #accessing }
+IndentationTransformerExamples >> indentedFoo [
+	<gtExample>
+	| result |
+	result := self parse: '  foo' rule: #indentedLine.
+	^ result
+]
+
+{ #category : #accessing }
+IndentationTransformerExamples >> newline [
+	<gtExample>
+	| result |
+	result := self parse: String cr rule: #newline.
+	^ result
+]
+
+{ #category : #accessing }
+IndentationTransformerExamples >> nonIndentedFoo [
+	<gtExample>
+	| result |
+	result := self parse: 'foo' rule: #nonIndentedLine.
+	^ result
+]
+
+{ #category : #accessing }
+IndentationTransformerExamples >> parserClass [
+	^ IndentationTransformer
 ]
 
 { #category : #accessing }
 IndentationTransformerExamples >> x [
 	<gtExample>
 	| result |
-	result := self transform: 'x'.
-	self assert: result equals: 'x'.
+	result := ''
+			join: (self
+					parse: 'x'
+					rule: #transformIndents).
+	self
+		assert: result
+		equals: 'x'.
 	^ result
 ]
