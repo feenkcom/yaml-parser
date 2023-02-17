@@ -65,11 +65,6 @@ YamlPParserExamples >> newline [
 ]
 
 { #category : #accessing }
-YamlPParserExamples >> parse: aString [
-	^ super parse: (IndentationTransformer transform: aString)
-]
-
-{ #category : #accessing }
 YamlPParserExamples >> parse: aString rule: aSymbol [
 	^ super parse: (IndentationTransformer transform: aString) rule: aSymbol
 ]

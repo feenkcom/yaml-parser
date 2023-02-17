@@ -425,7 +425,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-17T18:08:17.509606+01:00"
+									"dateAndTimeString" : "2023-02-17T18:09:11.274232+01:00"
 								}
 							},
 							"editEmail" : {
@@ -436,7 +436,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-17T18:08:17.509606+01:00"
+									"dateAndTimeString" : "2023-02-17T18:09:26.338057+01:00"
 								}
 							},
 							"uid" : {
@@ -446,7 +446,44 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : ""
+							"string" : "Continue with mappings and lists."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T19:55:41.532263+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T19:55:49.343633+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "J3zHmEuxDQCYzTV7AoRQHg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Fix this: {{gtExample:name=\nX=\"Gesamtausgabe_\"\nY=\"Sudoku_\"\n\nX=\" - fragment\"\nY=\"\"\n\nX=\"Seite_28_Region_Zürich\"\nY=\"Sudoku\"\n}}"
 						}
 					]
 				},
