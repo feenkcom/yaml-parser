@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-02T09:44:45.699804+01:00"
+						"dateAndTimeString" : "2023-02-17T14:57:35.706356+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,91 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-15T14:55:39.717126+01:00"
+						"dateAndTimeString" : "2023-02-17T14:58:13.695959+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "0aQyUBWwDQCZb2H5DCAgYQ=="
+					"uidString" : "mb/ybUexDQCdANVrAYZv9A=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We want to define a YAML PetitParser as a class that we can later subclass to recognize GutHub Action Workflow files."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-15T14:58:19.239554+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-16T15:51:57.895307+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "MdtnUhWwDQCa2to3DCAgYQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "We start with the [[Indentation Transformer]] to transform indentations to pseudo-tokens, and proceed from there."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-02T09:46:30.613521+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-02T09:46:54.830152+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "WHSPVhWwDQCcw8sCDCAgYQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Again, we start with a script, and incrementally elevate new productions to a class."
+				"string" : "We start by extracting a parser class from the mapping parser prototype, and then incrementally adding test cases."
 			},
 			{
 				"__type" : "textSnippet",
@@ -134,7 +60,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-02T09:47:07.428993+01:00"
+									"dateAndTimeString" : "2023-02-17T14:58:21.886127+01:00"
 								}
 							},
 							"editEmail" : {
@@ -145,17 +71,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-17T14:56:40.412426+01:00"
+									"dateAndTimeString" : "2023-02-17T15:01:02.52554+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "F5GnWBWwDQCd9vdGDCAgYQ=="
+								"uidString" : "vjlncUexDQCe7W7QAYZv9A=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "{{gtTodo:label=Add mapping lists|completed=2023-02-17}}"
+							"string" : "We start with the prototype in [[Recognizing mappings]]. We remove the recursion and extract the class, {{gtClass:name=YamlPParser}}. "
 						},
 						{
 							"__type" : "textSnippet",
@@ -171,7 +97,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-02T09:47:38.894407+01:00"
+									"dateAndTimeString" : "2023-02-17T15:01:40.490466+01:00"
 								}
 							},
 							"editEmail" : {
@@ -182,17 +108,85 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-02T09:48:07.862676+01:00"
+									"dateAndTimeString" : "2023-02-17T15:01:50.6609+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "9qaMWhWwDQCes60+DCAgYQ=="
+								"uidString" : "pY8MckexDQCfawxpAYZv9A=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "{{gtTodo:label=Define test examples for nested mapping lsits}}"
+							"string" : "We check that the simple examples work."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T14:58:34.54197+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T15:01:36.667987+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "sZc7ckexDQCfcUCtAYZv9A=="
+							},
+							"code" : " YamlPParser new parse: 'foo : bar' "
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T15:01:59.208335+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T15:02:28.98676+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "CZBufkexDQChnV1AAYZv9A=="
+							},
+							"code" : "YamlPParser new\r\tparse: (IndentationTransformer transform: YamlPParserExamples new nestedMappingListCode)"
 						},
 						{
 							"__type" : "textSnippet",
@@ -208,7 +202,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-02T09:48:10.223674+01:00"
+									"dateAndTimeString" : "2023-02-17T15:02:43.229846+01:00"
 								}
 							},
 							"editEmail" : {
@@ -219,17 +213,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-02T09:48:37.350889+01:00"
+									"dateAndTimeString" : "2023-02-17T15:03:18.679883+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "0ANxXBWwDQCfjW43DCAgYQ=="
+								"uidString" : "Gqj4gEexDQChupmOAYZv9A=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "{{gtTodo:label=Turn the scripted parser into a first prototype of a YamlPParser class}}"
+							"string" : "We now work on small, incremental test cases in the {{gtClass:name=YamlPParserExamples}} class. "
 						},
 						{
 							"__type" : "textSnippet",
@@ -245,7 +239,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-02T09:48:39.755702+01:00"
+									"dateAndTimeString" : "2023-02-17T15:03:26.428771+01:00"
 								}
 							},
 							"editEmail" : {
@@ -256,17 +250,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-02T09:48:55.639758+01:00"
+									"dateAndTimeString" : "2023-02-17T15:17:09.0894+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "nAIwXhWwDQCgjk/aDCAgYQ=="
+								"uidString" : "TbONg0exDQCiunkDAYZv9A=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "{{gtTodo:label=Extend the script to handle lists}}"
+							"string" : "First we change its superclass to {{gtClass:name=PP2CompositeNodeExamples}}. and we implement {{gtMethod:name=YamlPParserExamples>>parserClass}}. We check that the existing tests still pass."
 						},
 						{
 							"__type" : "textSnippet",
@@ -282,7 +276,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-02T09:49:01.870174+01:00"
+									"dateAndTimeString" : "2023-02-17T15:16:11.029717+01:00"
 								}
 							},
 							"editEmail" : {
@@ -293,54 +287,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-02T09:49:14.606695+01:00"
+									"dateAndTimeString" : "2023-02-17T15:16:41.579991+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "hGiEXxWwDQChJm8MDCAgYQ=="
+								"uidString" : "xGEssUexDQCk+PE2AYZv9A=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "{{gtTodo:label=Add more test examples}}"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-02T09:49:17.240496+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-02T09:50:23.869883+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "OYluYBWwDQChhb8QDCAgYQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "{{gtTodo:label=Extend the parser class with new productions}}"
+							"string" : "We override {{gtMethod:name=YamlPParserExamples>>parse:}} to invoke the transformer on the input."
 						}
 					]
 				},
@@ -352,7 +309,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-02T09:47:02.929823+01:00"
+						"dateAndTimeString" : "2023-02-17T14:58:15.326734+01:00"
 					}
 				},
 				"editEmail" : {
@@ -363,23 +320,61 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-02T09:47:04.549679+01:00"
+						"dateAndTimeString" : "2023-02-17T14:58:20.121049+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "738oWBWwDQCd39t5DCAgYQ=="
+					"uidString" : "0voCcUexDQCeqC8iAYZv9A=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Todos"
+				"string" : "#Extracting the class"
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T15:19:04.364828+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T15:19:16.660736+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "EYvcjkexDQCkNfVoAYZv9A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "As before, we loosely follow the [ANTLR scanner](https://github.com/umaranis/FastYaml/blob/master/src/antlr/YamlLexer.g4) and  [ANTLR parser](https://github.com/umaranis/FastYaml/blob/master/src/antlr/YamlParser.g4)."
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -389,7 +384,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-02T09:50:24.833713+01:00"
+						"dateAndTimeString" : "2023-02-17T15:06:28.34027+01:00"
 					}
 				},
 				"editEmail" : {
@@ -400,54 +395,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-02T09:50:24.833713+01:00"
+						"dateAndTimeString" : "2023-02-17T15:06:34.346664+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "G2uKZBWwDQCiX1jGDCAgYQ=="
+					"uidString" : "QZpVjkexDQCjz3ZMAYZv9A=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-02T09:50:29.639333+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-02T09:50:29.639333+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "Eb7TZBWwDQCiaLlaDCAgYQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
+				"string" : "#Implementing simple test cases"
 			}
 		]
 	},
@@ -459,7 +417,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-02-02T09:44:43.504263+01:00"
+			"dateAndTimeString" : "2023-02-17T14:57:22.629143+01:00"
 		}
 	},
 	"editEmail" : {
@@ -470,15 +428,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-02-02T09:44:43.504263+01:00"
+			"dateAndTimeString" : "2023-02-17T14:57:22.629143+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "YAML PParser"
+		"title" : "Building a YAML parser class"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "ee253250-15b0-0d00-996e-bb3c0c202061"
+		"uuid" : "2e4df26d-47b1-0d00-9cff-78c501866ff4"
 	}
 }

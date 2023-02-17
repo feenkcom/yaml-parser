@@ -757,14 +757,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-17T11:39:24.192134+01:00"
+									"dateAndTimeString" : "2023-02-17T14:52:34.570712+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "J7PvqUSxDQCscbB5AWx99g=="
 							},
-							"code" : "name := (#letter asPParser / $_ asPParser\r\t\t, (#word asPParser / $_ asPParser) star) flatten.\r\rnumber := #digit asPParser plus flatten.\rscalar := name / number.\rvalue := scalar.\r\rkey := name.\r\rmappingValue := PP2UnresolvedNode new.\r\rmapping := (key , $: asPParser trim , mappingValue)\r\t\t==> [ :node | node first -> node third ].\r\rnewline := #newline asPParser.\rindent := '<<INDENT>>' asPParser.\rdedent := '<<DEDENT>>' asPParser.\r\rmappingList := mapping , #endOfLine asPParser\r\t\t, (newline / mapping , #endOfLine asPParser) star.\r\rindentedMappingList := indent , mappingList , dedent.\r\rmappingValue def: indentedMappingList / value.\r\rdocument := (mappingList / value) end."
+							"code" : "name := (#letter asPParser / $_ asPParser\r\t\t, (#word asPParser / $_ asPParser) star) flatten.\r\rnumber := #digit asPParser plus flatten.\rscalar := name / number.\rvalue := scalar.\r\rkey := name.\r\rmappingValue := PP2UnresolvedNode new.\r\rmapping := (key , $: asPParser trim , mappingValue)\r\t\t==> [ :node | node first -> node third ].\r\rnewline := #newline asPParser.\rindent := '<<INDENT>>' asPParser.\rdedent := '<<DEDENT>>' asPParser.\r\rmappingList := mapping , (newline / mapping) star.\r\rindentedMappingList := indent , mappingList , dedent.\r\rmappingValue def: indentedMappingList / value.\r\rdocument := (mappingList / value) end"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -799,6 +799,40 @@
 								"uidString" : "qqz5qUSxDQCsd3z/AWx99g=="
 							},
 							"code" : "indentedMappingList parse: '<<INDENT>>bar : foobar\rbaz : foobaz\r<<DEDENT>>'"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T14:48:51.092591+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-17T14:51:32.564635+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "N990T0exDQCb3/KgAYZv9A=="
+							},
+							"code" : "mappingList end parse: 'bar : foobar\rbaz : foobaz'"
 						},
 						{
 							"__type" : "pharoSnippet",

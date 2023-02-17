@@ -145,7 +145,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T14:59:10.295624+01:00"
+									"dateAndTimeString" : "2023-02-17T14:56:40.412426+01:00"
 								}
 							},
 							"uid" : {
@@ -155,7 +155,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "{{gtTodo:label=Add mapping lists}}"
+							"string" : "{{gtTodo:label=Add mapping lists|completed=2023-02-17}}"
 						},
 						{
 							"__type" : "textSnippet",
@@ -182,7 +182,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-02T09:48:07.862676+01:00"
+									"dateAndTimeString" : "2023-02-17T14:56:42.797018+01:00"
 								}
 							},
 							"uid" : {
@@ -192,7 +192,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "{{gtTodo:label=Define test examples for nested mapping lsits}}"
+							"string" : "{{gtTodo:label=Define test examples for nested mapping lsits|completed=2023-02-17}}"
 						},
 						{
 							"__type" : "textSnippet",

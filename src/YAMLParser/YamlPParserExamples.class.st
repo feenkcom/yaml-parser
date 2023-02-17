@@ -1,8 +1,14 @@
 Class {
 	#name : #YamlPParserExamples,
-	#superclass : #Object,
+	#superclass : #PP2CompositeNodeExamples,
 	#category : #'YAMLParser-PPExamples'
 }
+
+{ #category : #accessing }
+YamlPParserExamples >> nestedMappingList [
+	<gtExample>
+	^ self parse: self nestedMappingListCode
+]
 
 { #category : #accessing }
 YamlPParserExamples >> nestedMappingListCode [
@@ -14,8 +20,13 @@ bar : foo'
 ]
 
 { #category : #accessing }
-YamlPParserExamples >> parse: aString [ 
-	^ MappingPParser parse: aString
+YamlPParserExamples >> parse: aString [
+	^ super parse: (IndentationTransformer transform: aString)
+]
+
+{ #category : #accessing }
+YamlPParserExamples >> parserClass [
+	^ YamlPParser
 ]
 
 { #category : #accessing }
