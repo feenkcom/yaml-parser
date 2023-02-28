@@ -250,7 +250,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-17T15:17:09.0894+01:00"
+									"dateAndTimeString" : "2023-02-28T13:47:12.089248+01:00"
 								}
 							},
 							"uid" : {
@@ -260,7 +260,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "First we change its superclass to {{gtClass:name=PP2CompositeNodeExamples}}. and we implement {{gtMethod:name=YamlPParserExamples>>parserClass}}. We check that the existing tests still pass."
+							"string" : "First we change its superclass to {{gtClass:name=PP2CompositeNodeExamples}}, to use the parse checking methods, and we implement {{gtMethod:name=YamlPParserExamples>>parserClass}}. We check that the existing tests still pass."
 						},
 						{
 							"__type" : "textSnippet",
@@ -287,7 +287,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-17T15:16:41.579991+01:00"
+									"dateAndTimeString" : "2023-02-28T13:42:19.620757+01:00"
 								}
 							},
 							"uid" : {
@@ -297,7 +297,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We override {{gtMethod:name=YamlPParserExamples>>parse:}} to invoke the transformer on the input."
+							"string" : "We override {{gtMethod:name=YamlPParserExamples>>parse:rule:}} to invoke the transformer on the input."
 						}
 					]
 				},
@@ -473,7 +473,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-17T19:55:49.343633+01:00"
+									"dateAndTimeString" : "2023-02-17T19:56:10.510418+01:00"
 								}
 							},
 							"uid" : {
@@ -483,7 +483,78 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Fix this: {{gtExample:name=\nX=\"Gesamtausgabe_\"\nY=\"Sudoku_\"\n\nX=\" - fragment\"\nY=\"\"\n\nX=\"Seite_28_Region_Zürich\"\nY=\"Sudoku\"\n}}"
+							"string" : "Fix this: {{gtExample:name=YamlPParserExamples>>#nestedMappingList}}"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-28T13:53:31.819535+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-28T13:53:36.520839+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "6n6NrSOyDQCP1tThD1K4wQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Somhow this is broken:"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-28T13:52:43.56975+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-28T13:53:39.275736+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Mq39ziOyDQCQ7hhLD1K4wQ=="
+							},
+							"code" : "YamlPParser new\r\tparse: (IndentationTransformer transform: YamlPParserExamples new nestedMappingListCode)"
 						}
 					]
 				},
@@ -517,6 +588,43 @@
 					"__type" : "textStyle"
 				},
 				"string" : "#Implementing simple test cases"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-28T13:43:23.831408+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-28T13:43:23.831408+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Ar6grSOyDQCP2z/MD1K4wQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
 			}
 		]
 	},
