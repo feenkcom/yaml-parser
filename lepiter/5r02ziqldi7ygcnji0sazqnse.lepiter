@@ -251,6 +251,43 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-01T11:02:28.474103+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-01T11:03:07.3325+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "rh3dizWyDQC0MeCFBdDo9w=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "{{gtTodo:label=Fix the broken test case}} — see [[*** Fix broken test case]]"
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
 												"dateAndTimeString" : "2023-02-02T09:48:10.223674+01:00"
 											}
 										},
@@ -262,7 +299,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-02-02T09:48:37.350889+01:00"
+												"dateAndTimeString" : "2023-03-01T11:02:22.287472+01:00"
 											}
 										},
 										"uid" : {
@@ -272,7 +309,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "{{gtTodo:label=Turn the scripted parser into a first prototype of a YamlPParser class}}"
+										"string" : "{{gtTodo:label=Turn the scripted parser into a first prototype of a YamlPPGrammar class}}"
 									}
 								]
 							},

@@ -1,5 +1,5 @@
 Class {
-	#name : #YamlPParser,
+	#name : #YamlPPGrammar,
 	#superclass : #PP2CompositeNode,
 	#instVars : [
 		'number',
@@ -32,88 +32,88 @@ Class {
 }
 
 { #category : #accessing }
-YamlPParser class >> ignoredNames [
+YamlPPGrammar class >> ignoredNames [
 	^ super ignoredNames copyWithAll: #(indentToken dedentToken)
 ]
 
 { #category : #grammar }
-YamlPParser >> comment [
+YamlPPGrammar >> comment [
 	<todo: 'What do we do with comments?'>
 	^ $# asPParser , #newline asPParser negate plus
 ]
 
 { #category : #grammar }
-YamlPParser >> decimalInteger [
+YamlPPGrammar >> decimalInteger [
 	<todo: 'Convert to a number'>
 	^ ($0 asPParser not , #digit asPParser plus) ==> #second
 ]
 
 { #category : #grammar }
-YamlPParser >> dedent [
+YamlPPGrammar >> dedent [
 	^ self dedentToken asPParser
 ]
 
 { #category : #grammar }
-YamlPParser >> dedentToken [
+YamlPPGrammar >> dedentToken [
 	dedentToken ifNil: [ dedentToken := self defaultDedentToken ].
 	^ dedentToken
 ]
 
 { #category : #accessing }
-YamlPParser >> dedentToken: anObject [
+YamlPPGrammar >> dedentToken: anObject [
 	dedentToken := anObject
 ]
 
 { #category : #grammar }
-YamlPParser >> defaultDedentToken [
+YamlPPGrammar >> defaultDedentToken [
 	^ '<<DEDENT>>'
 ]
 
 { #category : #grammar }
-YamlPParser >> defaultIndentToken [
+YamlPPGrammar >> defaultIndentToken [
 	^ '<<INDENT>>'
 ]
 
 { #category : #grammar }
-YamlPParser >> document [
+YamlPPGrammar >> document [
 	<todo: 'Add list, flowList and flowMappingList'>
 	^ (mappingList / value) end
 ]
 
 { #category : #grammar }
-YamlPParser >> doubleQuotedString [
+YamlPPGrammar >> doubleQuotedString [
 	<todo: 'Process escape sequences?'>
 	^ ($" asPParser , stringWithinDoubleQuotes , $" asPParser) ==> #second
 ]
 
 { #category : #grammar }
-YamlPParser >> doubledSingleQuotes [
+YamlPPGrammar >> doubledSingleQuotes [
 	^ ($' asPParser , $' asPParser) ==> #first
 ]
 
 { #category : #grammar }
-YamlPParser >> indent [
+YamlPPGrammar >> indent [
 	^ self indentToken asPParser
 ]
 
 { #category : #grammar }
-YamlPParser >> indentToken [
+YamlPPGrammar >> indentToken [
 	indentToken ifNil: [ indentToken := self defaultIndentToken ].
 	^ indentToken
 ]
 
 { #category : #accessing }
-YamlPParser >> indentToken: anObject [
+YamlPPGrammar >> indentToken: anObject [
 	indentToken := anObject
 ]
 
 { #category : #grammar }
-YamlPParser >> indentedMappingList [
+YamlPPGrammar >> indentedMappingList [
 	^ indent , mappingList , dedent
 ]
 
 { #category : #grammar }
-YamlPParser >> initialScalarStringChars [
+YamlPPGrammar >> initialScalarStringChars [
 	"Taken from the ANTLR Scanner
 	https://github.com/umaranis/FastYaml/blob/master/src/antlr/YamlLexer.g4
 	fragment STRING_MY_START
@@ -125,54 +125,54 @@ YamlPParser >> initialScalarStringChars [
 ]
 
 { #category : #grammar }
-YamlPParser >> integer [
+YamlPPGrammar >> integer [
 	<todo: 'Add octal, hex and binary integers.'>
 	^ decimalInteger
 ]
 
 { #category : #grammar }
-YamlPParser >> key [
+YamlPPGrammar >> key [
 	^ scalarString
 ]
 
 { #category : #grammar }
-YamlPParser >> mapping [
-	^ key , $: asPParser trim , mappingValue
+YamlPPGrammar >> mapping [
+	^ (key , $: asPParser trim , mappingValue)
 ]
 
 { #category : #grammar }
-YamlPParser >> mappingList [
+YamlPPGrammar >> mappingList [
 	^ mapping , (newline / mapping) star
 ]
 
 { #category : #grammar }
-YamlPParser >> mappingValue [
+YamlPPGrammar >> mappingValue [
 	^ indentedMappingList / value
 ]
 
 { #category : #grammar }
-YamlPParser >> newline [
+YamlPPGrammar >> newline [
 	^ #newline asPParser
 ]
 
 { #category : #grammar }
-YamlPParser >> notAnEscapedQuote [
+YamlPPGrammar >> notAnEscapedQuote [
 	^ ($\ asPParser / $" asPParser) negate
 ]
 
 { #category : #grammar }
-YamlPParser >> number [
+YamlPPGrammar >> number [
 	<todo: 'Add floats and imaginary numbers'>
 	^ integer
 ]
 
 { #category : #grammar }
-YamlPParser >> scalar [
+YamlPPGrammar >> scalar [
 	^ scalarString / number
 ]
 
 { #category : #grammar }
-YamlPParser >> scalarString [
+YamlPPGrammar >> scalarString [
 	"Taken from the ANTLR Scanner
 	https://github.com/umaranis/FastYaml/blob/master/src/antlr/YamlLexer.g4
 	STRING_MY
@@ -185,26 +185,26 @@ YamlPParser >> scalarString [
 ]
 
 { #category : #grammar }
-YamlPParser >> singleQuotedString [
+YamlPPGrammar >> singleQuotedString [
 	^ ($' asPParser , stringWithinSingleQuotes , $' asPParser) ==> #second
 ]
 
 { #category : #accessing }
-YamlPParser >> start [
+YamlPPGrammar >> start [
 	^ document
 ]
 
 { #category : #grammar }
-YamlPParser >> stringWithinDoubleQuotes [
+YamlPPGrammar >> stringWithinDoubleQuotes [
 	^ (notAnEscapedQuote / ($\ asPParser , #any asPParser)) star flatten
 ]
 
 { #category : #grammar }
-YamlPParser >> stringWithinSingleQuotes [
+YamlPPGrammar >> stringWithinSingleQuotes [
 	^ ($' asPParser negate / doubledSingleQuotes) star
 ]
 
 { #category : #grammar }
-YamlPParser >> value [
+YamlPPGrammar >> value [
 	^ scalar
 ]

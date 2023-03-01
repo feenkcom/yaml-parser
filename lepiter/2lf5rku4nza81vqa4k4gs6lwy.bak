@@ -757,14 +757,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-17T11:39:24.192134+01:00"
+									"dateAndTimeString" : "2023-02-17T14:52:34.570712+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "J7PvqUSxDQCscbB5AWx99g=="
 							},
-							"code" : "name := (#letter asPParser / $_ asPParser\r\t\t, (#word asPParser / $_ asPParser) star) flatten.\r\rnumber := #digit asPParser plus flatten.\rscalar := name / number.\rvalue := scalar.\r\rkey := name.\r\rmappingValue := PP2UnresolvedNode new.\r\rmapping := (key , $: asPParser trim , mappingValue)\r\t\t==> [ :node | node first -> node third ].\r\rnewline := #newline asPParser.\rindent := '<<INDENT>>' asPParser.\rdedent := '<<DEDENT>>' asPParser.\r\rmappingList := mapping , #endOfLine asPParser\r\t\t, (newline / mapping , #endOfLine asPParser) star.\r\rindentedMappingList := indent , mappingList , dedent.\r\rmappingValue def: indentedMappingList / value.\r\rdocument := (mappingList / value) end."
+							"code" : "name := (#letter asPParser / $_ asPParser\r\t\t, (#word asPParser / $_ asPParser) star) flatten.\r\rnumber := #digit asPParser plus flatten.\rscalar := name / number.\rvalue := scalar.\r\rkey := name.\r\rmappingValue := PP2UnresolvedNode new.\r\rmapping := (key , $: asPParser trim , mappingValue)\r\t\t==> [ :node | node first -> node third ].\r\rnewline := #newline asPParser.\rindent := '<<INDENT>>' asPParser.\rdedent := '<<DEDENT>>' asPParser.\r\rmappingList := mapping , (newline / mapping) star.\r\rindentedMappingList := indent , mappingList , dedent.\r\rmappingValue def: indentedMappingList / value.\r\rdocument := (mappingList / value) end"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -867,6 +867,40 @@
 								"uidString" : "jWyuoUKxDQCDfTurDhA3Ig=="
 							},
 							"code" : "document parse: 'foo : bar'.\r\rinput := IndentationTransformer\r\t\ttransform: YamlPParserExamples new nestedMappingListCode.\r\rdocument parse: input."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-01T10:44:57.93039+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-01T10:44:57.93039+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "VwlZTTWyDQCvdHrbBdDo9w=="
+							},
+							"code" : ""
 						},
 						{
 							"__type" : "textSnippet",

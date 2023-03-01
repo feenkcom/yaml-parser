@@ -2,55 +2,55 @@
 These examples only test the grammar, not the result of parsing.
 "
 Class {
-	#name : #YamlPParserExamples,
+	#name : #YamlPPGrammarExamples,
 	#superclass : #PP2CompositeNodeExamples,
 	#category : #'YAMLParser-PPExamples'
 }
 
 { #category : #accessing }
-YamlPParserExamples >> comment [
+YamlPPGrammarExamples >> comment [
 	<gtExample>
 	^ self parse: '# yada yada yada' rule: #comment
 ]
 
 { #category : #accessing }
-YamlPParserExamples >> decimalInteger [
+YamlPPGrammarExamples >> decimalInteger [
 	<gtExample>
 	^ self parse: '1234' rule: #decimalInteger
 ]
 
 { #category : #accessing }
-YamlPParserExamples >> decimalIntegerAsNumber [
+YamlPPGrammarExamples >> decimalIntegerAsNumber [
 	<gtExample>
 	^ self parse: '1234' rule: #number
 ]
 
 { #category : #accessing }
-YamlPParserExamples >> decimalIntegerAsScalar [
+YamlPPGrammarExamples >> decimalIntegerAsScalar [
 	<gtExample>
 	^ self parse: '1234' rule: #scalar
 ]
 
 { #category : #accessing }
-YamlPParserExamples >> doubleQuotedString [
+YamlPPGrammarExamples >> doubleQuotedString [
 	<gtExample>
 	^ self parse: '"It is a far far better thing"' rule: #doubleQuotedString
 ]
 
 { #category : #accessing }
-YamlPParserExamples >> doubleQuotedStringWithEscapes [
+YamlPPGrammarExamples >> doubleQuotedStringWithEscapes [
 	<gtExample>
 	^ self parse: '"This \string has'' \'' funny \\ \" escapes"' rule: #doubleQuotedString
 ]
 
 { #category : #accessing }
-YamlPParserExamples >> nestedMappingList [
+YamlPPGrammarExamples >> nestedMappingList [
 	<gtExample>
 	^ self parse: self nestedMappingListCode  rule: #mappingList
 ]
 
 { #category : #accessing }
-YamlPParserExamples >> nestedMappingListCode [
+YamlPPGrammarExamples >> nestedMappingListCode [
 	<gtExample>
 	^ 'foo :
   bar : foobar
@@ -59,60 +59,60 @@ bar : foo'
 ]
 
 { #category : #accessing }
-YamlPParserExamples >> newline [
+YamlPPGrammarExamples >> newline [
 	<gtExample>
 	^ self parse: String cr rule: #newline
 ]
 
 { #category : #accessing }
-YamlPParserExamples >> parse: aString rule: aSymbol [
+YamlPPGrammarExamples >> parse: aString rule: aSymbol [
 	^ super parse: (IndentationTransformer transform: aString) rule: aSymbol
 ]
 
 { #category : #accessing }
-YamlPParserExamples >> parserClass [
-	^ YamlPParser
+YamlPPGrammarExamples >> parserClass [
+	^ YamlPPGrammar
 ]
 
 { #category : #accessing }
-YamlPParserExamples >> scalarStringFoo [
+YamlPPGrammarExamples >> scalarStringFoo [
 	<gtExample>
 	^ self parse: 'foo' rule: #scalarString
 ]
 
 { #category : #accessing }
-YamlPParserExamples >> scalarStringFooBarWithColon [
+YamlPPGrammarExamples >> scalarStringFooBarWithColon [
 	<gtExample>
 	^ self parse: 'foo:bar' rule: #scalarString
 ]
 
 { #category : #accessing }
-YamlPParserExamples >> scalarStringFooBarWithSpaces [
+YamlPPGrammarExamples >> scalarStringFooBarWithSpaces [
 	<gtExample>
 	^ self parse: 'foo bar' rule: #scalarString
 ]
 
 { #category : #accessing }
-YamlPParserExamples >> simpleMappingList [
+YamlPPGrammarExamples >> simpleMappingList [
 	<gtExample>
 	^ self parse: self simpleMappingListCode rule: #mappingList
 ]
 
 { #category : #accessing }
-YamlPParserExamples >> simpleMappingListCode [
+YamlPPGrammarExamples >> simpleMappingListCode [
 	<gtExample>
 	^ 'foo : bar
 foobar : baz'
 ]
 
 { #category : #accessing }
-YamlPParserExamples >> singleQuotedString [
+YamlPPGrammarExamples >> singleQuotedString [
 	<gtExample>
 	^ self parse: '''It is a far far better thing''' rule: #singleQuotedString
 ]
 
 { #category : #accessing }
-YamlPParserExamples >> singleQuotedStringWithDoubledSingleQuotes [
+YamlPPGrammarExamples >> singleQuotedStringWithDoubledSingleQuotes [
 	<gtExample>
 	^ self parse: '''It is a ''''far'''' ''''far'''' better thing''' rule: #singleQuotedString
 ]
