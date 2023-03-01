@@ -67,6 +67,12 @@ YamlPPGrammarExamples >> indentNotComment [
 ]
 
 { #category : #accessing }
+YamlPPGrammarExamples >> indentedMappingList [
+	<gtExample>
+	^ self parse: '#{INDENT}#bar : baz#{DEDENT}#' rule: #indentedMappingList
+]
+
+{ #category : #accessing }
 YamlPPGrammarExamples >> nestedMappingList [
 	<gtExample>
 	^ self parse: self nestedMappingListCode  rule: #mappingList
@@ -161,4 +167,10 @@ YamlPPGrammarExamples >> singleQuotedString [
 YamlPPGrammarExamples >> singleQuotedStringWithDoubledSingleQuotes [
 	<gtExample>
 	^ self parse: '''It is a ''''far'''' ''''far'''' better thing''' rule: #singleQuotedString
+]
+
+{ #category : #accessing }
+YamlPPGrammarExamples >> spaceInValue [
+	<gtExample>
+	^ self parse: 'foo bar' rule: #value
 ]

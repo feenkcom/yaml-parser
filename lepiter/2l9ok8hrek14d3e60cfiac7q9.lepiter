@@ -225,7 +225,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-03-01T11:03:07.333703+01:00"
+												"dateAndTimeString" : "2023-03-01T16:33:48.305986+01:00"
 											}
 										},
 										"uid" : {
@@ -235,7 +235,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "[[*** Fix broken test case]] "
+										"string" : "[[Fixed broken test case]] "
 									},
 									{
 										"__type" : "textSnippet",
