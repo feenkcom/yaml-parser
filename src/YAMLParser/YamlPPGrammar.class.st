@@ -38,8 +38,10 @@ YamlPPGrammar class >> ignoredNames [
 
 { #category : #grammar }
 YamlPPGrammar >> comment [
+	"NB: hack to not recognize #{INDENT}# or #{DEDENT}# as comments"
+
 	<todo: 'What do we do with comments?'>
-	^ $# asPParser , #newline asPParser negate plus
+	^ $# asPParser , ${ asPParser not , #newline asPParser negate plus
 ]
 
 { #category : #grammar }

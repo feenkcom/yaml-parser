@@ -44,6 +44,12 @@ YamlPPGrammarExamples >> doubleQuotedStringWithEscapes [
 ]
 
 { #category : #accessing }
+YamlPPGrammarExamples >> indentNotComment [
+	<gtExample>
+	^ self fail: '#{INDENT}#' rule: #comment
+]
+
+{ #category : #accessing }
 YamlPPGrammarExamples >> nestedMappingList [
 	<gtExample>
 	^ self parse: self nestedMappingListCode  rule: #mappingList

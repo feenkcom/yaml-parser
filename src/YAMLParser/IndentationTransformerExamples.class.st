@@ -5,6 +5,11 @@ Class {
 }
 
 { #category : #accessing }
+IndentationTransformerExamples >> dedentToken [
+	^ self parserClass new dedentToken
+]
+
+{ #category : #accessing }
 IndentationTransformerExamples >> foo [
 	<gtExample>
 	| result |
@@ -30,7 +35,7 @@ IndentationTransformerExamples >> fooIndentBar [
 	self
 		assert: result
 		equals: 'foo
-<<INDENT>>bar<<DEDENT>>'.
+' , self indentToken , 'bar' , self dedentToken.
 	^ result
 ]
 
@@ -47,8 +52,9 @@ IndentationTransformerExamples >> fooIndentBarCR [
 	self
 		assert: result
 		equals: 'foo
-<<INDENT>>bar
-<<DEDENT>>'.
+' , self indentToken
+				, 'bar
+' , self dedentToken.
 	^ result
 ]
 
@@ -65,8 +71,9 @@ foobar'
 	self
 		assert: result
 		equals: 'foo
-<<INDENT>>bar
-<<DEDENT>>foobar'.
+' , self indentToken
+				, 'bar
+' , self dedentToken , 'foobar'.
 	^ result
 ]
 
@@ -84,8 +91,10 @@ foobar
 	self
 		assert: result
 		equals: 'foo
-<<INDENT>>bar
-<<DEDENT>>foobar
+' , self indentToken
+				, 'bar
+' , self dedentToken
+				, 'foobar
 '.
 	^ result
 ]
@@ -101,6 +110,11 @@ IndentationTransformerExamples >> indentOnce [
 { #category : #accessing }
 IndentationTransformerExamples >> indentString [
 	^ String space , String space
+]
+
+{ #category : #accessing }
+IndentationTransformerExamples >> indentToken [
+	^ self parserClass new indentToken
 ]
 
 { #category : #accessing }

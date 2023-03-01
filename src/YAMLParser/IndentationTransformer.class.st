@@ -53,7 +53,7 @@ IndentationTransformer >> dedentToken: anObject [
 
 { #category : #accessing }
 IndentationTransformer >> defaultDedentToken [
-	^ '<<DEDENT>>'
+	^ '#{DEDENT}#'
 ]
 
 { #category : #accessing }
@@ -64,7 +64,7 @@ IndentationTransformer >> defaultIndentString [
 
 { #category : #accessing }
 IndentationTransformer >> defaultIndentToken [
-	^ '<<INDENT>>'
+	^ '#{INDENT}#'
 ]
 
 { #category : #grammar }

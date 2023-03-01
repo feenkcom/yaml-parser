@@ -535,7 +535,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-01T14:52:48.80473+01:00"
+									"dateAndTimeString" : "2023-03-01T14:52:59.557592+01:00"
 								}
 							},
 							"uid" : {
@@ -545,7 +545,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Instead of `<<DEDENT>>` we could use `#{DEDENT}#` and adapt the `comment` rule to prohi"
+							"string" : "Instead of `<<DEDENT>>` we could use `#{DEDENT}#` and adapt the `comment` rule to prohibits `#{` at the start."
 						},
 						{
 							"__type" : "pharoSnippet",
