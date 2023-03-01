@@ -68,12 +68,12 @@ YamlPPGrammar >> dedentToken: anObject [
 
 { #category : #grammar }
 YamlPPGrammar >> defaultDedentToken [
-	^ '<<DEDENT>>'
+	^ '#{DEDENT}#'
 ]
 
 { #category : #grammar }
 YamlPPGrammar >> defaultIndentToken [
-	^ '<<INDENT>>'
+	^ '#{INDENT}#'
 ]
 
 { #category : #grammar }
@@ -178,12 +178,17 @@ YamlPPGrammar >> scalarString [
 	"Taken from the ANTLR Scanner
 	https://github.com/umaranis/FastYaml/blob/master/src/antlr/YamlLexer.g4
 	STRING_MY
+	Adapted to fail when encountering #{... after the first char.
 	"
+
 	^ initialScalarStringChars
-		, ((#blank asPParser / #newline asPParser / $" asPParser / $: asPParser) negate
-			/ ($: asPParser , (#blank asPParser / #newline asPParser) negate)
-			/ (#blank asPParser plus , (#blank asPParser / $: asPParser / $# asPParser / #newline asPParser) negate)
-			) star
+		, (($# asPParser , ${ asPParser not)
+				/ ($# asPParser / #blank asPParser / #newline asPParser / $" asPParser
+						/ $: asPParser) negate
+				/ ($: asPParser , (#blank asPParser / #newline asPParser) negate)
+				/ (#blank asPParser plus
+						, (#blank asPParser / $: asPParser / $# asPParser / #newline asPParser) negate))
+				star
 ]
 
 { #category : #grammar }

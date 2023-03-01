@@ -32,6 +32,14 @@ YamlPPGrammarExamples >> decimalIntegerAsScalar [
 ]
 
 { #category : #accessing }
+YamlPPGrammarExamples >> dedentToken [
+	<gtExample>
+	self fail: '#{DEDENT}#' rule: #comment.
+	self fail: '#{DEDENT}#' rule: #value.
+	^ self parse: '#{DEDENT}#' rule: #dedent
+]
+
+{ #category : #accessing }
 YamlPPGrammarExamples >> doubleQuotedString [
 	<gtExample>
 	^ self parse: '"It is a far far better thing"' rule: #doubleQuotedString
@@ -41,6 +49,15 @@ YamlPPGrammarExamples >> doubleQuotedString [
 YamlPPGrammarExamples >> doubleQuotedStringWithEscapes [
 	<gtExample>
 	^ self parse: '"This \string has'' \'' funny \\ \" escapes"' rule: #doubleQuotedString
+]
+
+{ #category : #accessing }
+YamlPPGrammarExamples >> embeddedHashValue [
+	"A hash in the middle of a scalar is not a comment"
+
+	<gtExample>
+	self fail: 'foo#bar' rule: #comment.
+	^ self parse: 'foo#bar' rule: #value
 ]
 
 { #category : #accessing }
@@ -83,6 +100,14 @@ YamlPPGrammarExamples >> nestedMappingListTiny [
 YamlPPGrammarExamples >> newline [
 	<gtExample>
 	^ self parse: String cr rule: #newline
+]
+
+{ #category : #accessing }
+YamlPPGrammarExamples >> noDedentInValue [
+	"Parsing ofthe value should stop at baz"
+
+	<gtExample>
+	^ self fail: 'baz#{DEDENT}#' rule: #value
 ]
 
 { #category : #accessing }
