@@ -59,6 +59,21 @@ bar : foo'
 ]
 
 { #category : #accessing }
+YamlPPGrammarExamples >> nestedMappingListCodeTiny [
+
+	<gtExample>
+	^ 'foo :
+  bar : baz'
+
+]
+
+{ #category : #accessing }
+YamlPPGrammarExamples >> nestedMappingListTiny [
+	<gtExample>
+	^ self parse: self nestedMappingListCodeTiny  rule: #mappingList
+]
+
+{ #category : #accessing }
 YamlPPGrammarExamples >> newline [
 	<gtExample>
 	^ self parse: String cr rule: #newline

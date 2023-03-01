@@ -859,14 +859,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-17T11:39:24.193748+01:00"
+									"dateAndTimeString" : "2023-03-01T11:38:11.057747+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "jWyuoUKxDQCDfTurDhA3Ig=="
 							},
-							"code" : "document parse: 'foo : bar'.\r\rinput := IndentationTransformer\r\t\ttransform: YamlPParserExamples new nestedMappingListCode.\r\rdocument parse: input."
+							"code" : "document parse: 'foo : bar'.\r\rinput := IndentationTransformer\r\t\ttransform: YamlPPGrammarExamples new nestedMappingListCode.\r\rdocument parse: input."
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -882,7 +882,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-01T10:44:57.93039+01:00"
+									"dateAndTimeString" : "2023-03-01T11:46:27.956455+01:00"
 								}
 							},
 							"editEmail" : {
@@ -893,14 +893,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-01T10:44:57.93039+01:00"
+									"dateAndTimeString" : "2023-03-01T11:46:49.831401+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "VwlZTTWyDQCvdHrbBdDo9w=="
+								"uidString" : "qV1KKTayDQCSsxcCBdDo9w=="
 							},
-							"code" : ""
+							"code" : "\rdocument parse: 'foo :\r<<INDENT>>bar : baz<<DEDENT>>'"
 						},
 						{
 							"__type" : "textSnippet",

@@ -34,7 +34,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-01T11:03:24.622265+01:00"
+									"dateAndTimeString" : "2023-03-01T11:03:29.555903+01:00"
 								}
 							},
 							"uid" : {
@@ -44,7 +44,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "There is one failure for now in {{gtClass:name=YA}}"
+							"string" : "There is one failure for now in {{gtClass:name=YamlPPGrammarExamples}}. "
 						},
 						{
 							"__type" : "exampleSnippet",
@@ -87,79 +87,10 @@
 							"noCode" : false
 						},
 						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-17T15:01:59.208335+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-01T10:51:49.75604+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "CZBufkexDQChnV1AAYZv9A=="
-							},
-							"code" : "YamlPPGrammar new\r\tparse: (IndentationTransformer transform: YamlPPGrammarExamples new nestedMappingListCode)"
-						},
-						{
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [
-									{
-										"__type" : "pharoSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-02-28T13:52:43.56975+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-03-01T10:57:20.079722+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "Mq39ziOyDQCQ7hhLD1K4wQ=="
-										},
-										"code" : "YamlPPGrammar new mappingList\r\tparse: (IndentationTransformer transform: YamlPParserExamples new nestedMappingListCode)"
-									}
-								]
+								"items" : [ ]
 							},
 							"createEmail" : {
 								"__type" : "email",
@@ -180,7 +111,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-28T13:53:36.520839+01:00"
+									"dateAndTimeString" : "2023-03-01T11:35:41.186356+01:00"
 								}
 							},
 							"uid" : {
@@ -190,10 +121,10 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Somhow this is broken:"
+							"string" : "Somehow this is broken:"
 						},
 						{
-							"__type" : "textSnippet",
+							"__type" : "pharoSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -206,7 +137,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-17T19:55:41.532263+01:00"
+									"dateAndTimeString" : "2023-03-01T11:36:07.857395+01:00"
 								}
 							},
 							"editEmail" : {
@@ -217,17 +148,150 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-01T10:58:17.126346+01:00"
+									"dateAndTimeString" : "2023-03-01T11:36:19.029217+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "J3zHmEuxDQCYzTV7AoRQHg=="
+								"uidString" : "qGdUBDayDQC7KSUYBdDo9w=="
 							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
+							"code" : "YamlPPGrammar new \r\tparse: (IndentationTransformer transform: YamlPPGrammarExamples new nestedMappingListCode)"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
 							},
-							"string" : "Fix this: {{gtExample:name=YamlPPGrammarExamples>>#nestedMappingList}}"
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-02-28T13:52:43.56975+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-01T11:36:42.222658+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Mq39ziOyDQCQ7hhLD1K4wQ=="
+							},
+							"code" : "YamlPPGrammar new mappingList end\r\tparse: (IndentationTransformer transform: YamlPPGrammarExamples new nestedMappingListCode)"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-01T11:37:33.625941+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-01T11:37:39.864056+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "MyFxCTayDQC9QOZFBdDo9w=="
+							},
+							"code" : "YamlPPGrammar new mappingList\r\tparse: (IndentationTransformer transform: YamlPPGrammarExamples new nestedMappingListCode)"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-01T11:42:42.348668+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-01T11:46:01.908761+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "7NzXGzayDQCAd3ZZBdDo9w=="
+							},
+							"code" : "YamlPPGrammar new mappingList  end\r\tparse: 'foo :\r<<INDENT>>bar : baz<<DEDENT>>'"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-01T11:49:15.267501+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-01T11:49:31.34151+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "WFRDMzayDQCZOBaTBdDo9w=="
+							},
+							"code" : "YamlPPGrammar new indentedMappingList  end\r\tparse: '<<INDENT>>bar : baz<<DEDENT>>'"
 						}
 					]
 				},
@@ -266,7 +330,45 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-01T11:52:50.965908+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-01T11:53:50.505985+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "AC4DQDayDQCiAt++BdDo9w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The problem is that the dedent “token” is parsed as being part ofthe value, since it gobbles up all of the text. So “baz<<"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -276,7 +378,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-28T13:43:23.831408+01:00"
+						"dateAndTimeString" : "2023-03-01T11:52:46.73793+01:00"
 					}
 				},
 				"editEmail" : {
@@ -287,7 +389,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-28T13:43:23.831408+01:00"
+						"dateAndTimeString" : "2023-03-01T11:52:48.846379+01:00"
 					}
 				},
 				"uid" : {
@@ -297,7 +399,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "#The problem"
 			},
 			{
 				"__type" : "textSnippet",

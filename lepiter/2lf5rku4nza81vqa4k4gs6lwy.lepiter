@@ -179,14 +179,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:01:57.328537+01:00"
+									"dateAndTimeString" : "2023-03-01T11:47:53.212568+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "9TmcQh+xDQCeexMrAUzVKw=="
 							},
-							"code" : "YamlPParserExamples new simpleMappingListCode"
+							"code" : "YamlPPGrammarExamples new simpleMappingListCode"
 						},
 						{
 							"__type" : "textSnippet",
@@ -429,14 +429,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-16T17:27:53.855907+01:00"
+									"dateAndTimeString" : "2023-03-01T11:47:58.063639+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "bsOhLDWxDQCnQ4RgD4lH3A=="
 							},
-							"code" : "key := (#word asPParser / $_ asPParser) plus flatten.\rmapping := (key , $: asPParser trim , key)\r\t\t==> [ :node | node first -> node third ].\rnewline := #newline asPParser.\rmappingList := (newline / (mapping , #endOfLine asPParser)) plus.\r\rmappingList end parse: YamlPParserExamples new simpleMappingListCode"
+							"code" : "key := (#word asPParser / $_ asPParser) plus flatten.\rmapping := (key , $: asPParser trim , key)\r\t\t==> [ :node | node first -> node third ].\rnewline := #newline asPParser.\rmappingList := (newline / (mapping , #endOfLine asPParser)) plus.\r\rmappingList end parse: YamlPPGrammarExamples new simpleMappingListCode"
 						}
 					]
 				},
@@ -575,14 +575,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-15T15:06:48.432166+01:00"
+									"dateAndTimeString" : "2023-03-01T11:48:00.506763+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "Y3f0Ux+xDQCh2yesAUzVKw=="
 							},
-							"code" : "YamlPParserExamples new nestedMappingListCode"
+							"code" : "YamlPPGrammarExamples new nestedMappingListCode"
 						},
 						{
 							"__type" : "textSnippet",
@@ -859,14 +859,48 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-01T10:45:25.976523+01:00"
+									"dateAndTimeString" : "2023-03-01T11:38:11.057747+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "jWyuoUKxDQCDfTurDhA3Ig=="
 							},
-							"code" : "document parse: 'foo : bar'.\r\rinput := IndentationTransformer\r\t\ttransform: YamlPParserExamples new nestedMappingListCode.\r\rdocument parse: input."
+							"code" : "document parse: 'foo : bar'.\r\rinput := IndentationTransformer\r\t\ttransform: YamlPPGrammarExamples new nestedMappingListCode.\r\rdocument parse: input."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-01T11:46:27.956455+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-01T11:46:49.831401+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "qV1KKTayDQCSsxcCBdDo9w=="
+							},
+							"code" : "\rdocument parse: 'foo :\r<<INDENT>>bar : baz<<DEDENT>>'"
 						},
 						{
 							"__type" : "textSnippet",
