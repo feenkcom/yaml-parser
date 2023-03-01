@@ -356,7 +356,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-01T11:53:50.505985+01:00"
+									"dateAndTimeString" : "2023-03-01T11:54:15.070335+01:00"
 								}
 							},
 							"uid" : {
@@ -366,7 +366,78 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The problem is that the dedent “token” is parsed as being part ofthe value, since it gobbles up all of the text. So “baz<<"
+							"string" : "The problem is that the dedent “token” is parsed as being part ofthe value, since it gobbles up all of the text. So `baz<<DEDENT>>` is seen as a simple value."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-01T11:55:47.083701+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-01T11:55:51.067061+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "YvadSjayDQCqVfJQBdDo9w=="
+							},
+							"code" : "YamlPPGrammar new indentedMappingList  end\r\tparse: '<<INDENT>>bar : baz<<DEDENT>>'"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-01T11:54:16.2063+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-01T11:54:16.2063+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "qEozRTayDQCo2i/4BdDo9w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : ""
 						}
 					]
 				},
