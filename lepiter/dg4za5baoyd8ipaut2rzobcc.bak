@@ -371,7 +371,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-02T10:04:18.309197+01:00"
+									"dateAndTimeString" : "2023-03-02T10:04:05.216106+01:00"
 								}
 							},
 							"uid" : {
@@ -381,7 +381,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We extend list items to have different kinds of list values."
+							"string" : "We extend list ite"
 						}
 					]
 				},

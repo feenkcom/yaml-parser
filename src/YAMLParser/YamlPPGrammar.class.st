@@ -26,7 +26,10 @@ Class {
 		'dedentToken',
 		'indentToken',
 		'initialScalarStringChars',
-		'scalarString'
+		'scalarString',
+		'listItem',
+		'list',
+		'listValue'
 	],
 	#category : #'YAMLParser-PParser'
 }
@@ -79,7 +82,7 @@ YamlPPGrammar >> defaultIndentToken [
 { #category : #grammar }
 YamlPPGrammar >> document [
 	<todo: 'Add list, flowList and flowMappingList'>
-	^ (mappingList / value) end
+	^ (list / mappingList / value) end
 ]
 
 { #category : #grammar }
@@ -135,6 +138,21 @@ YamlPPGrammar >> integer [
 { #category : #grammar }
 YamlPPGrammar >> key [
 	^ scalarString
+]
+
+{ #category : #grammar }
+YamlPPGrammar >> list [
+	^ listItem , (newline / listItem) star
+]
+
+{ #category : #grammar }
+YamlPPGrammar >> listItem [
+	^ $- asPParser trim, listValue 
+]
+
+{ #category : #grammar }
+YamlPPGrammar >> listValue [
+	^ indentedMappingList / value
 ]
 
 { #category : #grammar }

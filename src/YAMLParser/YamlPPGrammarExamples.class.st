@@ -61,6 +61,12 @@ YamlPPGrammarExamples >> embeddedHashValue [
 ]
 
 { #category : #accessing }
+YamlPPGrammarExamples >> fooListItem [
+	<gtExample>
+	^ self parse: '- foo' rule: #listItem
+]
+
+{ #category : #accessing }
 YamlPPGrammarExamples >> indentNotComment [
 	<gtExample>
 	^ self fail: '#{INDENT}#' rule: #comment
