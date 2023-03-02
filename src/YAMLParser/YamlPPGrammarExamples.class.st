@@ -14,6 +14,15 @@ YamlPPGrammarExamples >> comment [
 ]
 
 { #category : #accessing }
+YamlPPGrammarExamples >> compactMappingListItem [
+	"This is a compact nested mapping mentioned in section 2.2 of the YAML Spec
+		https://yaml.org/spec/1.2.2/#22-structures"
+
+	<gtExample>
+	^ self parse: '- foo: bar' rule: #listItem
+]
+
+{ #category : #accessing }
 YamlPPGrammarExamples >> decimalInteger [
 	<gtExample>
 	^ self parse: '1234' rule: #decimalInteger
@@ -61,9 +70,45 @@ YamlPPGrammarExamples >> embeddedHashValue [
 ]
 
 { #category : #accessing }
+YamlPPGrammarExamples >> fooBarFlowList [
+	<gtExample>
+	^ self parse: '[ foo , bar ]' rule: #flowList
+]
+
+{ #category : #accessing }
+YamlPPGrammarExamples >> fooFlowList [
+	<gtExample>
+	^ self parse: '[ foo ]' rule: #flowList
+]
+
+{ #category : #accessing }
 YamlPPGrammarExamples >> fooListItem [
 	<gtExample>
 	^ self parse: '- foo' rule: #listItem
+]
+
+{ #category : #accessing }
+YamlPPGrammarExamples >> foobarFeebazFlowMappingList [
+	<gtExample>
+	^ self parse: '{ foo : bar , fee : baz }' rule: #flowMappingList
+]
+
+{ #category : #accessing }
+YamlPPGrammarExamples >> foobarFeebazNestedFlowList [
+	<gtExample>
+	^ self parse: '[ { foo : bar } , [ fee , baz ] ]' rule: #flowList
+]
+
+{ #category : #accessing }
+YamlPPGrammarExamples >> foobarFeebazNestedFlowMappingList [
+	<gtExample>
+	^ self parse: '{ foo : bar , fee : [ foobar, baz ] }' rule: #flowMappingList
+]
+
+{ #category : #accessing }
+YamlPPGrammarExamples >> foobarFlowMappingList [
+	<gtExample>
+	^ self parse: '{ foo : bar }' rule: #flowMappingList
 ]
 
 { #category : #accessing }

@@ -28,14 +28,21 @@ Class {
 		'scalarString',
 		'listItem',
 		'list',
-		'indentedList'
+		'indentedList',
+		'flowList',
+		'flowMappingList'
 	],
 	#category : #'YAMLParser-PParser'
 }
 
 { #category : #accessing }
 YamlPPGrammar class >> ignoredNames [
-	^ super ignoredNames copyWithAll: #(indentToken dedentToken)
+	^ super ignoredNames copyWithAll: #(indentToken dedentToken parseTransformed:)
+]
+
+{ #category : #accessing }
+YamlPPGrammar class >> parseTransformed: aString [
+	^ self parse: (IndentationTransformer transform: aString)
 ]
 
 { #category : #grammar }
@@ -93,6 +100,17 @@ YamlPPGrammar >> doubleQuotedString [
 { #category : #grammar }
 YamlPPGrammar >> doubledSingleQuotes [
 	^ ($' asPParser , $' asPParser) ==> #first
+]
+
+{ #category : #grammar }
+YamlPPGrammar >> flowList [
+	^ $[ asPParser trim , value , ($, asPParser trim , value) star , $] asPParser trim
+]
+
+{ #category : #grammar }
+YamlPPGrammar >> flowMappingList [
+	^ ${ asPParser trim , mapping , ($, asPParser trim , mapping) star
+		, $} asPParser trim
 ]
 
 { #category : #grammar }
@@ -182,7 +200,7 @@ YamlPPGrammar >> number [
 
 { #category : #grammar }
 YamlPPGrammar >> scalar [
-	^ scalarString / number
+	^ number / scalarString
 ]
 
 { #category : #grammar }
@@ -191,16 +209,35 @@ YamlPPGrammar >> scalarString [
 	https://github.com/umaranis/FastYaml/blob/master/src/antlr/YamlLexer.g4
 	STRING_MY
 	Adapted to fail when encountering #{... after the first char.
+	Also forbidding flow chars {}[] within string values for now.
 	"
 
-	^ initialScalarStringChars
-		, (($# asPParser , ${ asPParser not)
-				/ ($# asPParser / #blank asPParser / #newline asPParser / $" asPParser
-						/ $: asPParser) negate
-				/ ($: asPParser , (#blank asPParser / #newline asPParser) negate)
-				/ (#blank asPParser plus
-						, (#blank asPParser / $: asPParser / $# asPParser / #newline asPParser) negate))
-				star
+	^ initialScalarStringChars, 
+			( ($# asPParser , ${ asPParser not)
+			/
+				( $# asPParser 
+				/ #blank asPParser 
+				/ #newline asPParser 
+				/ $" asPParser
+				/ $: asPParser
+				/ ${ asPParser
+				/ $} asPParser
+				/ $[ asPParser
+				/ $] asPParser
+				) negate
+			/ ($: asPParser , (#blank asPParser / #newline asPParser) negate)
+			/ (#blank asPParser plus
+				,	( #blank asPParser 
+					/ $: asPParser 
+					/ $# asPParser 
+					/ #newline asPParser
+					/ $, asPParser 
+					/ ${ asPParser
+					/ $} asPParser
+					/ $[ asPParser
+					/ $] asPParser
+					) negate)
+			) star
 ]
 
 { #category : #grammar }
@@ -225,5 +262,7 @@ YamlPPGrammar >> stringWithinSingleQuotes [
 
 { #category : #grammar }
 YamlPPGrammar >> value [
-	^ indentedList / indentedMappingList / scalar
+	<todo: 'Add string literals'>
+	^ indentedList / indentedMappingList / flowList / flowMappingList / mapping
+		/ scalar
 ]
