@@ -299,7 +299,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-03-02T09:45:17.487989+01:00"
+												"dateAndTimeString" : "2023-03-02T10:51:52.203444+01:00"
 											}
 										},
 										"uid" : {
@@ -309,7 +309,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "[[Extending the grammar]] "
+										"string" : "[[Extending the grammar with nested lists]] "
 									},
 									{
 										"__type" : "textSnippet",

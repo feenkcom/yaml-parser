@@ -6,7 +6,6 @@ Class {
 		'scalar',
 		'value',
 		'key',
-		'mappingValue',
 		'mapping',
 		'newline',
 		'indent',
@@ -29,7 +28,7 @@ Class {
 		'scalarString',
 		'listItem',
 		'list',
-		'listValue'
+		'indentedList'
 	],
 	#category : #'YAMLParser-PParser'
 }
@@ -113,6 +112,11 @@ YamlPPGrammar >> indentToken: anObject [
 ]
 
 { #category : #grammar }
+YamlPPGrammar >> indentedList [
+	^ indent , list , dedent
+]
+
+{ #category : #grammar }
 YamlPPGrammar >> indentedMappingList [
 	^ indent , mappingList , dedent
 ]
@@ -147,27 +151,17 @@ YamlPPGrammar >> list [
 
 { #category : #grammar }
 YamlPPGrammar >> listItem [
-	^ $- asPParser trim, listValue 
-]
-
-{ #category : #grammar }
-YamlPPGrammar >> listValue [
-	^ indentedMappingList / value
+	^ $- asPParser trim, value 
 ]
 
 { #category : #grammar }
 YamlPPGrammar >> mapping [
-	^ (key , $: asPParser trim , mappingValue)
+	^ (key , $: asPParser trim , value)
 ]
 
 { #category : #grammar }
 YamlPPGrammar >> mappingList [
 	^ mapping , (newline / mapping) star
-]
-
-{ #category : #grammar }
-YamlPPGrammar >> mappingValue [
-	^ indentedMappingList / value
 ]
 
 { #category : #grammar }
@@ -231,5 +225,5 @@ YamlPPGrammar >> stringWithinSingleQuotes [
 
 { #category : #grammar }
 YamlPPGrammar >> value [
-	^ scalar
+	^ indentedList / indentedMappingList / scalar
 ]
