@@ -332,7 +332,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-28T11:52:16.987946+01:00"
+									"dateAndTimeString" : "2023-03-02T09:24:10.565547+01:00"
 								}
 							},
 							"uid" : {
@@ -342,7 +342,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Building a YAML parser class]]"
+							"string" : "[[Building a YAML grammar class]]"
 						},
 						{
 							"__type" : "textSnippet",

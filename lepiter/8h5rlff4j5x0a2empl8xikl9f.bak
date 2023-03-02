@@ -45,6 +45,43 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-02T09:22:53.344969+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-02T09:22:55.460793+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "dS6pRUiyDQCWPmnsBFhPBg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "This "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
 					"items" : [
 						{
 							"__type" : "textSnippet",
@@ -1429,7 +1466,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-17T10:37:34.036177+01:00"
+									"dateAndTimeString" : "2023-02-17T10:40:06.705674+01:00"
 								}
 							},
 							"editEmail" : {
@@ -1440,14 +1477,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-17T10:38:03.211876+01:00"
+									"dateAndTimeString" : "2023-02-17T10:40:20.523865+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "aj/LzEOxDQCj85m+AWx99g=="
+								"uidString" : "E8nk1UOxDQCkgJqPAWx99g=="
 							},
-							"code" : "('../yamlFiles' asFileReference allChildrenMatching: '*.yml')\r\tcollect: [ :each | IndentationTransformer transform: each contents ]"
+							"code" : "('../yamlFiles' asFileReference allChildrenMatching: '*.yml') sorted\r\tcollect: [ :each | IndentationTransformer transform: each contents ]"
 						},
 						{
 							"__type" : "textSnippet",

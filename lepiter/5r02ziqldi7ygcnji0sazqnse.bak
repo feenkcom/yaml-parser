@@ -262,7 +262,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-03-01T11:03:07.3325+01:00"
+												"dateAndTimeString" : "2023-03-01T16:33:48.304754+01:00"
 											}
 										},
 										"uid" : {
@@ -272,7 +272,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "{{gtTodo:label=Fix the broken test case}} — see [[*** Fix broken test case]]"
+										"string" : "{{gtTodo:label=Fix the broken test case}} — see [[Fixed broken test case]]"
 									},
 									{
 										"__type" : "textSnippet",

@@ -927,7 +927,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-01T14:39:29.703478+01:00"
+									"dateAndTimeString" : "2023-03-01T14:39:37.195023+01:00"
 								}
 							},
 							"uid" : {
@@ -937,7 +937,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Make sure that dede"
+							"string" : "Make sure that dedents aren't parsed as parts of values."
 						},
 						{
 							"__type" : "pharoSnippet",
