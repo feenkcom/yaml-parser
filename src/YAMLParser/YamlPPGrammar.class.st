@@ -30,7 +30,9 @@ Class {
 		'list',
 		'indentedList',
 		'flowList',
-		'flowMappingList'
+		'flowMappingList',
+		'variable',
+		'listItemValue'
 	],
 	#category : #'YAMLParser-PParser'
 }
@@ -88,7 +90,7 @@ YamlPPGrammar >> defaultIndentToken [
 { #category : #grammar }
 YamlPPGrammar >> document [
 	<todo: 'Add list, flowList and flowMappingList'>
-	^ (list / mappingList / value) end
+	^ newline star , (list / mappingList / value) end
 ]
 
 { #category : #grammar }
@@ -145,10 +147,12 @@ YamlPPGrammar >> initialScalarStringChars [
 	https://github.com/umaranis/FastYaml/blob/master/src/antlr/YamlLexer.g4
 	fragment STRING_MY_START
 	"
-	^ ($- asPParser / #blank asPParser / #newline asPParser / $: asPParser
-		/ $# asPParser / ${ asPParser / $[ asPParser / $& asPParser / $* asPParser) negate 
-		/ ($: asPParser , (#blank asPParser / #newline asPParser) negate)
-		/ ($- asPParser , (#blank asPParser / $- asPParser / #newline asPParser) negate)
+
+	^ ( $- asPParser / #blank asPParser / #newline asPParser / $: asPParser
+		/ $# asPParser / ${ asPParser / $[ asPParser / $& asPParser / $* asPParser)
+		negate 
+	  / ($: asPParser , (#blank asPParser / #newline asPParser) negate)
+	  / ($- asPParser , (#blank asPParser / $- asPParser / #newline asPParser) negate)
 ]
 
 { #category : #grammar }
@@ -169,7 +173,12 @@ YamlPPGrammar >> list [
 
 { #category : #grammar }
 YamlPPGrammar >> listItem [
-	^ $- asPParser trim, value 
+	^ $- asPParser trim, listItemValue 
+]
+
+{ #category : #grammar }
+YamlPPGrammar >> listItemValue [
+	^ (mapping , newline star , indentedMappingList star) / value
 ]
 
 { #category : #grammar }
@@ -214,6 +223,7 @@ YamlPPGrammar >> scalarString [
 
 	^ (initialScalarStringChars, 
 			( ($# asPParser , ${ asPParser not)
+			/ variable
 			/
 				( $# asPParser 
 				/ #blank asPParser 
@@ -262,7 +272,16 @@ YamlPPGrammar >> stringWithinSingleQuotes [
 
 { #category : #grammar }
 YamlPPGrammar >> value [
+	"We add the {{..}} variable rule before the { key : val, ...} flowMappingList rule"
+
 	<todo: 'Add string literals'>
-	^ indentedList / indentedMappingList / flowList / flowMappingList / mapping
-		/ scalar
+	^ indentedList / indentedMappingList / flowList / variable / flowMappingList
+		/ doubleQuotedString / scalar
+]
+
+{ #category : #grammar }
+YamlPPGrammar >> variable [
+	"This is used, for example, in Ansible, though it does not appear in the YAML spec"
+
+	^ '{{' asPParser , $} asPParser negate star token , '}}' asPParser
 ]

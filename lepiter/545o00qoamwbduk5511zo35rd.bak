@@ -18,6 +18,43 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-10T11:29:25.057822+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-10T11:29:25.057822+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Po3k+OqyDQCZI1gaChtoVg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2023-03-02T10:58:52.816731+01:00"
 					}
 				},
@@ -108,14 +145,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-10T14:44:41.692502+01:00"
+									"dateAndTimeString" : "2023-03-02T16:02:41.999517+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "LOwfqEmyDQCvebicDvs5Og=="
 							},
-							"code" : "files := FileLocator imageDirectory parent / 'yamlFiles'\r\t\tchildrenMatching: '*.y*ml'.\rfiles\r\tselect: [ :each | (YamlPPGrammar parseTransformed: each contents) isPetit2Failure not ]"
+							"code" : "files := FileLocator imageDirectory parent / 'yamlFiles'\r\t\tchildrenMatching: '*.y*ml'.\rfiles select: [ :each | (YamlPPGrammar parseTransformed: each contents) isPetit2Failure  not ]."
 						},
 						{
 							"__type" : "textSnippet",
@@ -142,7 +179,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-10T14:44:51.51918+01:00"
+									"dateAndTimeString" : "2023-03-02T16:06:40.331488+01:00"
 								}
 							},
 							"uid" : {
@@ -152,7 +189,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "And these fail (sorted by size):"
+							"string" : "And these fail:"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -179,14 +216,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-10T14:44:34.522388+01:00"
+									"dateAndTimeString" : "2023-03-02T16:06:52.526754+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "rDhA6U2yDQCJrgt1CqjmSw=="
 							},
-							"code" : "files := FileLocator imageDirectory parent / 'yamlFiles'\r\t\tchildrenMatching: '*.y*ml'.\r(files\r\tselect: [ :each | (YamlPPGrammar parseTransformed: each contents) isPetit2Failure ])\r\tsort"
+							"code" : "files := FileLocator imageDirectory parent / 'yamlFiles'\r\t\tchildrenMatching: '*.y*ml'.\rfiles\r\tselect: [ :each | (YamlPPGrammar parseTransformed: each contents) isPetit2Failure ]"
 						}
 					]
 				},
@@ -491,82 +528,7 @@
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-03-10T11:28:59.594778+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-03-10T14:41:37.152531+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "X/5f9+qyDQCYX5pCChtoVg=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "[[Debugging Sync to Gitee]] "
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-03-10T14:42:26.385572+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-03-10T14:42:32.90904+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "HpQxq+2yDQCFIoXnBLVZag=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "We can now parse 15 files!"
-									}
-								]
+								"items" : [ ]
 							},
 							"createEmail" : {
 								"__type" : "email",
@@ -576,7 +538,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-10T14:41:46.279822+01:00"
+									"dateAndTimeString" : "2023-03-10T11:28:56.63695+01:00"
 								}
 							},
 							"editEmail" : {
@@ -587,17 +549,54 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-10T14:42:10.186036+01:00"
+									"dateAndTimeString" : "2023-03-10T11:28:56.63695+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "45zNqO2yDQCDwDd/BLVZag=="
+								"uidString" : "Ctwy9+qyDQCYWJ+JChtoVg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "#Initial newlines, external variables and continued compact notations"
+							"string" : ""
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-10T11:28:59.594778+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-10T11:29:23.232896+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "X/5f9+qyDQCYX5pCChtoVg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "[[Debugging Sync to Gitee]] "
 						},
 						{
 							"__type" : "textSnippet",
@@ -635,6 +634,217 @@
 								"__type" : "textStyle"
 							},
 							"string" : ""
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-10T11:29:36.867187+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-10T11:29:43.911518+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "HbyY+eqyDQCZKsmoChtoVg=="
+							},
+							"code" : "thisSnippet moveFollowingSnippetsToPage: 'Debugging Sync to Gitee'"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-10T11:10:38.983134+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-10T11:12:14.538975+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "egLGteqyDQCTGK6RAQ3yEA=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "We now fail with this small example:"
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-10T11:10:42.403872+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-10T11:12:01.810795+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "GTP6teqyDQCUE/DTAQ3yEA=="
+										},
+										"code" : "syncGitee := FileLocator imageDirectory parent / 'yamlFiles' / 'sync-gitee.yml'.\rYamlPPGrammar parseTransformed: syncGitee contents."
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-10T11:13:18.494756+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-10T11:15:58.157093+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "l/ZHv+qyDQCwe06DAQ3yEA=="
+										},
+										"code" : "YamlPPGrammar parseTransformed:\r'steps:\n  - name: Sync to Gitee\n    env:\n      SSH_PRIVATE_KEY: ${{ secrets.GITEE_PRIVATE_KEY }}\n    with:\n      source-repo: \"git@github.com:BeyondDimension/SteamTools.git\"\n      destination-repo: \"git@gitee.com:rmbgame/SteamTools\"\n'"
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-10T11:13:59.397786+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-10T11:28:51.905151+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "4RS4weqyDQC6AwO0AQ3yEA=="
+										},
+										"code" : "YamlPPGrammar parseTransformed:\r'steps:\n  - name: Sync to Gitee\n    env:\n      SSH_PRIVATE_KEY: ${{ secrets.GITEE_PRIVATE_KEY }}\n    with:\n      source-repo: \"git@github.com:BeyondDimension/SteamTools.git\"\n      destination-repo: \"git@gitee.com:rmbgame/SteamTools\"\n'"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-10T11:09:42.374018+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-10T11:10:38.704018+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "rDdmsuqyDQCNOGAkAQ3yEA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "#Next ..."
 						}
 					]
 				},
@@ -679,7 +889,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-03-02T10:58:41.145043+01:00"
+			"dateAndTimeString" : "2023-03-10T11:29:25.026922+01:00"
 		}
 	},
 	"editEmail" : {
@@ -690,15 +900,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-03-10T10:23:14.821055+01:00"
+			"dateAndTimeString" : "2023-03-10T11:29:25.026922+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "* Running the parser on YAML test files"
+		"title" : "Debugging Sync to Gitee"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "58ab419c-49b2-0d00-ac4b-79640efb393a"
+		"uuid" : "e913e4f8-eab2-0d00-9922-5fd00a1b6856"
 	}
 }

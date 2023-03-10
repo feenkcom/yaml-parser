@@ -389,6 +389,43 @@
 														"__type" : "textStyle"
 													},
 													"string" : "[[Debugging compact notations]] "
+												},
+												{
+													"__type" : "textSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-03-10T12:16:25.50324+01:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-03-10T14:41:37.154927+01:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "vwTFoOuyDQCovaD+BAIQ4g=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "[[Debugging Sync to Gitee]] "
 												}
 											]
 										},

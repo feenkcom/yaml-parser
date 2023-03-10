@@ -378,7 +378,7 @@
 														"__type" : "time",
 														"time" : {
 															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-03-10T10:23:27.907273+01:00"
+															"dateAndTimeString" : "2023-03-10T11:06:45.685509+01:00"
 														}
 													},
 													"uid" : {
@@ -388,7 +388,44 @@
 													"paragraphStyle" : {
 														"__type" : "textStyle"
 													},
-													"string" : "[[* Debugging compact notations]] "
+													"string" : "[[Debugging compact notations]] "
+												},
+												{
+													"__type" : "textSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-03-10T12:16:25.50324+01:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-03-10T12:16:26.753394+01:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "vwTFoOuyDQCovaD+BAIQ4g=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "[[* Debugging Sync to Gitee]] "
 												}
 											]
 										},

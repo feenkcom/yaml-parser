@@ -23,6 +23,15 @@ YamlPPGrammarExamples >> compactMappingListItem [
 ]
 
 { #category : #accessing }
+YamlPPGrammarExamples >> compactMappingListItemContinued [
+	"This is a compact mapping list continued with further mappings"
+
+	<gtExample>
+	^ self parse: '- foo: bar
+  fee : baz' rule: #listItem
+]
+
+{ #category : #accessing }
 YamlPPGrammarExamples >> decimalInteger [
 	<gtExample>
 	^ self parse: '1234' rule: #decimalInteger
@@ -51,7 +60,11 @@ YamlPPGrammarExamples >> dedentToken [
 { #category : #accessing }
 YamlPPGrammarExamples >> doubleQuotedString [
 	<gtExample>
-	^ self parse: '"It is a far far better thing"' rule: #doubleQuotedString
+	| input |
+	input := '"It is a far far better thing"'.
+	self parse: input rule: #value.
+	self fail: input rule: #scalar.
+	^ self parse: input rule: #doubleQuotedString
 ]
 
 { #category : #accessing }
@@ -286,4 +299,24 @@ YamlPPGrammarExamples >> singleQuotedStringWithDoubledSingleQuotes [
 YamlPPGrammarExamples >> spaceInValue [
 	<gtExample>
 	^ self parse: 'foo bar' rule: #value
+]
+
+{ #category : #accessing }
+YamlPPGrammarExamples >> variable [
+	<gtExample>
+	| input |
+	input := '{{ foo }}'.
+	self parse: input rule: #value.
+	self fail: input rule: #scalar.
+	^ self parse: input rule: #variable
+]
+
+{ #category : #accessing }
+YamlPPGrammarExamples >> variableWithinScalar [
+	<gtExample>
+	| input |
+	input := 'Something ${{ foo }}'.
+	self parse: input rule: #value.
+	self parse: input rule: #scalar.
+	^ self fail: input rule: #variable
 ]
