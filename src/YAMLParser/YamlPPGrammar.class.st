@@ -56,7 +56,7 @@ YamlPPGrammar >> comment [
 { #category : #grammar }
 YamlPPGrammar >> decimalInteger [
 	<todo: 'Convert to a number'>
-	^ ($0 asPParser not , #digit asPParser plus) ==> #second
+	^ ($0 asPParser not , #digit asPParser plus token) ==> #second
 ]
 
 { #category : #grammar }
@@ -212,7 +212,7 @@ YamlPPGrammar >> scalarString [
 	Also forbidding flow chars {}[] within string values for now.
 	"
 
-	^ initialScalarStringChars, 
+	^ (initialScalarStringChars, 
 			( ($# asPParser , ${ asPParser not)
 			/
 				( $# asPParser 
@@ -237,7 +237,7 @@ YamlPPGrammar >> scalarString [
 					/ $[ asPParser
 					/ $] asPParser
 					) negate)
-			) star
+			) star) token
 ]
 
 { #category : #grammar }
@@ -252,12 +252,12 @@ YamlPPGrammar >> start [
 
 { #category : #grammar }
 YamlPPGrammar >> stringWithinDoubleQuotes [
-	^ (notAnEscapedQuote / ($\ asPParser , #any asPParser)) star flatten
+	^ (notAnEscapedQuote / ($\ asPParser , #any asPParser)) star token
 ]
 
 { #category : #grammar }
 YamlPPGrammar >> stringWithinSingleQuotes [
-	^ ($' asPParser negate / doubledSingleQuotes) star
+	^ ($' asPParser negate / doubledSingleQuotes) star token
 ]
 
 { #category : #grammar }
