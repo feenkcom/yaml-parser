@@ -19,9 +19,9 @@ BaselineOfYAMLParser >> baseline: spec [
 	<baseline>
 	spec
 		for: #common
-		do: [ spec
+		do: [ "spec
 				baseline: 'GToolkit'
-				with: [ spec repository: 'github://feenkcom/gtoolkit:main/src' ].
+				with: [ spec repository: 'github://feenkcom/gtoolkit:main/src' ]."
 			spec
 				baseline: 'GToolkitPhlow'
 					with: [ spec repository: 'github://feenkcom/gtoolkit-phlow:main/src' ];
@@ -29,5 +29,5 @@ BaselineOfYAMLParser >> baseline: spec [
 					with: [ spec repository: 'github://feenkcom/gt4petitparser2:main/src' ].
 			spec
 				package: 'YAMLParser'
-				with: [ spec requires: #('GToolkitPhlow' 'GToolkit4PetitParser2' 'GToolkit') ] ]
+				with: [ spec requires: #('GToolkitPhlow' 'GToolkit4PetitParser2' "'GToolkit'") ] ]
 ]
