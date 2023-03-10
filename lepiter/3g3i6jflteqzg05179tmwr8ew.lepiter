@@ -442,7 +442,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-03-10T10:26:23.090676+01:00"
+												"dateAndTimeString" : "2023-03-10T11:06:45.483992+01:00"
 											}
 										},
 										"uid" : {
@@ -452,7 +452,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "We continue with  [[* Debugging compact notations]] "
+										"string" : "We continue with  [[Debugging compact notations]] "
 									}
 								]
 							},
@@ -486,6 +486,183 @@
 								"__type" : "textStyle"
 							},
 							"string" : "## Compact notations"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-10T11:10:38.983134+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-10T11:12:14.538975+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "egLGteqyDQCTGK6RAQ3yEA=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "We now fail with this small example:"
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-10T11:10:42.403872+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-10T11:12:01.810795+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "GTP6teqyDQCUE/DTAQ3yEA=="
+										},
+										"code" : "syncGitee := FileLocator imageDirectory parent / 'yamlFiles' / 'sync-gitee.yml'.\rYamlPPGrammar parseTransformed: syncGitee contents."
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-10T11:13:18.494756+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-10T11:15:58.157093+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "l/ZHv+qyDQCwe06DAQ3yEA=="
+										},
+										"code" : "YamlPPGrammar parseTransformed:\r'steps:\n  - name: Sync to Gitee\n    env:\n      SSH_PRIVATE_KEY: ${{ secrets.GITEE_PRIVATE_KEY }}\n    with:\n      source-repo: \"git@github.com:BeyondDimension/SteamTools.git\"\n      destination-repo: \"git@gitee.com:rmbgame/SteamTools\"\n'"
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-10T11:13:59.397786+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-10T11:15:50.752995+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "4RS4weqyDQC6AwO0AQ3yEA=="
+										},
+										"code" : "YamlPPGrammar parseTransformed:'\nsteps:\n  - name: Sync to Gitee\n    env:\n      SSH_PRIVATE_KEY: ${{ secrets.GITEE_PRIVATE_KEY }}\n    with:\n      source-repo: \"git@github.com:BeyondDimension/SteamTools.git\"\n      destination-repo: \"git@gitee.com:rmbgame/SteamTools\"\n'"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-10T11:09:42.374018+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-10T11:10:38.704018+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "rDdmsuqyDQCNOGAkAQ3yEA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "#Next ..."
 						}
 					]
 				},
