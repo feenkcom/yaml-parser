@@ -16,15 +16,18 @@ BaselineOfYAMLParser class >> loadLepiter [
 
 { #category : #baseline }
 BaselineOfYAMLParser >> baseline: spec [
-	
 	<baseline>
-	spec for: #'common' do: [
-	
-		"spec baseline: 'ExternalProject' with: [
-			spec repository: 'github://<organization>/<repository>:main/src' ]."
-			
-		spec package: 'YAMLParser'.
-		"spec package: 'PackageTwo' with: [ 
-			spec requires: #( 'ExternalProject' 'YAMLParser' ) ]"
-	]
+	spec
+		for: #common
+		do: [ spec
+				baseline: 'GToolkit'
+				with: [ spec repository: 'github://feenkcom/gtoolkit:main/src' ].
+			spec
+				baseline: 'GToolkitPhlow'
+					with: [ spec repository: 'github://feenkcom/gtoolkit-phlow:main/src' ];
+				baseline: 'GToolkit4PetitParser2'
+					with: [ spec repository: 'github://feenkcom/gt4petitparser2:main/src' ].
+			spec
+				package: 'YAMLParser'
+				with: [ spec requires: #('GToolkitPhlow' 'GToolkit4PetitParser2' 'GToolkit') ] ]
 ]
