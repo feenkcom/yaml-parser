@@ -8,9 +8,21 @@ Class {
 }
 
 { #category : #accessing }
-YamlPPGrammarExamples >> comment [
+YamlPPGrammarExamples >> codeWithComment [
 	<gtExample>
-	^ self parse: '# yada yada yada' rule: #comment
+	^ self parse: 'foo
+# yada yada yada' rule: #document
+]
+
+{ #category : #accessing }
+YamlPPGrammarExamples >> comment [
+	"NB: A document should contain at least one scalar?"
+
+	<gtExample>
+	| input |
+	input := '# yada yada yada'.
+	self fail: input rule: #document.
+	^ self parse: input rule: #comment
 ]
 
 { #category : #accessing }

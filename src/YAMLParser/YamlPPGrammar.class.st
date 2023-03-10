@@ -32,7 +32,8 @@ Class {
 		'flowList',
 		'flowMappingList',
 		'variable',
-		'listItemValue'
+		'listItemValue',
+		'ignorable'
 	],
 	#category : #'YAMLParser-PParser'
 }
@@ -90,7 +91,7 @@ YamlPPGrammar >> defaultIndentToken [
 { #category : #grammar }
 YamlPPGrammar >> document [
 	<todo: 'Add list, flowList and flowMappingList'>
-	^ newline star , (list / mappingList / value) end
+	^ (newline star / ignorable) , (list / mappingList / value) end
 ]
 
 { #category : #grammar }
@@ -106,13 +107,25 @@ YamlPPGrammar >> doubledSingleQuotes [
 
 { #category : #grammar }
 YamlPPGrammar >> flowList [
-	^ $[ asPParser trim , value , ($, asPParser trim , value) star , $] asPParser trim
+	^ ($[ asPParser trim: ignorable) , value
+		, (($, asPParser trim: ignorable) , value) star
+		, ($] asPParser trim: ignorable)
 ]
 
 { #category : #grammar }
 YamlPPGrammar >> flowMappingList [
-	^ ${ asPParser trim , mapping , ($, asPParser trim , mapping) star
-		, $} asPParser trim
+	^ (${ asPParser trim: ignorable) , mapping
+		, (($, asPParser trim: ignorable) , mapping) star
+		, ($} asPParser trim: ignorable)
+]
+
+{ #category : #grammar }
+YamlPPGrammar >> ignorable [
+	"Newlines are special"
+
+	"^ (comment / #space asPParser) star"
+
+	^ (comment / Character space asPParser) star
 ]
 
 { #category : #grammar }
@@ -173,7 +186,7 @@ YamlPPGrammar >> list [
 
 { #category : #grammar }
 YamlPPGrammar >> listItem [
-	^ $- asPParser trim, listItemValue 
+	^ ($- asPParser trim: ignorable), newline optional, listItemValue 
 ]
 
 { #category : #grammar }
@@ -183,7 +196,11 @@ YamlPPGrammar >> listItemValue [
 
 { #category : #grammar }
 YamlPPGrammar >> mapping [
-	^ (key , $: asPParser trim , value)
+	"We are tolerant of an extra space before a key.
+	Apparently a missing value is equivalent to null, so we match newline and (not consuming the NL)."
+
+	^ #space asPParser optional , key , ($: asPParser trim: ignorable)
+		, (#endOfInput asPParser / newline and / value)
 ]
 
 { #category : #grammar }
@@ -209,7 +226,7 @@ YamlPPGrammar >> number [
 
 { #category : #grammar }
 YamlPPGrammar >> scalar [
-	^ number / scalarString
+	^ (number / scalarString) trim: ignorable
 ]
 
 { #category : #grammar }
