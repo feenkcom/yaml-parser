@@ -559,12 +559,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-03-10T09:03:15.349319+01:00"
+			"dateAndTimeString" : "2023-03-10T10:22:45.846997+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "* Fix the yaml project baseline ..."
+		"title" : "Fix the yaml project baseline (DONE)"
 	},
 	"uid" : {
 		"__type" : "uuid",

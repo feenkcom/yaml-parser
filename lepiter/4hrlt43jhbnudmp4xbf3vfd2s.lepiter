@@ -572,12 +572,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-03-02T16:02:22.718793+01:00"
+			"dateAndTimeString" : "2023-03-10T10:23:27.079775+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Debugging compact notations"
+		"title" : "* Debugging compact notations"
 	},
 	"uid" : {
 		"__type" : "uuid",

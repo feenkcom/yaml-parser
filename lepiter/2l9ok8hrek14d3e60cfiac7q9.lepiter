@@ -82,43 +82,6 @@
 								"__type" : "textStyle"
 							},
 							"string" : "[[YAML Specs]] "
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-10T09:08:22.727781+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-10T09:08:23.417869+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "sodUAOmyDQCcNbRWDXl/Kw=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "[[* Fix the yaml project baseline ...]]"
 						}
 					]
 				},
@@ -415,7 +378,7 @@
 														"__type" : "time",
 														"time" : {
 															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-03-02T16:02:22.732028+01:00"
+															"dateAndTimeString" : "2023-03-10T10:23:27.907273+01:00"
 														}
 													},
 													"uid" : {
@@ -425,7 +388,7 @@
 													"paragraphStyle" : {
 														"__type" : "textStyle"
 													},
-													"string" : "[[Debugging compact notations]] "
+													"string" : "[[* Debugging compact notations]] "
 												}
 											]
 										},
@@ -448,7 +411,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-03-02T10:58:49.638652+01:00"
+												"dateAndTimeString" : "2023-03-10T10:23:16.131951+01:00"
 											}
 										},
 										"uid" : {
@@ -458,7 +421,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "[[Running the parser on YAML test files]] "
+										"string" : "[[* Running the parser on YAML test files]] "
 									},
 									{
 										"__type" : "textSnippet",
