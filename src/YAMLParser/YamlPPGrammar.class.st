@@ -35,7 +35,8 @@ Class {
 		'listItemValue',
 		'ignorable',
 		'indentedValue',
-		'unindentedValue'
+		'unindentedValue',
+		'file'
 	],
 	#category : #'YAMLParser-PParser'
 }
@@ -52,10 +53,13 @@ YamlPPGrammar class >> parseTransformed: aString [
 
 { #category : #grammar }
 YamlPPGrammar >> comment [
-	"NB: hack to not recognize #{INDENT}# or #{DEDENT}# as comments"
+	"Consume everything up to the end of line, but not the newline itself.
+	NB: ${ hack to not recognize #{INDENT}# or #{DEDENT}# as comments.
+	See: YamlPPGrammarExamples>>#indentNotComment 
+	"
 
-	<todo: 'What do we do with comments?'>
-	^ $# asPParser , ${ asPParser not , #newline asPParser negate plus
+	<todo: 'What do we do with comments? Discard them?'>
+	^ $# asPParser , ${ asPParser not , #endOfLine asPParser negate plus
 ]
 
 { #category : #grammar }
@@ -93,7 +97,7 @@ YamlPPGrammar >> defaultIndentToken [
 { #category : #grammar }
 YamlPPGrammar >> document [
 	<todo: 'Add list, flowList and flowMappingList'>
-	^ (newline star / ignorable) , (list / mappingList / value) end
+	^ list / mappingList / value
 ]
 
 { #category : #grammar }
@@ -105,6 +109,12 @@ YamlPPGrammar >> doubleQuotedString [
 { #category : #grammar }
 YamlPPGrammar >> doubledSingleQuotes [
 	^ ($' asPParser , $' asPParser) ==> #first
+]
+
+{ #category : #grammar }
+YamlPPGrammar >> file [
+	<todo: 'not used yet'>
+	^ document star end
 ]
 
 { #category : #grammar }
@@ -123,11 +133,10 @@ YamlPPGrammar >> flowMappingList [
 
 { #category : #grammar }
 YamlPPGrammar >> ignorable [
-	"Newlines are special"
+	"NB: We don't care about newlines, so we consume them here with the #space parser.
+	Despite what is said in the comment of PP2Node>>#trim:, we need a star here."
 
-	"^ (comment / #space asPParser) star"
-
-	^ (comment / Character space asPParser) star
+	^ (comment / #space asPParser) star
 ]
 
 { #category : #grammar }
@@ -183,22 +192,22 @@ YamlPPGrammar >> integer [
 
 { #category : #grammar }
 YamlPPGrammar >> key [
-	^ scalarString
+	^ scalarString trim: ignorable
 ]
 
 { #category : #grammar }
 YamlPPGrammar >> list [
-	^ listItem , (newline / listItem) star
+	^ listItem , listItem star
 ]
 
 { #category : #grammar }
 YamlPPGrammar >> listItem [
-	^ ($- asPParser trim: ignorable), newline optional, listItemValue 
+	^ ($- asPParser trim: ignorable) , listItemValue
 ]
 
 { #category : #grammar }
 YamlPPGrammar >> listItemValue [
-	^ (mapping , newline star , indentedMappingList star) / value
+	^ (mapping , indentedMappingList star) / value
 ]
 
 { #category : #grammar }
@@ -206,19 +215,18 @@ YamlPPGrammar >> mapping [
 	"We are tolerant of an extra space before a key.
 	Apparently a missing value is equivalent to null, so we match newline and (not consuming the NL)."
 
-	^ #space asPParser optional , key , ($: asPParser trim: ignorable)
-		, (#endOfInput asPParser 
-		/ newline and, indentedValue
-		/ unindentedValue)
+	^ key , ($: asPParser trim: ignorable)
+		, (#endOfInput asPParser / indentedValue / unindentedValue)
 ]
 
 { #category : #grammar }
 YamlPPGrammar >> mappingList [
-	^ mapping , (newline / mapping) star
+	^ mapping , mapping star
 ]
 
 { #category : #grammar }
 YamlPPGrammar >> newline [
+	<todo: 'Remove this? We don''t need this anymore, it seems.'>
 	^ #newline asPParser
 ]
 
@@ -283,7 +291,7 @@ YamlPPGrammar >> singleQuotedString [
 
 { #category : #accessing }
 YamlPPGrammar >> start [
-	^ document
+	^ file
 ]
 
 { #category : #grammar }

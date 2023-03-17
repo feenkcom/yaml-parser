@@ -16,13 +16,20 @@ YamlPPGrammarExamples >> codeWithComment [
 
 { #category : #accessing }
 YamlPPGrammarExamples >> comment [
-	"NB: A document should contain at least one scalar?"
-
 	<gtExample>
 	| input |
 	input := '# yada yada yada'.
 	self fail: input rule: #document.
+	self parse: input rule: #ignorable.
 	^ self parse: input rule: #comment
+]
+
+{ #category : #accessing }
+YamlPPGrammarExamples >> commentWithCode [
+	<gtExample>
+	^ self parse: '
+# yada yada yada
+foo' rule: #document
 ]
 
 { #category : #accessing }
