@@ -212,11 +212,10 @@ YamlPPGrammar >> listItemValue [
 
 { #category : #grammar }
 YamlPPGrammar >> mapping [
-	"We are tolerant of an extra space before a key.
-	Apparently a missing value is equivalent to null, so we match newline and (not consuming the NL)."
+	"Apparently a missing value is equivalent to null"
 
 	^ key , ($: asPParser trim: ignorable)
-		, (#endOfInput asPParser / indentedValue / unindentedValue)
+		, (indentedValue / unindentedValue optional)
 ]
 
 { #category : #grammar }
