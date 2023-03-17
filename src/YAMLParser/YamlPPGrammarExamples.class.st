@@ -158,7 +158,8 @@ YamlPPGrammarExamples >> nestedListAndMappingList [
 YamlPPGrammarExamples >> nestedListAndMappingListCode [
 "A more complex example with nested lists and mapping lists"
 	<gtExample>
-	^ '-
+	^ 
+'-
   foo : bar
   fee :
     - baz

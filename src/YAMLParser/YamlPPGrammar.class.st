@@ -33,7 +33,9 @@ Class {
 		'flowMappingList',
 		'variable',
 		'listItemValue',
-		'ignorable'
+		'ignorable',
+		'indentedValue',
+		'unindentedValue'
 	],
 	#category : #'YAMLParser-PParser'
 }
@@ -155,6 +157,11 @@ YamlPPGrammar >> indentedMappingList [
 ]
 
 { #category : #grammar }
+YamlPPGrammar >> indentedValue [
+	^ indentedList / indentedMappingList
+]
+
+{ #category : #grammar }
 YamlPPGrammar >> initialScalarStringChars [
 	"Taken from the ANTLR Scanner
 	https://github.com/umaranis/FastYaml/blob/master/src/antlr/YamlLexer.g4
@@ -200,7 +207,9 @@ YamlPPGrammar >> mapping [
 	Apparently a missing value is equivalent to null, so we match newline and (not consuming the NL)."
 
 	^ #space asPParser optional , key , ($: asPParser trim: ignorable)
-		, (#endOfInput asPParser / newline and / value)
+		, (#endOfInput asPParser 
+		/ newline and, indentedValue
+		/ unindentedValue)
 ]
 
 { #category : #grammar }
@@ -288,12 +297,16 @@ YamlPPGrammar >> stringWithinSingleQuotes [
 ]
 
 { #category : #grammar }
+YamlPPGrammar >> unindentedValue [
+	^ flowList / variable / flowMappingList / doubleQuotedString / scalar
+]
+
+{ #category : #grammar }
 YamlPPGrammar >> value [
 	"We add the {{..}} variable rule before the { key : val, ...} flowMappingList rule"
 
 	<todo: 'Add string literals'>
-	^ indentedList / indentedMappingList / flowList / variable / flowMappingList
-		/ doubleQuotedString / scalar
+	^ unindentedValue / indentedValue
 ]
 
 { #category : #grammar }

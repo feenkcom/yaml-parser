@@ -415,7 +415,7 @@
 														"__type" : "time",
 														"time" : {
 															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-03-10T12:16:26.753394+01:00"
+															"dateAndTimeString" : "2023-03-10T14:41:37.154927+01:00"
 														}
 													},
 													"uid" : {
@@ -425,7 +425,7 @@
 													"paragraphStyle" : {
 														"__type" : "textStyle"
 													},
-													"string" : "[[* Debugging Sync to Gitee]] "
+													"string" : "[[Debugging Sync to Gitee]] "
 												}
 											]
 										},

@@ -121,45 +121,7 @@
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-03-10T09:07:04.61243+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-03-10T09:07:05.43302+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "86/X++iyDQCbhBvbDXl/Kw=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "feenkcom/gtoolkit#3046"
-									}
-								]
+								"items" : [ ]
 							},
 							"createEmail" : {
 								"__type" : "email",
@@ -180,7 +142,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-10T09:06:58.008262+01:00"
+									"dateAndTimeString" : "2023-03-17T10:09:13.607691+01:00"
 								}
 							},
 							"uid" : {
@@ -190,7 +152,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Issue [#3046](https://github.com/feenkcom/gtoolkit/issues/3046). "
+							"string" : "Issue [#3046](https://github.com/feenkcom/gtoolkit/issues/3046).  feenkcom/gtoolkit#3046"
 						}
 					]
 				},

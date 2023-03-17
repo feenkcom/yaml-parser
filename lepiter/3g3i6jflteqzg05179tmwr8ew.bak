@@ -812,7 +812,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-10T17:01:03.997457+01:00"
+									"dateAndTimeString" : "2023-03-10T17:06:29.992017+01:00"
 								}
 							},
 							"uid" : {
@@ -822,7 +822,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Debugging release drafter]] "
+							"string" : "[[* Debugging release drafter — null map value]] "
 						}
 					]
 				},
@@ -845,7 +845,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-10T17:00:50.520273+01:00"
+						"dateAndTimeString" : "2023-03-10T17:06:21.389452+01:00"
 					}
 				},
 				"uid" : {
@@ -855,7 +855,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Release drafter"
+				"string" : "#Missing map values are null"
 			}
 		]
 	},
