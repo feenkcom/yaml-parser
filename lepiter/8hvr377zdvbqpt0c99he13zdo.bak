@@ -512,6 +512,43 @@
 				"string" : "Now we have introduced some ambiguity. After a mapping `key:` and newline, do we expect a null, or a new indented value? We need to explicitly look for a newline before en indent value, else assume a null."
 			},
 			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-17T10:00:08.615543+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-17T10:00:11.395207+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "KFiDinazDQCeuY06C8Z8BQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "This is broken:"
+			},
+			{
 				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
@@ -536,14 +573,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-17T09:59:47.266116+01:00"
+						"dateAndTimeString" : "2023-03-17T09:59:57.907195+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "7ydsiHazDQCeUIEjC8Z8BQ=="
 				},
-				"code" : "YamlPPGrammar parseTransformed: \r'foo:'"
+				"code" : "YamlPPGrammar parseTransformed: \r'foo:\r  bar: baz'"
 			},
 			{
 				"__type" : "textSnippet",
@@ -868,7 +905,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-10T17:20:23.302295+01:00"
+						"dateAndTimeString" : "2023-03-17T10:26:28.173921+01:00"
 					}
 				},
 				"uid" : {
@@ -878,7 +915,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "Still doesn't solve the problem."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -1040,12 +1077,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-03-10T17:06:29.982245+01:00"
+			"dateAndTimeString" : "2023-03-17T10:26:06.721337+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "* Debugging release drafter — null map value"
+		"title" : "*** Debugging release drafter — null map value"
 	},
 	"uid" : {
 		"__type" : "uuid",

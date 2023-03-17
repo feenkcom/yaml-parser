@@ -812,7 +812,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-10T17:06:29.992017+01:00"
+									"dateAndTimeString" : "2023-03-17T10:26:06.726027+01:00"
 								}
 							},
 							"uid" : {
@@ -822,7 +822,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[* Debugging release drafter — null map value]] "
+							"string" : "[[*** Debugging release drafter — null map value]] "
 						}
 					]
 				},
@@ -878,12 +878,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-03-10T10:23:14.821055+01:00"
+			"dateAndTimeString" : "2023-03-17T09:27:14.375768+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "* Running the parser on YAML test files"
+		"title" : "*** Running the parser on YAML test files"
 	},
 	"uid" : {
 		"__type" : "uuid",

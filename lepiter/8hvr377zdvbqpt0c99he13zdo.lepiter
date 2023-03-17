@@ -104,7 +104,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-10T17:06:31.997425+01:00"
+						"dateAndTimeString" : "2023-03-17T10:27:38.688766+01:00"
 					}
 				},
 				"uid" : {
@@ -114,7 +114,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "Issue [#3046](https://github.com/feenkcom/gtoolkit/issues/3046).  feenkcom/gtoolkit#3046"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -905,7 +905,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-10T17:20:23.302295+01:00"
+						"dateAndTimeString" : "2023-03-17T10:26:28.173921+01:00"
 					}
 				},
 				"uid" : {
@@ -915,7 +915,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "Still doesn't solve the problem."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -1077,12 +1077,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-03-10T17:06:29.982245+01:00"
+			"dateAndTimeString" : "2023-03-17T10:26:06.721337+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "* Debugging release drafter — null map value"
+		"title" : "*** Debugging release drafter — null map value"
 	},
 	"uid" : {
 		"__type" : "uuid",
