@@ -156,51 +156,51 @@ YamlPPGrammarExamples >> indentedMappingList [
 ]
 
 { #category : #accessing }
-YamlPPGrammarExamples >> nestedListAndMappingList [
+YamlPPGrammarExamples >> mappingWithNullAndNewMapping [
 	<gtExample>
-	^ self parse: self nestedListAndMappingListCode  rule: #list
+	| input |
+	input := 'foo:
+bar: baz'.
+	self parse: input rule: #mapping.
+	^ self parse: input rule: #document
 ]
 
 { #category : #accessing }
-YamlPPGrammarExamples >> nestedListAndMappingListCode [
-"A more complex example with nested lists and mapping lists"
+YamlPPGrammarExamples >> mappingWithNullValueAtEOF [
+	"Not sure why this is not working. Parsing is continuing after the end of input."
+
 	<gtExample>
-	^ 
-'-
+	| input |
+	input := 'foo:'.
+	self parse: input rule: #mapping.
+	^ self parse: input rule: #document
+]
+
+{ #category : #accessing }
+YamlPPGrammarExamples >> nestedListAndMappingList [
+	<gtExample>
+	^ self parse: '-
   foo : bar
   fee :
     - baz
-    - booz'
+    - booz'  rule: #list
 ]
 
 { #category : #accessing }
 YamlPPGrammarExamples >> nestedListWithMappingList [
 	<gtExample>
-	^ self parse: self nestedListWithMappingListCode  rule: #list
-]
-
-{ #category : #accessing }
-YamlPPGrammarExamples >> nestedListWithMappingListCode [
-"A more complex example with nested lists and mapping lists"
-	<gtExample>
-	^ '-
+	^ self parse: '-
   foo : bar
-  fee : baz'
+  fee : baz'  rule: #list
 ]
 
 { #category : #accessing }
 YamlPPGrammarExamples >> nestedMappingList [
 	<gtExample>
-	^ self parse: self nestedMappingListCode  rule: #mappingList
-]
-
-{ #category : #accessing }
-YamlPPGrammarExamples >> nestedMappingListCode [
-	<gtExample>
-	^ 'foo :
+	^ self parse: 'foo :
   bar : foobar
   baz : foobaz
-bar : foo'
+bar : foo'  rule: #mappingList
 ]
 
 { #category : #accessing }
@@ -221,16 +221,9 @@ YamlPPGrammarExamples >> nestedMappingListTiny [
 { #category : #accessing }
 YamlPPGrammarExamples >> nestedMappingListWithList [
 	<gtExample>
-	^ self parse: self nestedMappingListWithListCode  rule: #mappingList
-]
-
-{ #category : #accessing }
-YamlPPGrammarExamples >> nestedMappingListWithListCode [
-"A more complex example with nested lists and mapping lists"
-	<gtExample>
-	^ 'foo :
+	^ self parse: 'foo :
   - bar
-  - baz'
+  - baz'  rule: #mappingList
 ]
 
 { #category : #accessing }
@@ -278,14 +271,8 @@ YamlPPGrammarExamples >> scalarStringFooBarWithSpaces [
 { #category : #accessing }
 YamlPPGrammarExamples >> simpleMappingList [
 	<gtExample>
-	^ self parse: self simpleMappingListCode rule: #mappingList
-]
-
-{ #category : #accessing }
-YamlPPGrammarExamples >> simpleMappingListCode [
-	<gtExample>
-	^ 'foo : bar
-foobar : baz'
+	^ self parse: 'foo : bar
+foobar : baz' rule: #mappingList
 ]
 
 { #category : #accessing }

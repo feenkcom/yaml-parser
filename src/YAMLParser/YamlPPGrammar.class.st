@@ -36,7 +36,8 @@ Class {
 		'ignorable',
 		'indentedValue',
 		'unindentedValue',
-		'file'
+		'file',
+		'ignorable2'
 	],
 	#category : #'YAMLParser-PParser'
 }
@@ -133,10 +134,17 @@ YamlPPGrammar >> flowMappingList [
 
 { #category : #grammar }
 YamlPPGrammar >> ignorable [
-	"NB: We don't care about newlines, so we consume them here with the #space parser.
+	"Normally we don't care about newlines, so we consume them here with the #space parser.
 	Despite what is said in the comment of PP2Node>>#trim:, we need a star here."
 
 	^ (comment / #space asPParser) star
+]
+
+{ #category : #grammar }
+YamlPPGrammar >> ignorable2 [
+	"In cases where we must not consume a newline (mapping), we use this instead."
+
+	^ (comment / Character space asPParser) star
 ]
 
 { #category : #grammar }
@@ -212,10 +220,16 @@ YamlPPGrammar >> listItemValue [
 
 { #category : #grammar }
 YamlPPGrammar >> mapping [
-	"Apparently a missing value is equivalent to null"
+	"Apparently a missing value is equivalent to null.
+	We use ignorable2 to *not* consume any newline.
+	An end of input or an unindentValue after a newline signal a null value."
 
-	^ key , ($: asPParser trim: ignorable)
-		, (indentedValue / unindentedValue optional)
+	^ key , ($: asPParser trim: ignorable2) ,
+		( #endOfInput asPParser
+		/ newline , 
+			( indentedValue 
+			/ mapping )
+		/ unindentedValue)
 ]
 
 { #category : #grammar }
