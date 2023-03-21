@@ -1217,40 +1217,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : ""
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-17T09:44:42.042938+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-17T09:46:02.899222+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "6/hIU3azDQCgf6MvDo+/wg=="
-				},
-				"code" : "YamlPPGrammar parseTransformed: \r'on:\n  push: b\n'"
 			}
 		]
 	},

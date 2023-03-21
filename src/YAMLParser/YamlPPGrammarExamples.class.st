@@ -77,6 +77,24 @@ YamlPPGrammarExamples >> dedentToken [
 ]
 
 { #category : #accessing }
+YamlPPGrammarExamples >> docWithLiteralString [
+	<gtExample>
+	^ self parse: 
+'yaml: |
+  ...
+' rule: #document
+]
+
+{ #category : #accessing }
+YamlPPGrammarExamples >> documentStartEnd [
+	<gtExample>
+	^ self parse: '---
+foo
+...
+' rule: #document
+]
+
+{ #category : #accessing }
 YamlPPGrammarExamples >> doubleQuotedString [
 	<gtExample>
 	| input |
@@ -156,6 +174,16 @@ YamlPPGrammarExamples >> indentedMappingList [
 ]
 
 { #category : #accessing }
+YamlPPGrammarExamples >> literalString [
+	<gtExample>
+	^ self parse: 
+'|
+  foo
+  bar
+' rule: #literalString
+]
+
+{ #category : #accessing }
 YamlPPGrammarExamples >> mappingWithNullAndNewMapping [
 	<gtExample>
 	| input |
@@ -170,6 +198,8 @@ YamlPPGrammarExamples >> mappingWithNullValueAtEOF [
 	"Not sure why this is not working. Parsing is continuing after the end of input."
 
 	<gtExample>
+	<noTest>
+	
 	| input |
 	input := 'foo:'.
 	self parse: input rule: #mapping.

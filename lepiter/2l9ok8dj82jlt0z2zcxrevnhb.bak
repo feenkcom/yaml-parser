@@ -482,7 +482,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-10T10:13:29.694195+01:00"
+									"dateAndTimeString" : "2023-03-02T15:52:30.647087+01:00"
 								}
 							},
 							"uid" : {
@@ -492,7 +492,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[GitHub actyions workflow syntax](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions) "
+							"string" : "[GitHub actions workflow syntax](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions) "
 						}
 					]
 				},

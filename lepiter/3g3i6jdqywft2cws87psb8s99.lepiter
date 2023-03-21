@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-17T09:27:14.380192+01:00"
+						"dateAndTimeString" : "2023-03-21T08:54:19.57027+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We need this next. See [[*** Running the parser on YAML test files]]."
+				"string" : "We need this next. See [[*** Running the parser on GH Action sample files]]."
 			},
 			{
 				"__type" : "textSnippet",
@@ -1065,7 +1065,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-17T09:27:14.381929+01:00"
+									"dateAndTimeString" : "2023-03-21T08:54:19.574413+01:00"
 								}
 							},
 							"uid" : {
@@ -1075,7 +1075,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Let's try a fragment of a real example from `lint-server.yml`. (See [[*** Running the parser on YAML test files]].) "
+							"string" : "Let's try a fragment of a real example from `lint-server.yml`. (See [[*** Running the parser on GH Action sample files]].) "
 						},
 						{
 							"__type" : "pharoSnippet",

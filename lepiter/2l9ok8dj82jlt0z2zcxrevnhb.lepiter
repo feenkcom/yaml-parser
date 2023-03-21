@@ -161,6 +161,43 @@
 											"__type" : "textStyle"
 										},
 										"string" : "[JSON <-> YAML](https://www.json2yaml.com)"
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-21T08:25:48.885471+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-21T08:25:54.419842+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "cTeIsMWzDQC5PjFVCun98A=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "[YAML test suite](https://github.com/yaml/yaml-test-suite)"
 									}
 								]
 							},

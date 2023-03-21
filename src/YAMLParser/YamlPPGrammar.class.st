@@ -37,7 +37,8 @@ Class {
 		'indentedValue',
 		'unindentedValue',
 		'file',
-		'ignorable2'
+		'ignorable2',
+		'literalString'
 	],
 	#category : #'YAMLParser-PParser'
 }
@@ -97,8 +98,13 @@ YamlPPGrammar >> defaultIndentToken [
 
 { #category : #grammar }
 YamlPPGrammar >> document [
-	<todo: 'Add list, flowList and flowMappingList'>
-	^ list / mappingList / value
+	"NB: flowList and flowMappingList are included in value."
+	
+	^ ('---' asPParser trim: ignorable) optional , 
+		(list 
+		/ mappingList 
+		/ value),
+	('...' asPParser trim: ignorable) optional
 ]
 
 { #category : #grammar }
@@ -114,7 +120,6 @@ YamlPPGrammar >> doubledSingleQuotes [
 
 { #category : #grammar }
 YamlPPGrammar >> file [
-	<todo: 'not used yet'>
 	^ document star end
 ]
 
@@ -219,6 +224,12 @@ YamlPPGrammar >> listItemValue [
 ]
 
 { #category : #grammar }
+YamlPPGrammar >> literalString [
+	^ ($| asPParser , newline , indent , (scalarString , newline) star , dedent)
+		==> #fourth
+]
+
+{ #category : #grammar }
 YamlPPGrammar >> mapping [
 	"Apparently a missing value is equivalent to null.
 	We use ignorable2 to *not* consume any newline.
@@ -319,7 +330,8 @@ YamlPPGrammar >> stringWithinSingleQuotes [
 
 { #category : #grammar }
 YamlPPGrammar >> unindentedValue [
-	^ flowList / variable / flowMappingList / doubleQuotedString / scalar
+	^ flowList / variable / flowMappingList / doubleQuotedString / literalString
+		/ scalar
 ]
 
 { #category : #grammar }
